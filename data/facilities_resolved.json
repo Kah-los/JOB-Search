@@ -10762,5 +10762,105 @@
     "ats": "Workday",
     "still_blank": false,
     "resolve_method": "user-supplied"
+  },
+  {
+    "id": 676,
+    "name": "Oracle Health (Cerner)",
+    "country": "U.S.",
+    "state": "Missouri",
+    "resolved_url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/jobs",
+    "ats": "OracleORC",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 677,
+    "name": "GDIT",
+    "country": "U.S.",
+    "state": "Virginia",
+    "resolved_url": "https://gdit.wd5.myworkdayjobs.com/External_Career_Site",
+    "ats": "Workday",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 678,
+    "name": "Booz Allen Hamilton",
+    "country": "U.S.",
+    "state": "Virginia",
+    "resolved_url": "https://bah.wd1.myworkdayjobs.com/BAH_Jobs",
+    "ats": "Workday",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 679,
+    "name": "Keck Medicine of USC",
+    "country": "U.S.",
+    "state": "California",
+    "resolved_url": "https://usc.wd5.myworkdayjobs.com/ExternalKeckUSCCareers",
+    "ats": "Workday",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 680,
+    "name": "Cohere Health",
+    "country": "U.S.",
+    "state": "Massachusetts",
+    "resolved_url": "https://job-boards.greenhouse.io/coherehealth",
+    "ats": "Greenhouse",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 681,
+    "name": "UTMB Health (Galveston)",
+    "country": "U.S.",
+    "state": "Texas",
+    "resolved_url": "https://applyjobs.utmb.edu/",
+    "ats": null,
+    "still_blank": false,
+    "resolve_method": "user-supplied-recordonly"
+  },
+  {
+    "id": 682,
+    "name": "Penn State Health",
+    "country": "U.S.",
+    "state": "Pennsylvania",
+    "resolved_url": "https://www.pennstatehershey.jobs/jobs/",
+    "ats": null,
+    "still_blank": false,
+    "resolve_method": "user-supplied-recordonly"
+  },
+  {
+    "id": 683,
+    "name": "Allegheny Health Network",
+    "country": "U.S.",
+    "state": "Pennsylvania",
+    "resolved_url": "https://careers.highmarkhealth.org/brands/ahn/",
+    "ats": null,
+    "still_blank": false,
+    "resolve_method": "user-supplied-recordonly"
+  },
+  {
+    "id": 684,
+    "name": "Columbia University Irving Medical Center",
+    "country": "U.S.",
+    "state": "New York",
+    "resolved_url": "https://www.cuimc.columbia.edu/about-us/explore-cuimc/leadership-and-administration/administrative-offices/cuimc-human-resources/job-opportunities",
+    "ats": null,
+    "still_blank": false,
+    "resolve_method": "user-supplied-recordonly"
+  },
+  {
+    "id": 685,
+    "name": "McKesson",
+    "country": "U.S.",
+    "state": "Texas",
+    "resolved_url": "https://careers.mckesson.com/en/search-jobs",
+    "ats": null,
+    "still_blank": false,
+    "resolve_method": "user-supplied-recordonly"
   }
 ]
