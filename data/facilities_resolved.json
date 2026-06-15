@@ -10862,5 +10862,55 @@
     "ats": null,
     "still_blank": false,
     "resolve_method": "user-supplied-recordonly"
+  },
+  {
+    "id": 686,
+    "name": "University of Miami Health",
+    "country": "U.S.",
+    "state": "Florida",
+    "resolved_url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff",
+    "ats": "Workday",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 687,
+    "name": "Adaptive Biotechnologies",
+    "country": "U.S.",
+    "state": "Washington",
+    "resolved_url": "https://job-boards.greenhouse.io/adaptivebiotechnologies",
+    "ats": "Greenhouse",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 688,
+    "name": "Lee Health",
+    "country": "U.S.",
+    "state": "Florida",
+    "resolved_url": "https://jobs.leehealth.org/jobs/",
+    "ats": null,
+    "still_blank": false,
+    "resolve_method": "user-supplied-recordonly"
+  },
+  {
+    "id": 689,
+    "name": "Fred Hutchinson Cancer Center",
+    "country": "U.S.",
+    "state": "Washington",
+    "resolved_url": "https://careers-fhcrc.icims.com/jobs/intro",
+    "ats": null,
+    "still_blank": false,
+    "resolve_method": "user-supplied-recordonly"
+  },
+  {
+    "id": 690,
+    "name": "Community Health of South Florida",
+    "country": "U.S.",
+    "state": "Florida",
+    "resolved_url": "https://chisouthfl.org/careers/",
+    "ats": null,
+    "still_blank": false,
+    "resolve_method": "user-supplied-recordonly"
   }
 ]
