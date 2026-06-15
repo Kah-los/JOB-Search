@@ -152,9 +152,9 @@
     "hyperlink": null,
     "career_url": null,
     "url_source": null,
-    "ats": null,
+    "ats": "Phenom",
     "needs_discovery": true,
-    "resolved_url": "https://careers.ecuhealth.org/search/jobs",
+    "resolved_url": "https://careers.ecuhealth.org/",
     "resolved_status": null,
     "resolve_method": "web-discovered",
     "still_blank": false
@@ -1018,7 +1018,7 @@
     "url_source": "text",
     "ats": null,
     "needs_discovery": false,
-    "resolved_url": null,
+    "resolved_url": "https://careers.atriumhealth.org/",
     "resolved_status": null,
     "resolve_method": "failed",
     "still_blank": false
@@ -1096,9 +1096,9 @@
     "hyperlink": null,
     "career_url": "https://icims.com",
     "url_source": "salvaged-domain",
-    "ats": "iCIMS",
+    "ats": "Phenom",
     "needs_discovery": false,
-    "resolved_url": "https://www.icims.com/",
+    "resolved_url": "https://jobs.novanthealth.org/careers-home/jobs",
     "resolved_status": 200,
     "resolve_method": "verified-existing",
     "still_blank": false
@@ -9320,9 +9320,9 @@
     "hyperlink": null,
     "career_url": "https://chop.edu",
     "url_source": "salvaged-domain",
-    "ats": null,
+    "ats": "Phenom",
     "needs_discovery": false,
-    "resolved_url": "https://careers.chop.edu/us/en",
+    "resolved_url": "https://careers.chop.edu/",
     "resolved_status": 200,
     "resolve_method": "probed-path",
     "still_blank": false
@@ -10702,5 +10702,65 @@
     "resolved_status": 200,
     "resolve_method": "probed-path",
     "still_blank": false
+  },
+  {
+    "id": 670,
+    "name": "Mount Nittany Health",
+    "country": "U.S.",
+    "state": "Pennsylvania",
+    "resolved_url": "https://mnh-ibosjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/MountNittanyHealthCareers/jobs",
+    "ats": "OracleORC",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 671,
+    "name": "Universal Health Services (UHS)",
+    "country": "U.S.",
+    "state": "Pennsylvania",
+    "resolved_url": "https://jobs.uhs.com/careers/jobs",
+    "ats": "Phenom",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 672,
+    "name": "Medtronic",
+    "country": "U.S.",
+    "state": "Minnesota",
+    "resolved_url": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers",
+    "ats": "Workday",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 673,
+    "name": "Humana",
+    "country": "U.S.",
+    "state": "Kentucky",
+    "resolved_url": "https://humana.wd5.myworkdayjobs.com/Humana_External_Career_Site",
+    "ats": "Workday",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 674,
+    "name": "Leidos",
+    "country": "U.S.",
+    "state": "Virginia",
+    "resolved_url": "https://leidos.wd5.myworkdayjobs.com/External",
+    "ats": "Workday",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
+  },
+  {
+    "id": 675,
+    "name": "athenahealth",
+    "country": "U.S.",
+    "state": "Massachusetts",
+    "resolved_url": "https://athenahealth.wd1.myworkdayjobs.com/External",
+    "ats": "Workday",
+    "still_blank": false,
+    "resolve_method": "user-supplied"
   }
 ]
