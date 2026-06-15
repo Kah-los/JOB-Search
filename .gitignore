@@ -1,0 +1,9 @@
+# Personal / sensitive — keep OUT of the public repo
+applications/            # tailored CVs + cover letters with full contact details
+pipeline/profile.json    # email, phone, and visa-sponsorship status
+
+# Build/scratch artifacts
+data/*.log
+**/__pycache__/
+*.pyc
+.DS_Store
