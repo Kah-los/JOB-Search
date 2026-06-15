@@ -287,12 +287,73 @@ def scrape_ultipro(url, employer, queries=None, cap=2000):
     return jobs
 
 
-# ---------------- Phenom (CareerSite /api/jobs JSON) ----------------
+# ---------------- Phenom (two variants) ----------------
+def _phenom_html(host, base_path, employer, cap=3000):
+    """Fallback variant: jobs embedded as inline JSON in the search-results page,
+    paginated via ?from=N (e.g. Sutter Health, Baptist Health FL)."""
+    seen, jobs, frm = set(), [], 0
+    candidates = [base_path.rstrip("/") + "/search-results", "/us/en/search-results"]
+    search_path = None
+    while frm < cap:
+        ok = False
+        for cand in ([search_path] if search_path else candidates):
+            try:
+                r = requests.get(f"https://{host}{cand}", headers=HEADERS,
+                                 params={"from": frm, "s": 1}, timeout=TIMEOUT)
+                t = r.text
+            except Exception:
+                continue
+            i = t.find('"jobs":[')
+            if i < 0:
+                continue
+            start = t.find("[", i)
+            depth, end = 0, start
+            for k in range(start, len(t)):
+                if t[k] == "[":
+                    depth += 1
+                elif t[k] == "]":
+                    depth -= 1
+                    if depth == 0:
+                        end = k + 1
+                        break
+            try:
+                arr = json.loads(t[start:end])
+            except Exception:
+                continue
+            search_path = cand
+            ok = True
+            if not arr:
+                return jobs
+            for j in arr:
+                jid = j.get("jobId") or j.get("reqId")
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
+                desc = " ".join([j.get("descriptionTeaser", "") or "",
+                                 " ".join(j.get("ml_skills", []) or []),
+                                 j.get("category", "") or ""])
+                jobs.append({
+                    "employer": employer, "title": j.get("title"),
+                    "location": j.get("cityState") or ", ".join(filter(None, [j.get("city"), j.get("state")])),
+                    "url": j.get("applyUrl") or f"https://{host}/job/{jid}",
+                    "description": re.sub(r"\s+", " ", desc).strip()[:4000],
+                    "salary_text": "", "remote_type": j.get("remoteType", "") or "",
+                    "employment_type": j.get("type", ""), "date_posted": j.get("postedDate", ""),
+                    "source_platform": "Phenom",
+                })
+            break
+        if not ok:
+            break
+        frm += 10
+    return jobs
+
+
 def scrape_phenom(url, employer, queries=None, cap=3000):
-    """Phenom career sites expose /api/jobs as JSON with descriptions inline.
-    Covers the common variant (e.g. Mount Sinai, Orlando Health). Some Phenom
-    tenants instead serve /search-jobs/results HTML — those return [] here."""
-    host = urlparse(url if "://" in url else "https://" + url).netloc
+    """Phenom career sites. Variant A: /api/jobs JSON with full descriptions
+    (Mount Sinai, Orlando). Variant B fallback: inline JSON in search-results
+    page (Sutter, Baptist FL). AdventHealth-style WordPress sites yield []."""
+    p = urlparse(url if "://" in url else "https://" + url)
+    host = p.netloc
     if not host:
         return []
     api = f"https://{host}/api/jobs"
@@ -330,6 +391,9 @@ def scrape_phenom(url, employer, queries=None, cap=3000):
         if len(page_jobs) < 100:
             break
         page += 1
+    # Variant B fallback: inline JSON in the search-results page
+    if not jobs:
+        jobs = _phenom_html(host, p.path or "/", employer, cap=cap)
     return jobs
 
 
