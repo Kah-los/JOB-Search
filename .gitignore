@@ -7,3 +7,6 @@ data/*.log
 **/__pycache__/
 *.pyc
 .DS_Store
+
+# Telegram bot credentials — never commit
+pipeline/telegram_config.json

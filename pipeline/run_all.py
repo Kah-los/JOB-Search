@@ -130,6 +130,7 @@ def write_dashboard(matches, new_today):
 </tr>""")
 
     html = f"""<!doctype html><html><head><meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
 <title>Carlos — Job Search Dashboard</title>
 <style>
 body{{font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;margin:24px;color:#1a2330;background:#f6f8fb}}

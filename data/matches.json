@@ -43,27 +43,6 @@
     "app_folder": "applications/california/el-camino-health__manager-him-professional-billing-coding-"
   },
   {
-    "title": "Systems Analytics Analyst II",
-    "employer": "Baylor Scott & White Health",
-    "location": "Little Rock",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-05-18",
-    "fit_score": 8.8,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://archildrens.wd1.myworkdayjobs.com/External_Career_Site/job/Little-Rock/Systems-Analytics-Analyst-II_R0023574",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Change management, Data governance, Quality assurance, SQL"
-    ],
-    "app_folder": "applications/texas/baylor-scott-white-health__systems-analytics-analyst-ii"
-  },
-  {
     "title": "Lead Analyst, Quality Analytics & Performance Improvement (Remote)",
     "employer": "Molina Healthcare",
     "location": "United States",
@@ -124,7 +103,28 @@
     "reasons": [
       "Skills present: BI, Data governance, Epic, FHIR, HIPAA, Python"
     ],
-    "app_folder": "applications/massachusetts/tufts-medicine__clinical-translational-research-innovati"
+    "app_folder": "applications/massachussets/tufts-medicine__clinical-translational-research-innovati"
+  },
+  {
+    "title": "Senior Analyst, Reporting & Analytics (Data Governance)",
+    "employer": "Molina Healthcare",
+    "location": "AZ, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-27",
+    "fit_score": 8.5,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037372",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Data governance, Python, SQL"
+    ],
+    "app_folder": "applications/california/molina-healthcare__senior-analyst-reporting-analytics-data-"
   },
   {
     "title": "EPIC Application Analyst",
@@ -147,27 +147,6 @@
       "Skills present: BI, Change management, End-user training, Epic, Quality assurance"
     ],
     "app_folder": "applications/kentucky/king-s-daughters-health-system__epic-application-analyst"
-  },
-  {
-    "title": "Senior Analyst, Reporting & Analytics (Data Governance)",
-    "employer": "Molina Healthcare",
-    "location": "AZ, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-27",
-    "fit_score": 8.5,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037372",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Data governance, Python, SQL"
-    ],
-    "app_folder": "applications/california/molina-healthcare__senior-analyst-reporting-analytics-data-"
   },
   {
     "title": "Senior Analyst, Data & Analytics (Remote)",
@@ -425,27 +404,6 @@
     "app_folder": "applications/massachussets/umass-memorial-health__sr-epic-application-systems-analyst-mych"
   },
   {
-    "title": "EPIC Applications Systems Analyst, Orders/Research/ClinDoc",
-    "employer": "UMass Memorial Health",
-    "location": "Worcester, MA",
-    "salary": "$101,254",
-    "work_mode": "Remote",
-    "date_posted": "2026-05-20",
-    "fit_score": 8.0,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://ummh.wd1.myworkdayjobs.com/Careers/job/Worcester-MA/Applications-Systems-Analyst--Orders-Research-ClinDoc_R26104156",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, End-user training, Epic"
-    ],
-    "app_folder": "applications/massachussets/umass-memorial-health__epic-applications-systems-analyst-orders"
-  },
-  {
     "title": "Sr Applications Systems Analyst- EPIC ClinDoc/Stork",
     "employer": "UMass Memorial Health",
     "location": "Worcester, MA",
@@ -509,27 +467,6 @@
     "app_folder": "applications/massachusetts/mass-general-brigham__inpatient-coding-quality-specialist"
   },
   {
-    "title": "Coding Manager",
-    "employer": "Hattiesburg Clinic and Forrest County \u2026",
-    "location": "Dallas, TX",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Hybrid",
-    "date_posted": "2026-05-19",
-    "fit_score": 8.0,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Coding-Manager_JR5424-1",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, CPT, Change management, Epic, ICD-10-CM"
-    ],
-    "app_folder": "applications/mississippi/hattiesburg-clinic-and-forrest__coding-manager"
-  },
-  {
     "title": "Lead Analyst, Healthcare Analytics (Data Stewardship & Enterprise Reporting) \u2013 Remote",
     "employer": "Molina Healthcare",
     "location": "United States",
@@ -549,6 +486,27 @@
       "Skills present: BI, Python, SQL"
     ],
     "app_folder": "applications/california/molina-healthcare__lead-analyst-healthcare-analytics-data-s"
+  },
+  {
+    "title": "Coding Manager",
+    "employer": "Hattiesburg Clinic and Forrest County \u2026",
+    "location": "Dallas, TX",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Hybrid",
+    "date_posted": "2026-05-19",
+    "fit_score": 8.0,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Coding-Manager_JR5424-1",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, CPT, Change management, Epic, ICD-10-CM"
+    ],
+    "app_folder": "applications/mississippi/hattiesburg-clinic-and-forrest__coding-manager"
   },
   {
     "title": "Senior Coding Auditor",
@@ -616,6 +574,28 @@
     "app_folder": "applications/new-york/montefiore-medical-center__revenue-cycle-systems-analyst"
   },
   {
+    "title": "Senior Project Manager (SME - Enrollment)",
+    "employer": "Molina Healthcare",
+    "location": "United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-04-21",
+    "fit_score": 7.8,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037016",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Project Manager",
+      "Skills present: BI, Change management, HIPAA, SQL"
+    ],
+    "app_folder": "applications/california/molina-healthcare__senior-project-manager-sme-enrollment"
+  },
+  {
     "title": "Supv Health Information Mgmt",
     "employer": "Culpeper Hospital",
     "location": "Manassas, VA, United States",
@@ -656,28 +636,6 @@
       "Skills present: BI, Change management, Epic, HIPAA"
     ],
     "app_folder": "applications/tenessee/covenant-healthcare__manager-revenue-cycle-applications-trans"
-  },
-  {
-    "title": "Senior Project Manager (SME - Enrollment)",
-    "employer": "Molina Healthcare",
-    "location": "United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-04-21",
-    "fit_score": 7.8,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037016",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Project Manager",
-      "Skills present: BI, Change management, HIPAA, SQL"
-    ],
-    "app_folder": "applications/california/molina-healthcare__senior-project-manager-sme-enrollment"
   },
   {
     "title": "Business Intelligence Analyst Senior",
@@ -724,6 +682,28 @@
     "app_folder": "applications/pensilvania/geisinger-health-system__business-intelligence-analyst-intermedia"
   },
   {
+    "title": "Program Manager- Quality Compliance - Remote CA",
+    "employer": "Molina Healthcare",
+    "location": "CA, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-05-18",
+    "fit_score": 7.7,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037391",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Program Manager",
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/molina-healthcare__program-manager-quality-compliance-remot"
+  },
+  {
     "title": "Epic Credential Trainer",
     "employer": "King's Daughters Health System",
     "location": "Salinas, CA",
@@ -764,28 +744,6 @@
       "Skills present: BI, Change management, Epic, HIPAA, Quality assurance"
     ],
     "app_folder": "applications/kentucky/king-s-daughters-health-system__epic-ancillary-application-manager-on-si"
-  },
-  {
-    "title": "Program Manager- Quality Compliance - Remote CA",
-    "employer": "Molina Healthcare",
-    "location": "CA, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-05-18",
-    "fit_score": 7.7,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037391",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Program Manager",
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/molina-healthcare__program-manager-quality-compliance-remot"
   },
   {
     "title": "Revenue Cycle Optimization Manager - Hybrid (w/ office hours in Nashua, NH)",
@@ -872,6 +830,112 @@
       "Skills present: BI, Epic, Go-live support"
     ],
     "app_folder": "applications/new-york/montefiore-medical-center__application-analyst-epic-ambulatory"
+  },
+  {
+    "title": "Applications Analyst II - Epic Ambulatory Application Certified - Remote",
+    "employer": "Tufts Medicine",
+    "location": "TuftsMedicine",
+    "salary": "$107,481",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-01",
+    "fit_score": 7.5,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://tuftsmedicine.wd1.myworkdayjobs.com/Jobs/job/TuftsMedicine/Applications-Analyst-II---Epic-Ambulatory-Application-Certified---Remote_R23675",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Epic"
+    ],
+    "app_folder": "applications/massachussets/tufts-medicine__applications-analyst-ii-epic-ambulatory-"
+  },
+  {
+    "title": "Analyst, Data & Analytics - Value Base Programs/Excel - Remote",
+    "employer": "Molina Healthcare",
+    "location": "Des Moines, IA, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-12",
+    "fit_score": 7.5,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037746",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, SQL"
+    ],
+    "app_folder": "applications/california/molina-healthcare__analyst-data-analytics-value-base-progra"
+  },
+  {
+    "title": "Senior Financial Analyst \u2013 Regulatory Reporting & Healthcare Finance (Remote)",
+    "employer": "Molina Healthcare",
+    "location": "United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-04",
+    "fit_score": 7.5,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037536",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, SQL"
+    ],
+    "app_folder": "applications/california/molina-healthcare__senior-financial-analyst-regulatory-repo"
+  },
+  {
+    "title": "Analyst, Finance & Analytics (Advanced SQL / Large-Scale Data) - REMOTE",
+    "employer": "Molina Healthcare",
+    "location": "United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-04",
+    "fit_score": 7.5,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037878",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, SQL"
+    ],
+    "app_folder": "applications/california/molina-healthcare__analyst-finance-analytics-advanced-sql-l"
+  },
+  {
+    "title": "Risk & Quality Reporting Analyst (Must have SQL, PowerBi, Databricks, Managed Care) - REMOTE",
+    "employer": "Molina Healthcare",
+    "location": "NE, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-04-30",
+    "fit_score": 7.5,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037114",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Reporting Analyst",
+      "Skills present: BI, SQL"
+    ],
+    "app_folder": "applications/california/molina-healthcare__risk-quality-reporting-analyst-must-have"
   },
   {
     "title": "Revenue Integrity Analyst Senior",
@@ -1084,112 +1148,6 @@
       "Skills present: HIPAA, Patient privacy"
     ],
     "app_folder": "applications/utah/foothill-family-clinic__senior-privacy-analyst"
-  },
-  {
-    "title": "Applications Analyst II - Epic Ambulatory Application Certified - Remote",
-    "employer": "Tufts Medicine",
-    "location": "TuftsMedicine",
-    "salary": "$107,481",
-    "work_mode": "Remote",
-    "date_posted": "2026-06-01",
-    "fit_score": 7.5,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://tuftsmedicine.wd1.myworkdayjobs.com/Jobs/job/TuftsMedicine/Applications-Analyst-II---Epic-Ambulatory-Application-Certified---Remote_R23675",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Epic"
-    ],
-    "app_folder": "applications/massachusetts/tufts-medicine__applications-analyst-ii-epic-ambulatory-"
-  },
-  {
-    "title": "Analyst, Data & Analytics - Value Base Programs/Excel - Remote",
-    "employer": "Molina Healthcare",
-    "location": "Des Moines, IA, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-06-12",
-    "fit_score": 7.5,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037746",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, SQL"
-    ],
-    "app_folder": "applications/california/molina-healthcare__analyst-data-analytics-value-base-progra"
-  },
-  {
-    "title": "Senior Financial Analyst \u2013 Regulatory Reporting & Healthcare Finance (Remote)",
-    "employer": "Molina Healthcare",
-    "location": "United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-06-04",
-    "fit_score": 7.5,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037536",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, SQL"
-    ],
-    "app_folder": "applications/california/molina-healthcare__senior-financial-analyst-regulatory-repo"
-  },
-  {
-    "title": "Analyst, Finance & Analytics (Advanced SQL / Large-Scale Data) - REMOTE",
-    "employer": "Molina Healthcare",
-    "location": "United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-06-04",
-    "fit_score": 7.5,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037878",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, SQL"
-    ],
-    "app_folder": "applications/california/molina-healthcare__analyst-finance-analytics-advanced-sql-l"
-  },
-  {
-    "title": "Risk & Quality Reporting Analyst (Must have SQL, PowerBi, Databricks, Managed Care) - REMOTE",
-    "employer": "Molina Healthcare",
-    "location": "NE, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-04-30",
-    "fit_score": 7.5,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037114",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Reporting Analyst",
-      "Skills present: BI, SQL"
-    ],
-    "app_folder": "applications/california/molina-healthcare__risk-quality-reporting-analyst-must-have"
   },
   {
     "title": "Sr. Workday Applications Analyst",
@@ -1447,91 +1405,6 @@
     "app_folder": "applications/new-york/montefiore-medical-center__epic-ambulatory-team-lead"
   },
   {
-    "title": "Systems Analyst II Cadence (Community Connect) - FT - Days - Epic Community Connect",
-    "employer": "El Camino Health",
-    "location": "Mountain View, CA",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Hybrid",
-    "date_posted": "2026-04-06",
-    "fit_score": 7.3,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Systems-Analyst-II-Cadence--Community-Connect----FT---Days---Epic-Community-Connect_R00015738",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Epic"
-    ],
-    "app_folder": "applications/california/el-camino-health__systems-analyst-ii-cadence-community-con"
-  },
-  {
-    "title": "IT Project Manager (On-Site - Salinas, CA)",
-    "employer": "King's Daughters Health System",
-    "location": "Salinas, CA",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-01",
-    "fit_score": 7.3,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/IT-Project-Manager_SVH-103061",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Project Manager",
-      "Skills present: BI, Epic, HIPAA, Quality assurance"
-    ],
-    "app_folder": "applications/kentucky/king-s-daughters-health-system__it-project-manager-on-site-salinas-ca"
-  },
-  {
-    "title": "HIM Specialist 1",
-    "employer": "Bozeman Health",
-    "location": "Bend, OR",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-02-13",
-    "fit_score": 7.3,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://stcharles.wd1.myworkdayjobs.com/External/job/Bend-OR/HIM-Specialist-1_R1021570",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, HIPAA, Quality assurance, Release of information"
-    ],
-    "app_folder": "applications/montana/bozeman-health__him-specialist-1"
-  },
-  {
-    "title": "Lead Application Engineer - EPIC Hospital Billing (REMOTE)",
-    "employer": "Monument Health",
-    "location": "United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-06-03",
-    "fit_score": 7.3,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/309541",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Epic"
-    ],
-    "app_folder": "applications/south-dakota/monument-health__lead-application-engineer-epic-hospital-"
-  },
-  {
     "title": "Sr Analyst, Medical Economics \u2013 Remote (SQL, PMPM Analysis & Cost Trend Strategy)",
     "employer": "Molina Healthcare",
     "location": "United States",
@@ -1679,6 +1552,91 @@
     "app_folder": "applications/california/molina-healthcare__risk-quality-performance-manager"
   },
   {
+    "title": "Systems Analyst II Cadence (Community Connect) - FT - Days - Epic Community Connect",
+    "employer": "El Camino Health",
+    "location": "Mountain View, CA",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Hybrid",
+    "date_posted": "2026-04-06",
+    "fit_score": 7.3,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Systems-Analyst-II-Cadence--Community-Connect----FT---Days---Epic-Community-Connect_R00015738",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Epic"
+    ],
+    "app_folder": "applications/california/el-camino-health__systems-analyst-ii-cadence-community-con"
+  },
+  {
+    "title": "IT Project Manager (On-Site - Salinas, CA)",
+    "employer": "King's Daughters Health System",
+    "location": "Salinas, CA",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-01",
+    "fit_score": 7.3,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/IT-Project-Manager_SVH-103061",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Project Manager",
+      "Skills present: BI, Epic, HIPAA, Quality assurance"
+    ],
+    "app_folder": "applications/kentucky/king-s-daughters-health-system__it-project-manager-on-site-salinas-ca"
+  },
+  {
+    "title": "HIM Specialist 1",
+    "employer": "Bozeman Health",
+    "location": "Bend, OR",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-02-13",
+    "fit_score": 7.3,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://stcharles.wd1.myworkdayjobs.com/External/job/Bend-OR/HIM-Specialist-1_R1021570",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, HIPAA, Quality assurance, Release of information"
+    ],
+    "app_folder": "applications/montana/bozeman-health__him-specialist-1"
+  },
+  {
+    "title": "Lead Application Engineer - EPIC Hospital Billing (REMOTE)",
+    "employer": "Monument Health",
+    "location": "United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-03",
+    "fit_score": 7.3,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/309541",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Epic"
+    ],
+    "app_folder": "applications/south-dakota/monument-health__lead-application-engineer-epic-hospital-"
+  },
+  {
     "title": "Analyst, Rev Cycle Compliance - Corporate Revenue Integrity - Full Time",
     "employer": "The Guthrie Clinic",
     "location": "Sayre, PA, United States",
@@ -1698,27 +1656,6 @@
       "Skills present: BI"
     ],
     "app_folder": "applications/pennsilvania/the-guthrie-clinic__analyst-rev-cycle-compliance-corporate-r"
-  },
-  {
-    "title": "Medical Coding Manager - HB + PB - Full Time - Hybrid | Nashua, NH",
-    "employer": "Covenant HealthCare",
-    "location": "Nashua, NH",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Hybrid",
-    "date_posted": "2026-05-24",
-    "fit_score": 7.2,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Medical-Coding-Manager---HB---PB---Full-Time---Hybrid---Nashua--NH_JR12186",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, CPT, ICD-10-CM"
-    ],
-    "app_folder": "applications/tenessee/covenant-healthcare__medical-coding-manager-hb-pb-full-time-h"
   },
   {
     "title": "Manager, Customer Experience & Performance Improvement - SHP Operations - Day Shift Full Time",
@@ -1742,25 +1679,25 @@
     "app_folder": "applications/california/sharp-healthcare__manager-customer-experience-performance-"
   },
   {
-    "title": "Director of Coding and HIM",
-    "employer": "Hattiesburg Clinic and Forrest County \u2026",
-    "location": "Dallas, TX",
+    "title": "Medical Coding Manager - HB + PB - Full Time - Hybrid | Nashua, NH",
+    "employer": "Covenant HealthCare",
+    "location": "Nashua, NH",
     "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-03-27",
-    "fit_score": 7.1,
+    "work_mode": "Hybrid",
+    "date_posted": "2026-05-24",
+    "fit_score": 7.2,
     "visa_flag": "",
     "onsite_flag": "",
-    "url": "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Director-of-Coding-and-HIM_JR5757",
+    "url": "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Medical-Coding-Manager---HB---PB---Full-Time---Hybrid---Nashua--NH_JR12186",
     "source_platform": "Workday",
     "status": "New",
     "first_seen": "2026-06-15",
     "last_seen": "2026-06-15",
     "updated": false,
     "reasons": [
-      "Skills present: BI"
+      "Skills present: BI, CPT, ICD-10-CM"
     ],
-    "app_folder": "applications/mississippi/hattiesburg-clinic-and-forrest__director-of-coding-and-him"
+    "app_folder": "applications/tenessee/covenant-healthcare__medical-coding-manager-hb-pb-full-time-h"
   },
   {
     "title": "Senior Business Analyst",
@@ -1845,6 +1782,27 @@
       "Skills present: BI"
     ],
     "app_folder": "applications/california/molina-healthcare__analyst-pre-pay-dispute-coding-cpc-remot"
+  },
+  {
+    "title": "Director of Coding and HIM",
+    "employer": "Hattiesburg Clinic and Forrest County \u2026",
+    "location": "Dallas, TX",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-03-27",
+    "fit_score": 7.1,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Director-of-Coding-and-HIM_JR5757",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/mississippi/hattiesburg-clinic-and-forrest__director-of-coding-and-him"
   },
   {
     "title": "EPIC Analyst-Level 3 - IT Epic Clinical - Full Time",
@@ -1956,48 +1914,6 @@
     "app_folder": "applications/new-york/montefiore-medical-center__quality-analyst"
   },
   {
-    "title": "Epic Cadence Analyst",
-    "employer": "Cottage Health",
-    "location": "Goleta, CA, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-12",
-    "fit_score": 7.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/12018",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: Epic"
-    ],
-    "app_folder": "applications/california/cottage-health__epic-cadence-analyst"
-  },
-  {
-    "title": "Manager IT Applications - Epic Ambulatory and Population Health",
-    "employer": "Monument Health",
-    "location": "Cincinnati, OH, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-06-10",
-    "fit_score": 7.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308632",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Epic"
-    ],
-    "app_folder": "applications/south-dakota/monument-health__manager-it-applications-epic-ambulatory-"
-  },
-  {
     "title": "Applications Analyst-Business (Epic PB/HB)",
     "employer": "Eisenhower Health",
     "location": "Eisenhower Medical Center",
@@ -2080,6 +1996,48 @@
       "Skills present: BI, CPT"
     ],
     "app_folder": "applications/california/sharp-healthcare__compliance-auditor-srs"
+  },
+  {
+    "title": "Epic Cadence Analyst",
+    "employer": "Cottage Health",
+    "location": "Goleta, CA, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-12",
+    "fit_score": 7.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/12018",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: Epic"
+    ],
+    "app_folder": "applications/california/cottage-health__epic-cadence-analyst"
+  },
+  {
+    "title": "Manager IT Applications - Epic Ambulatory and Population Health",
+    "employer": "Monument Health",
+    "location": "Cincinnati, OH, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-06-10",
+    "fit_score": 7.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308632",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Epic"
+    ],
+    "app_folder": "applications/south-dakota/monument-health__manager-it-applications-epic-ambulatory-"
   },
   {
     "title": "Mgr Applications Security, Epic and Workday",
@@ -2737,198 +2695,6 @@
     "app_folder": "applications/new-york/montefiore-medical-center__revenue-cycle-supervisor"
   },
   {
-    "title": "Assistant Vice President, Audit",
-    "employer": "Edward-Elmhurst Health",
-    "location": "SRO Corporate Center Warrenville 4201 Winfield Road",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-06-01",
-    "fit_score": 6.9,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://nshs.wd1.myworkdayjobs.com/ns-eeh/job/SRO-Corporate-Center-Warrenville-4201-Winfield-Road/Assistant-Vice-President--Audit_R43168",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Change management, HIPAA"
-    ],
-    "app_folder": "applications/illinois/edward-elmhurst-health__assistant-vice-president-audit"
-  },
-  {
-    "title": "Senior Financial Analyst",
-    "employer": "Edward-Elmhurst Health",
-    "location": "SRO Corporate Center Warrenville 4201 Winfield Road",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-05-28",
-    "fit_score": 6.9,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://nshs.wd1.myworkdayjobs.com/ns-eeh/job/SRO-Corporate-Center-Warrenville-4201-Winfield-Road/Senior-Financial-Analyst-1_R42832",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, SQL"
-    ],
-    "app_folder": "applications/illinois/edward-elmhurst-health__senior-financial-analyst"
-  },
-  {
-    "title": "Regional Financial Analyst",
-    "employer": "FMOLHS",
-    "location": "Riverside Denbigh Professional Park - Newport News, Virginia",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-05-27",
-    "fit_score": 6.9,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Denbigh-Professional-Park---Newport-News-Virginia/Regional-Financial-Analyst_2026-034824",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, SQL"
-    ],
-    "app_folder": "applications/louisiana/fmolhs__regional-financial-analyst"
-  },
-  {
-    "title": "Epic Principal Trainer",
-    "employer": "King's Daughters Health System",
-    "location": "Salinas, CA",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-27",
-    "fit_score": 6.9,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-103153",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Epic Principal Trainer",
-      "Skills present: BI, Change management, Epic"
-    ],
-    "app_folder": "applications/kentucky/king-s-daughters-health-system__epic-principal-trainer"
-  },
-  {
-    "title": "Epic Principal Trainer",
-    "employer": "King's Daughters Health System",
-    "location": "Salinas, CA",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-06",
-    "fit_score": 6.9,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-103064",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Epic Principal Trainer",
-      "Skills present: BI, Change management, Epic"
-    ],
-    "app_folder": "applications/kentucky/king-s-daughters-health-system__epic-principal-trainer"
-  },
-  {
-    "title": "Epic Principal Trainer",
-    "employer": "King's Daughters Health System",
-    "location": "Salinas, CA",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-02-27",
-    "fit_score": 6.9,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-102631-1",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Epic Principal Trainer",
-      "Skills present: BI, Change management, Epic"
-    ],
-    "app_folder": "applications/kentucky/king-s-daughters-health-system__epic-principal-trainer"
-  },
-  {
-    "title": "Director, Enterprise Epic Applications- Clinical - SolutionHealth - Full Time",
-    "employer": "Covenant HealthCare",
-    "location": "Remote - NH",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-06-12",
-    "fit_score": 6.9,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Director--Enterprise-Epic-Applications--Clinical---SolutionHealth---Full-Time_JR12398",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Epic"
-    ],
-    "app_folder": "applications/tenessee/covenant-healthcare__director-enterprise-epic-applications-cl"
-  },
-  {
-    "title": "Patient Access Auditor/Trainer - Patient Registration - Full Time",
-    "employer": "Covenant HealthCare",
-    "location": "Nashua, NH",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-06-09",
-    "fit_score": 6.9,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Patient-Access-Auditor-Trainer---Patient-Registration---Full-Time_JR11662-1",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, HIPAA, Quality assurance"
-    ],
-    "app_folder": "applications/tenessee/covenant-healthcare__patient-access-auditor-trainer-patient-r"
-  },
-  {
-    "title": "EPIC Caboodle/Clarity Report Writer - IT Reporting - Full Time",
-    "employer": "Covenant HealthCare",
-    "location": "Remote - NH",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2026-06-02",
-    "fit_score": 6.9,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Data-Analyst-III---IT-Reporting---Full-Time_JR11587",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Epic"
-    ],
-    "app_folder": "applications/tenessee/covenant-healthcare__epic-caboodle-clarity-report-writer-it-r"
-  },
-  {
     "title": "Applications Analyst-Clinical",
     "employer": "Eisenhower Health",
     "location": "Eisenhower Medical Center",
@@ -3268,6 +3034,198 @@
     "app_folder": "applications/california/sharp-healthcare__charge-integrity-specialist-pfs-revenue-"
   },
   {
+    "title": "Assistant Vice President, Audit",
+    "employer": "Edward-Elmhurst Health",
+    "location": "SRO Corporate Center Warrenville 4201 Winfield Road",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-06-01",
+    "fit_score": 6.9,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://nshs.wd1.myworkdayjobs.com/ns-eeh/job/SRO-Corporate-Center-Warrenville-4201-Winfield-Road/Assistant-Vice-President--Audit_R43168",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Change management, HIPAA"
+    ],
+    "app_folder": "applications/illinois/edward-elmhurst-health__assistant-vice-president-audit"
+  },
+  {
+    "title": "Senior Financial Analyst",
+    "employer": "Edward-Elmhurst Health",
+    "location": "SRO Corporate Center Warrenville 4201 Winfield Road",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-05-28",
+    "fit_score": 6.9,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://nshs.wd1.myworkdayjobs.com/ns-eeh/job/SRO-Corporate-Center-Warrenville-4201-Winfield-Road/Senior-Financial-Analyst-1_R42832",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, SQL"
+    ],
+    "app_folder": "applications/illinois/edward-elmhurst-health__senior-financial-analyst"
+  },
+  {
+    "title": "Regional Financial Analyst",
+    "employer": "FMOLHS",
+    "location": "Riverside Denbigh Professional Park - Newport News, Virginia",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-05-27",
+    "fit_score": 6.9,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Denbigh-Professional-Park---Newport-News-Virginia/Regional-Financial-Analyst_2026-034824",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, SQL"
+    ],
+    "app_folder": "applications/louisiana/fmolhs__regional-financial-analyst"
+  },
+  {
+    "title": "Epic Principal Trainer",
+    "employer": "King's Daughters Health System",
+    "location": "Salinas, CA",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-27",
+    "fit_score": 6.9,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-103153",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Epic Principal Trainer",
+      "Skills present: BI, Change management, Epic"
+    ],
+    "app_folder": "applications/kentucky/king-s-daughters-health-system__epic-principal-trainer"
+  },
+  {
+    "title": "Epic Principal Trainer",
+    "employer": "King's Daughters Health System",
+    "location": "Salinas, CA",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-06",
+    "fit_score": 6.9,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-103064",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Epic Principal Trainer",
+      "Skills present: BI, Change management, Epic"
+    ],
+    "app_folder": "applications/kentucky/king-s-daughters-health-system__epic-principal-trainer"
+  },
+  {
+    "title": "Epic Principal Trainer",
+    "employer": "King's Daughters Health System",
+    "location": "Salinas, CA",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-02-27",
+    "fit_score": 6.9,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-102631-1",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Epic Principal Trainer",
+      "Skills present: BI, Change management, Epic"
+    ],
+    "app_folder": "applications/kentucky/king-s-daughters-health-system__epic-principal-trainer"
+  },
+  {
+    "title": "Director, Enterprise Epic Applications- Clinical - SolutionHealth - Full Time",
+    "employer": "Covenant HealthCare",
+    "location": "Remote - NH",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-12",
+    "fit_score": 6.9,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Director--Enterprise-Epic-Applications--Clinical---SolutionHealth---Full-Time_JR12398",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Epic"
+    ],
+    "app_folder": "applications/tenessee/covenant-healthcare__director-enterprise-epic-applications-cl"
+  },
+  {
+    "title": "Patient Access Auditor/Trainer - Patient Registration - Full Time",
+    "employer": "Covenant HealthCare",
+    "location": "Nashua, NH",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-06-09",
+    "fit_score": 6.9,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Patient-Access-Auditor-Trainer---Patient-Registration---Full-Time_JR11662-1",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, HIPAA, Quality assurance"
+    ],
+    "app_folder": "applications/tenessee/covenant-healthcare__patient-access-auditor-trainer-patient-r"
+  },
+  {
+    "title": "EPIC Caboodle/Clarity Report Writer - IT Reporting - Full Time",
+    "employer": "Covenant HealthCare",
+    "location": "Remote - NH",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-02",
+    "fit_score": 6.9,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Data-Analyst-III---IT-Reporting---Full-Time_JR11587",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Epic"
+    ],
+    "app_folder": "applications/tenessee/covenant-healthcare__epic-caboodle-clarity-report-writer-it-r"
+  },
+  {
     "title": "Business Analyst II, International Patient Services",
     "employer": "Mass General Brigham",
     "location": "Somerville-MA",
@@ -3354,27 +3312,6 @@
     "app_folder": "applications/new-york/montefiore-medical-center__operations-manager"
   },
   {
-    "title": "Revenue Integrity Manager",
-    "employer": "Hattiesburg Clinic and Forrest County \u2026",
-    "location": "Dallas, TX",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Hybrid",
-    "date_posted": "2026-03-20",
-    "fit_score": 6.7,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Revenue-Integrity-Manager_JR5709",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Epic"
-    ],
-    "app_folder": "applications/mississippi/hattiesburg-clinic-and-forrest__revenue-integrity-manager"
-  },
-  {
     "title": "Senior Medical Records Collector - Hybrid (Must reside in San Diego, CA)",
     "employer": "Molina Healthcare",
     "location": "San Diego, CA, United States",
@@ -3394,6 +3331,27 @@
       "Skills present: BI, Quality assurance"
     ],
     "app_folder": "applications/california/molina-healthcare__senior-medical-records-collector-hybrid-"
+  },
+  {
+    "title": "Revenue Integrity Manager",
+    "employer": "Hattiesburg Clinic and Forrest County \u2026",
+    "location": "Dallas, TX",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Hybrid",
+    "date_posted": "2026-03-20",
+    "fit_score": 6.7,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Revenue-Integrity-Manager_JR5709",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Epic"
+    ],
+    "app_folder": "applications/mississippi/hattiesburg-clinic-and-forrest__revenue-integrity-manager"
   },
   {
     "title": "Manager, Regulatory - Clinical Regulatory Compliance - Full Time",
@@ -3456,7 +3414,7 @@
     "reasons": [
       "Skills present: BI"
     ],
-    "app_folder": "applications/massachusetts/tufts-medicine__director-of-compliance-quality-risk-home"
+    "app_folder": "applications/massachussets/tufts-medicine__director-of-compliance-quality-risk-home"
   },
   {
     "title": "Project Manager-Process Improvement-Sr",
@@ -3523,6 +3481,28 @@
       "Skills present: BI"
     ],
     "app_folder": "applications/massachusetts/mass-general-brigham__project-manager-lead"
+  },
+  {
+    "title": "Clinical Research Program Manager",
+    "employer": "Mass General Brigham",
+    "location": "Boston-MA",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-15",
+    "fit_score": 6.5,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://massgeneralbrigham.wd1.myworkdayjobs.com/MGBExternal/job/Boston-MA/Clinical-Research-Program-Manager_RQ4068637",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Program Manager",
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/massachusetts/mass-general-brigham__clinical-research-program-manager"
   },
   {
     "title": "Clinical Research Project Manager",
@@ -4083,49 +4063,6 @@
     "app_folder": "applications/texas/natera__corporate-compliance-director"
   },
   {
-    "title": "Sr Project Manager",
-    "employer": "Culpeper Hospital",
-    "location": "Manassas, VA, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Remote",
-    "date_posted": "2025-05-07",
-    "fit_score": 6.5,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://fa-euzb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/3515",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Project Manager",
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/virginia/culpeper-hospital__sr-project-manager"
-  },
-  {
-    "title": "Clinical Systems Analyst (Hybrid)",
-    "employer": "Foothill Family Clinic",
-    "location": "Stamford, CT, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "Hybrid",
-    "date_posted": "2026-05-05",
-    "fit_score": 6.5,
-    "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://fa-ewfb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Careers/job/5658",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Clinical Systems Analyst"
-    ],
-    "app_folder": "applications/utah/foothill-family-clinic__clinical-systems-analyst-hybrid"
-  },
-  {
     "title": "Health & Welfare Benefits Analyst Tufts Medicine",
     "employer": "Tufts Medicine",
     "location": "TuftsMedicine",
@@ -4144,7 +4081,7 @@
     "reasons": [
       "Skills present: BI"
     ],
-    "app_folder": "applications/massachusetts/tufts-medicine__health-welfare-benefits-analyst-tufts-me"
+    "app_folder": "applications/massachussets/tufts-medicine__health-welfare-benefits-analyst-tufts-me"
   },
   {
     "title": "Retirement Analyst Tufts Medicine",
@@ -4165,7 +4102,7 @@
     "reasons": [
       "Skills present: BI"
     ],
-    "app_folder": "applications/massachusetts/tufts-medicine__retirement-analyst-tufts-medicine"
+    "app_folder": "applications/massachussets/tufts-medicine__retirement-analyst-tufts-medicine"
   },
   {
     "title": "Senior Program Manager (Remote)",
@@ -4403,6 +4340,49 @@
       "Skills present: BI"
     ],
     "app_folder": "applications/california/molina-healthcare__principal-system-engineering-ai-cloud-pr"
+  },
+  {
+    "title": "Sr Project Manager",
+    "employer": "Culpeper Hospital",
+    "location": "Manassas, VA, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2025-05-07",
+    "fit_score": 6.5,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://fa-euzb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/3515",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Project Manager",
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/virginia/culpeper-hospital__sr-project-manager"
+  },
+  {
+    "title": "Clinical Systems Analyst (Hybrid)",
+    "employer": "Foothill Family Clinic",
+    "location": "Stamford, CT, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Hybrid",
+    "date_posted": "2026-05-05",
+    "fit_score": 6.5,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://fa-ewfb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Careers/job/5658",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Clinical Systems Analyst"
+    ],
+    "app_folder": "applications/utah/foothill-family-clinic__clinical-systems-analyst-hybrid"
   },
   {
     "title": "Benefits Program Manager (FT, 100%)-Days",
@@ -4812,198 +4792,6 @@
     "app_folder": "applications/new-york/montefiore-medical-center__product-manager-epic-patient-access"
   },
   {
-    "title": "Surgical Services Program Manager Senior",
-    "employer": "Cottage Health",
-    "location": "Santa Barbara, CA, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-04-06",
-    "fit_score": 6.4,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/13096",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Program Manager",
-      "Skills present: BI, Quality assurance"
-    ],
-    "app_folder": "applications/california/cottage-health__surgical-services-program-manager-senior"
-  },
-  {
-    "title": "Clinical Program Manager, Integrated Care - FT - Days - Integrated Care @ MV",
-    "employer": "El Camino Health",
-    "location": "Mountain View, CA",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-06-04",
-    "fit_score": 6.4,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Clinical-Program-Manager--Integrated-Care---FT---Days---Integrated-Care---MV_R00017149",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Program Manager",
-      "Skills present: BI, Epic"
-    ],
-    "app_folder": "applications/california/el-camino-health__clinical-program-manager-integrated-care"
-  },
-  {
-    "title": "Epic Security Architect - FT - Days - IS Technical Services @ MV",
-    "employer": "El Camino Health",
-    "location": "Mountain View, CA",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-20",
-    "fit_score": 6.4,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Epic-Security-Architect---FT---Days---IS-Technical-Services---MV_R00017012",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Epic"
-    ],
-    "app_folder": "applications/california/el-camino-health__epic-security-architect-ft-days-is-techn"
-  },
-  {
-    "title": "Sr Financial Analyst - FT - Days - Financial Analysis and Planning @ MV",
-    "employer": "El Camino Health",
-    "location": "Mountain View, CA",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-18",
-    "fit_score": 6.4,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Sr-Financial-Analyst---FT---Days---Financial-Analysis-and-Planning---MV_R00017155-1",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, SQL"
-    ],
-    "app_folder": "applications/california/el-camino-health__sr-financial-analyst-ft-days-financial-a"
-  },
-  {
-    "title": "Marketing & Communications Program Manager - FT - Days - Marketing and Communication @ MV",
-    "employer": "El Camino Health",
-    "location": "Mountain View, CA",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-03-11",
-    "fit_score": 6.4,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Marketing---Communications-Program-Manager---FT---Days---Marketing-and-Communication---MV_R00016652-1",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Program Manager",
-      "Skills present: BI, Quality assurance"
-    ],
-    "app_folder": "applications/california/el-camino-health__marketing-communications-program-manager"
-  },
-  {
-    "title": "Financial Compliance Counselor",
-    "employer": "Monument Health",
-    "location": "Norwood, OH, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-06-05",
-    "fit_score": 6.4,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/309381",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Epic"
-    ],
-    "app_folder": "applications/south-dakota/monument-health__financial-compliance-counselor"
-  },
-  {
-    "title": "Supervisor of Absence and Leave Case Management",
-    "employer": "Monument Health",
-    "location": "Blue Ash, OH, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-29",
-    "fit_score": 6.4,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308255",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, HIPAA"
-    ],
-    "app_folder": "applications/south-dakota/monument-health__supervisor-of-absence-and-leave-case-man"
-  },
-  {
-    "title": "Coding and Billing Supervisor \u2013 Corporate Health",
-    "employer": "Monument Health",
-    "location": "Blue Ash, OH, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-19",
-    "fit_score": 6.4,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308476",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, HIPAA"
-    ],
-    "app_folder": "applications/south-dakota/monument-health__coding-and-billing-supervisor-corporate-"
-  },
-  {
-    "title": "Lead Applications Engineer - Epic",
-    "employer": "Monument Health",
-    "location": "Cincinnati, OH, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-04-14",
-    "fit_score": 6.4,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308565",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI, Epic"
-    ],
-    "app_folder": "applications/south-dakota/monument-health__lead-applications-engineer-epic"
-  },
-  {
     "title": "Applications Analyst-Clinical-Sr",
     "employer": "Eisenhower Health",
     "location": "Eisenhower Medical Center",
@@ -5238,25 +5026,196 @@
     "app_folder": "applications/california/sharp-healthcare__credentialing-data-analyst-shp-health-se"
   },
   {
-    "title": "Account Analyst I (Biller - Collector)",
-    "employer": "Baylor Scott & White Health",
-    "location": "Little Rock",
+    "title": "Surgical Services Program Manager Senior",
+    "employer": "Cottage Health",
+    "location": "Santa Barbara, CA, United States",
     "salary": "Salary Not Disclosed",
-    "work_mode": "Hybrid",
-    "date_posted": "2026-06-01",
-    "fit_score": 6.3,
+    "work_mode": "On-site",
+    "date_posted": "2026-04-06",
+    "fit_score": 6.4,
     "visa_flag": "",
-    "onsite_flag": "",
-    "url": "https://archildrens.wd1.myworkdayjobs.com/External_Career_Site/job/Little-Rock/Account-Analyst-I--Biller---Collector-_R0023710",
+    "onsite_flag": "On-site",
+    "url": "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/13096",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Program Manager",
+      "Skills present: BI, Quality assurance"
+    ],
+    "app_folder": "applications/california/cottage-health__surgical-services-program-manager-senior"
+  },
+  {
+    "title": "Clinical Program Manager, Integrated Care - FT - Days - Integrated Care @ MV",
+    "employer": "El Camino Health",
+    "location": "Mountain View, CA",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-06-04",
+    "fit_score": 6.4,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Clinical-Program-Manager--Integrated-Care---FT---Days---Integrated-Care---MV_R00017149",
     "source_platform": "Workday",
     "status": "New",
     "first_seen": "2026-06-15",
     "last_seen": "2026-06-15",
     "updated": false,
     "reasons": [
-      "Skills present: BI"
+      "Title matches: Program Manager",
+      "Skills present: BI, Epic"
     ],
-    "app_folder": "applications/texas/baylor-scott-white-health__account-analyst-i-biller-collector"
+    "app_folder": "applications/california/el-camino-health__clinical-program-manager-integrated-care"
+  },
+  {
+    "title": "Epic Security Architect - FT - Days - IS Technical Services @ MV",
+    "employer": "El Camino Health",
+    "location": "Mountain View, CA",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-20",
+    "fit_score": 6.4,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Epic-Security-Architect---FT---Days---IS-Technical-Services---MV_R00017012",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Epic"
+    ],
+    "app_folder": "applications/california/el-camino-health__epic-security-architect-ft-days-is-techn"
+  },
+  {
+    "title": "Sr Financial Analyst - FT - Days - Financial Analysis and Planning @ MV",
+    "employer": "El Camino Health",
+    "location": "Mountain View, CA",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-18",
+    "fit_score": 6.4,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Sr-Financial-Analyst---FT---Days---Financial-Analysis-and-Planning---MV_R00017155-1",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, SQL"
+    ],
+    "app_folder": "applications/california/el-camino-health__sr-financial-analyst-ft-days-financial-a"
+  },
+  {
+    "title": "Marketing & Communications Program Manager - FT - Days - Marketing and Communication @ MV",
+    "employer": "El Camino Health",
+    "location": "Mountain View, CA",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-03-11",
+    "fit_score": 6.4,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Marketing---Communications-Program-Manager---FT---Days---Marketing-and-Communication---MV_R00016652-1",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Program Manager",
+      "Skills present: BI, Quality assurance"
+    ],
+    "app_folder": "applications/california/el-camino-health__marketing-communications-program-manager"
+  },
+  {
+    "title": "Financial Compliance Counselor",
+    "employer": "Monument Health",
+    "location": "Norwood, OH, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-06-05",
+    "fit_score": 6.4,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/309381",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Epic"
+    ],
+    "app_folder": "applications/south-dakota/monument-health__financial-compliance-counselor"
+  },
+  {
+    "title": "Supervisor of Absence and Leave Case Management",
+    "employer": "Monument Health",
+    "location": "Blue Ash, OH, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-29",
+    "fit_score": 6.4,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308255",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, HIPAA"
+    ],
+    "app_folder": "applications/south-dakota/monument-health__supervisor-of-absence-and-leave-case-man"
+  },
+  {
+    "title": "Coding and Billing Supervisor \u2013 Corporate Health",
+    "employer": "Monument Health",
+    "location": "Blue Ash, OH, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-19",
+    "fit_score": 6.4,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308476",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, HIPAA"
+    ],
+    "app_folder": "applications/south-dakota/monument-health__coding-and-billing-supervisor-corporate-"
+  },
+  {
+    "title": "Lead Applications Engineer - Epic",
+    "employer": "Monument Health",
+    "location": "Cincinnati, OH, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-04-14",
+    "fit_score": 6.4,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308565",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Epic"
+    ],
+    "app_folder": "applications/south-dakota/monument-health__lead-applications-engineer-epic"
   },
   {
     "title": "Operations Manager, Shift Lieutenant",
@@ -5523,27 +5482,6 @@
     "app_folder": "applications/massachusetts/mass-general-brigham__mri-operations-manager"
   },
   {
-    "title": "Coding Quality Analyst - Inpatient",
-    "employer": "UW Health",
-    "location": "Middleton, WI, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-02-04",
-    "fit_score": 6.3,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://eimy.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/45174",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Quality Analyst, Coding Quality Analyst"
-    ],
-    "app_folder": "applications/wisconsin/uw-health__coding-quality-analyst-inpatient"
-  },
-  {
     "title": "Medicare Strategy and Operations Manager",
     "employer": "Molina Healthcare",
     "location": "United States",
@@ -5566,25 +5504,25 @@
     "app_folder": "applications/california/molina-healthcare__medicare-strategy-and-operations-manager"
   },
   {
-    "title": "Patient Safety Technician, Full Time, Nights 11p-7a, Atlantic Health Morristown Medical Center",
-    "employer": "University of Texas Southwestern Med\u2026",
-    "location": "Morristown, NJ, United States",
+    "title": "Coding Quality Analyst - Inpatient",
+    "employer": "UW Health",
+    "location": "Middleton, WI, United States",
     "salary": "Salary Not Disclosed",
     "work_mode": "On-site",
-    "date_posted": "2026-06-11",
-    "fit_score": 6.2,
+    "date_posted": "2026-02-04",
+    "fit_score": 6.3,
     "visa_flag": "",
     "onsite_flag": "On-site",
-    "url": "https://erqh.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/29920",
+    "url": "https://eimy.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/45174",
     "source_platform": "OracleORC",
     "status": "New",
     "first_seen": "2026-06-15",
     "last_seen": "2026-06-15",
     "updated": false,
     "reasons": [
-      "Skills present: BI"
+      "Title matches: Quality Analyst, Coding Quality Analyst"
     ],
-    "app_folder": "applications/texas/university-of-texas-southweste__patient-safety-technician-full-time-nigh"
+    "app_folder": "applications/wisconsin/uw-health__coding-quality-analyst-inpatient"
   },
   {
     "title": "OR Administration Analyst - 40hr",
@@ -6168,6 +6106,283 @@
     "app_folder": "applications/new-york/montefiore-medical-center__senior-product-manager-data-analytics"
   },
   {
+    "title": "Network & Telecommunication Support Analyst IV (Avaya System Manager & Session Manager) - Onsite",
+    "employer": "Tufts Medicine",
+    "location": "TuftsMedicine",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-19",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://tuftsmedicine.wd1.myworkdayjobs.com/Jobs/job/TuftsMedicine/Network---Telecommunication-Support-Analyst-IV--Avaya-System-Manager---Session-Manager----Onsite_R24165",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/massachussets/tufts-medicine__network-telecommunication-support-analys"
+  },
+  {
+    "title": "Senior Analyst, Claims Research",
+    "employer": "Molina Healthcare",
+    "location": "FL, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-06-09",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037688",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/molina-healthcare__senior-analyst-claims-research"
+  },
+  {
+    "title": "Program Manager (Member Interventions)",
+    "employer": "Molina Healthcare",
+    "location": "United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-06-08",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037767",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Program Manager",
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/molina-healthcare__program-manager-member-interventions"
+  },
+  {
+    "title": "Analyst, Claims Research",
+    "employer": "Molina Healthcare",
+    "location": "FL, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-28",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037689",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/molina-healthcare__analyst-claims-research"
+  },
+  {
+    "title": "Compliance Manager (supports Washington Health Plan)",
+    "employer": "Molina Healthcare",
+    "location": "Bothell, WA, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-20",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037551",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/molina-healthcare__compliance-manager-supports-washington-h"
+  },
+  {
+    "title": "Program Manager (Ohio Claims Processes)",
+    "employer": "Molina Healthcare",
+    "location": "OH, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-11",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037342",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Program Manager",
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/molina-healthcare__program-manager-ohio-claims-processes"
+  },
+  {
+    "title": "Analyst, Provider Configuration",
+    "employer": "Molina Healthcare",
+    "location": "United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-08",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037044",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/molina-healthcare__analyst-provider-configuration"
+  },
+  {
+    "title": "Case Management Processor",
+    "employer": "Molina Healthcare",
+    "location": "FL, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-07",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037228",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/molina-healthcare__case-management-processor"
+  },
+  {
+    "title": "Sr Analyst, Healthcare, Health Plan Operations (Supports Florida Government Contracts)",
+    "employer": "Molina Healthcare",
+    "location": "FL, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-06",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037297",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/molina-healthcare__sr-analyst-healthcare-health-plan-operat"
+  },
+  {
+    "title": "Provider Quality Improvement Specialist",
+    "employer": "Molina Healthcare",
+    "location": "NV, United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-05",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2036944",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Quality Improvement Specialist",
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/molina-healthcare__provider-quality-improvement-specialist"
+  },
+  {
+    "title": "Senior Program Manager (Salesforce Experience Required, Salesforce Certification Preferred)",
+    "employer": "Molina Healthcare",
+    "location": "United States",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-04-28",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037133",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Title matches: Program Manager",
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/molina-healthcare__senior-program-manager-salesforce-experi"
+  },
+  {
+    "title": "Program Support Coordinator - SCMG Practice Transformation & Performance Improvement - Day Shift - Full Time",
+    "employer": "Sharp HealthCare",
+    "location": "Virtual",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-06-04",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://sharp.wd1.myworkdayjobs.com/External/job/Virtual/Program-Support-Coordinator---SCMG-Practice-Transformation---Performance-Improvement---Day-Shift---Full-Time_JR206897",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/sharp-healthcare__program-support-coordinator-scmg-practic"
+  },
+  {
+    "title": "Sr Financial Analyst - SCMG Finance - Sharp Corporate - Day Shift - Full Time",
+    "employer": "Sharp HealthCare",
+    "location": "San Diego, CA",
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-05-22",
+    "fit_score": 6.0,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://sharp.wd1.myworkdayjobs.com/External/job/San-Diego-CA/Sr-Financial-Analyst---SCMG-Finance---Sharp-Corporate---Day-Shift---Full-Time_JR205570",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-15",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/california/sharp-healthcare__sr-financial-analyst-scmg-finance-sharp-"
+  },
+  {
     "title": "Senior Analyst - PD - Days - Financial Analysis and Planning @ MV",
     "employer": "El Camino Health",
     "location": "Mountain View, CA",
@@ -6461,282 +6676,5 @@
       "Skills present: BI"
     ],
     "app_folder": "applications/south-dakota/monument-health__coding-educator"
-  },
-  {
-    "title": "Network & Telecommunication Support Analyst IV (Avaya System Manager & Session Manager) - Onsite",
-    "employer": "Tufts Medicine",
-    "location": "TuftsMedicine",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-19",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://tuftsmedicine.wd1.myworkdayjobs.com/Jobs/job/TuftsMedicine/Network---Telecommunication-Support-Analyst-IV--Avaya-System-Manager---Session-Manager----Onsite_R24165",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/massachusetts/tufts-medicine__network-telecommunication-support-analys"
-  },
-  {
-    "title": "Senior Analyst, Claims Research",
-    "employer": "Molina Healthcare",
-    "location": "FL, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-06-09",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037688",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/molina-healthcare__senior-analyst-claims-research"
-  },
-  {
-    "title": "Program Manager (Member Interventions)",
-    "employer": "Molina Healthcare",
-    "location": "United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-06-08",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037767",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Program Manager",
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/molina-healthcare__program-manager-member-interventions"
-  },
-  {
-    "title": "Analyst, Claims Research",
-    "employer": "Molina Healthcare",
-    "location": "FL, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-28",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037689",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/molina-healthcare__analyst-claims-research"
-  },
-  {
-    "title": "Compliance Manager (supports Washington Health Plan)",
-    "employer": "Molina Healthcare",
-    "location": "Bothell, WA, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-20",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037551",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/molina-healthcare__compliance-manager-supports-washington-h"
-  },
-  {
-    "title": "Program Manager (Ohio Claims Processes)",
-    "employer": "Molina Healthcare",
-    "location": "OH, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-11",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037342",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Program Manager",
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/molina-healthcare__program-manager-ohio-claims-processes"
-  },
-  {
-    "title": "Analyst, Provider Configuration",
-    "employer": "Molina Healthcare",
-    "location": "United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-08",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037044",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/molina-healthcare__analyst-provider-configuration"
-  },
-  {
-    "title": "Case Management Processor",
-    "employer": "Molina Healthcare",
-    "location": "FL, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-07",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037228",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/molina-healthcare__case-management-processor"
-  },
-  {
-    "title": "Sr Analyst, Healthcare, Health Plan Operations (Supports Florida Government Contracts)",
-    "employer": "Molina Healthcare",
-    "location": "FL, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-06",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037297",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/molina-healthcare__sr-analyst-healthcare-health-plan-operat"
-  },
-  {
-    "title": "Provider Quality Improvement Specialist",
-    "employer": "Molina Healthcare",
-    "location": "NV, United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-05",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2036944",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Quality Improvement Specialist",
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/molina-healthcare__provider-quality-improvement-specialist"
-  },
-  {
-    "title": "Senior Program Manager (Salesforce Experience Required, Salesforce Certification Preferred)",
-    "employer": "Molina Healthcare",
-    "location": "United States",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-04-28",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037133",
-    "source_platform": "OracleORC",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Title matches: Program Manager",
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/molina-healthcare__senior-program-manager-salesforce-experi"
-  },
-  {
-    "title": "Program Support Coordinator - SCMG Practice Transformation & Performance Improvement - Day Shift - Full Time",
-    "employer": "Sharp HealthCare",
-    "location": "Virtual",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-06-04",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://sharp.wd1.myworkdayjobs.com/External/job/Virtual/Program-Support-Coordinator---SCMG-Practice-Transformation---Performance-Improvement---Day-Shift---Full-Time_JR206897",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/sharp-healthcare__program-support-coordinator-scmg-practic"
-  },
-  {
-    "title": "Sr Financial Analyst - SCMG Finance - Sharp Corporate - Day Shift - Full Time",
-    "employer": "Sharp HealthCare",
-    "location": "San Diego, CA",
-    "salary": "Salary Not Disclosed",
-    "work_mode": "On-site",
-    "date_posted": "2026-05-22",
-    "fit_score": 6.0,
-    "visa_flag": "",
-    "onsite_flag": "On-site",
-    "url": "https://sharp.wd1.myworkdayjobs.com/External/job/San-Diego-CA/Sr-Financial-Analyst---SCMG-Finance---Sharp-Corporate---Day-Shift---Full-Time_JR205570",
-    "source_platform": "Workday",
-    "status": "New",
-    "first_seen": "2026-06-15",
-    "last_seen": "2026-06-15",
-    "updated": false,
-    "reasons": [
-      "Skills present: BI"
-    ],
-    "app_folder": "applications/california/sharp-healthcare__sr-financial-analyst-scmg-finance-sharp-"
   }
 ]

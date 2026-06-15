@@ -29,12 +29,6 @@
     "status": "New",
     "last_seen": "2026-06-15"
   },
-  "https://ummh.wd1.myworkdayjobs.com/Careers/job/Worcester-MA/Applications-Systems-Analyst--Orders-Research-ClinDoc_R26104156": {
-    "fingerprint": "fb7487859e9b",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
   "https://ummh.wd1.myworkdayjobs.com/Careers/job/Worcester-MA/Sr-Workday-Applications-Analyst_R26104447": {
     "fingerprint": "bde5db2b3f6e",
     "first_seen": "2026-06-15",
@@ -59,26 +53,8 @@
     "status": "New",
     "last_seen": "2026-06-15"
   },
-  "https://archildrens.wd1.myworkdayjobs.com/External_Career_Site/job/Little-Rock/Account-Analyst-I--Biller---Collector-_R0023710": {
-    "fingerprint": "9d72fd456705",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://archildrens.wd1.myworkdayjobs.com/External_Career_Site/job/Little-Rock/Systems-Analytics-Analyst-II_R0023574": {
-    "fingerprint": "ddd318667c3f",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
   "https://archildrens.wd1.myworkdayjobs.com/External_Career_Site/job/Little-Rock/Director-Internal-Audit_R0023464": {
     "fingerprint": "88b1ab222934",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://erqh.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/29920": {
-    "fingerprint": "ddfbc28d0b9d",
     "first_seen": "2026-06-15",
     "status": "New",
     "last_seen": "2026-06-15"
@@ -127,6 +103,12 @@
   },
   "https://massgeneralbrigham.wd1.myworkdayjobs.com/MGBExternal/job/Boston-MA/Project-Manager-Lead_RQ4065291": {
     "fingerprint": "ff4c45cbccaa",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://massgeneralbrigham.wd1.myworkdayjobs.com/MGBExternal/job/Boston-MA/Clinical-Research-Program-Manager_RQ4068637": {
+    "fingerprint": "5576584cd95e",
     "first_seen": "2026-06-15",
     "status": "New",
     "last_seen": "2026-06-15"
@@ -941,438 +923,6 @@
     "status": "New",
     "last_seen": "2026-06-15"
   },
-  "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/13912": {
-    "fingerprint": "c1a295b7ef23",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/13714": {
-    "fingerprint": "c92898a3ae53",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/12018": {
-    "fingerprint": "bcf1107dc4dd",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/13096": {
-    "fingerprint": "9fba9770d308",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Senior-Analyst---PD---Days---Financial-Analysis-and-Planning---MV_R00017310": {
-    "fingerprint": "e38541c6ed75",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Clinical-Program-Manager--Integrated-Care---FT---Days---Integrated-Care---MV_R00017149": {
-    "fingerprint": "3dc8f11c2688",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Epic-Security-Architect---FT---Days---IS-Technical-Services---MV_R00017012": {
-    "fingerprint": "9d82344c1ad4",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Sr-Financial-Analyst---FT---Days---Financial-Analysis-and-Planning---MV_R00017155-1": {
-    "fingerprint": "ce3e60cfe8e0",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/HIM-Specialist-I---PD---Days---HIMS---Medical-Records---MV_R00017069": {
-    "fingerprint": "4ce5f30334e1",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Systems-Analyst-II-Cadence--Community-Connect----FT---Days---Epic-Community-Connect_R00015738": {
-    "fingerprint": "3624f3977940",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Senior-Compensation-Analyst---FT---Days---Human-Resources---MV_R00017004": {
-    "fingerprint": "ae89b3fa581e",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Marketing---Communications-Program-Manager---FT---Days---Marketing-and-Communication---MV_R00016652-1": {
-    "fingerprint": "807898006f3c",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Manager--HIM-Professional-Billing-Coding---FT---Days---HIMS---Medical-Records---MV_R00016148": {
-    "fingerprint": "2f539e8b9095",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://nshs.wd1.myworkdayjobs.com/ns-eeh/job/SRO-Corporate-Center-Warrenville-4201-Winfield-Road/Assistant-Vice-President--Audit_R43168": {
-    "fingerprint": "7858c52e1e4f",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://nshs.wd1.myworkdayjobs.com/ns-eeh/job/SRO-Corporate-Center-Warrenville-4201-Winfield-Road/Senior-Financial-Analyst-1_R42832": {
-    "fingerprint": "be8984442f4a",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://eimy.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/45174": {
-    "fingerprint": "eb1672e05ff3",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://eimy.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/42239": {
-    "fingerprint": "383ca1aa24e3",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-euzb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6439": {
-    "fingerprint": "ac6fd4475186",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-euzb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/3515": {
-    "fingerprint": "f545b3c8ca01",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Shore-Memorial-Hospital---Onancock-Virginia/Mammographer-Quality-Control-Stereo_2026-035378": {
-    "fingerprint": "cca4835137a3",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Denbigh-Professional-Park---Newport-News-Virginia/Regional-Financial-Analyst_2026-034824": {
-    "fingerprint": "9d1743ee7921",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Denbigh-Professional-Park---Newport-News-Virginia/HIMS-Coding-Auditor_2026-034361": {
-    "fingerprint": "72195525f591",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Diagnostic-and-Breast-Imaging-Center---Oyster-Point---Newport-News-Virginia/Mammographer-Quality-Control-Stereo_2026-034333-1": {
-    "fingerprint": "d12536cadd47",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Denbigh-Professional-Park---Newport-News-Virginia/Consultant---Lifelong-Health-Revenue-Cycle-and-Finance_2026-033475": {
-    "fingerprint": "129de44b820c",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Denbigh-Professional-Park---Newport-News-Virginia/Accounting-Systems-Analyst_2025-025992": {
-    "fingerprint": "8969b95b5d53",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://sfmc.wd1.myworkdayjobs.com/SFHS/job/Cape-Girardeau-MO/Manager---Care-Coordination_2026-109391": {
-    "fingerprint": "aa947851e7e2",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://sfmc.wd1.myworkdayjobs.com/SFHS/job/Cape-Girardeau-MO/Performance-Improvement-Specialist_2026-109559": {
-    "fingerprint": "a8fa70f26086",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Credential-Trainer_SVH-103155-1": {
-    "fingerprint": "4c4f6a1bb197",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-103153": {
-    "fingerprint": "209f51f73140",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Access-Analyst_SVH-102869": {
-    "fingerprint": "a94c06548cf3",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Director-of-Quality-and-Safety_SVH-103134": {
-    "fingerprint": "b853dcc8e508",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-103064": {
-    "fingerprint": "d99b471a3a76",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/IT-Project-Manager_SVH-103061": {
-    "fingerprint": "f97ea7dc6396",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Training-Manager_SVH-102837": {
-    "fingerprint": "9451bdd20825",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/EPIC-Application-Analyst_SVH-103055": {
-    "fingerprint": "2e712d51b6c8",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Ancillary-Application-Manager_SVH-102514": {
-    "fingerprint": "62b63a52cdbd",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-102631-1": {
-    "fingerprint": "cf45dc910bd0",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Coding-Manager_JR5424-1": {
-    "fingerprint": "f50187b070ea",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Division-Order-Analyst_JR5783": {
-    "fingerprint": "af5b3331ffaa",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Healthcare-Data-Analyst_JR5801": {
-    "fingerprint": "edaf68f34589",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Sr-Investment-Analyst_JR5772": {
-    "fingerprint": "4dd4d14b5a37",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Director-of-Coding-and-HIM_JR5757": {
-    "fingerprint": "b1686f5fa9b6",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Revenue-Integrity-Manager_JR5709": {
-    "fingerprint": "49adc491129e",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Clinical-Support-Analyst---House-Support---Full-Time_JR12423": {
-    "fingerprint": "f85f7ce4e0e5",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Director--Enterprise-Epic-Applications--Clinical---SolutionHealth---Full-Time_JR12398": {
-    "fingerprint": "31cc007957e6",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Manchester-NH/RN-Case-Manager-NE--Care-Coordination--Per-Diem_JR12302": {
-    "fingerprint": "b1f4fabc5f46",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Patient-Access-Auditor-Trainer---Patient-Registration---Full-Time_JR11662-1": {
-    "fingerprint": "f5f39c904d89",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Certified-Medical-Coding-Specialist---Professional-Based---PB---Full-Time_JR12185": {
-    "fingerprint": "261702745f19",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Solution-Health---Epic-Applications-Analyst--1-4---HOSPITAL-BILLING---Rev-Cycle-Application-and-Epic-Operations---Full-Time_JR9393": {
-    "fingerprint": "0268218e7baa",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Data-Analyst-III---IT-Reporting---Full-Time_JR11587": {
-    "fingerprint": "7defc7add7fe",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Revenue-Cycle-Optimization-Manager---Hybrid--w--office-hours-in-Nashua--NH-_JR12213": {
-    "fingerprint": "7003968579de",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Medical-Coding-Manager---HB---PB---Full-Time---Hybrid---Nashua--NH_JR12186": {
-    "fingerprint": "3c2287d226e2",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Epic-Applications-Analyst--1-4---Digital-Patient-Experience--MyChart--Cheers--Welcome---IT-Services---Full-Time_JR11865-1": {
-    "fingerprint": "b5c9adf73f01",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/EPIC-Applications-Analyst--1-4---Professional-Billing-Admin-and-Professional-Billing-Claims----IT-Services---Full-Time_JR11860": {
-    "fingerprint": "022f1f8faf26",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/EPIC-Applications-Analyst--1-4---Hospital-Billing-Admin-and-Hospital-Billing-Claims---IT-Services---Full-Time_JR11859": {
-    "fingerprint": "2f5164845929",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/EPIC-Applications-Analyst--1-4---Hospital-Billing-Admin-and-Hospital-Billing-Claims---IT-Services---Full-Time_JR11856": {
-    "fingerprint": "2f5164845929",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Manager--Revenue-Cycle-Applications-Transformation---IT-Services---Full-Time_JR11875": {
-    "fingerprint": "b2ed58d1049a",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Epic-Applications-Analyst--1-4---HOSPITAL-BILLING---Rev-Cycle-Application-and-Epic-Operations---Full-Time_JR11779": {
-    "fingerprint": "b8caa79688af",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Solutionthealth---Epic-Applications-Analyst-1-4--EpicCare-Ambulatory----Full-Time_JR11370": {
-    "fingerprint": "814daedaed62",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://stcharles.wd1.myworkdayjobs.com/External/job/Bend-OR/Patient-Safety-Assistant-Float_R1022441": {
-    "fingerprint": "672f8fb9bfc0",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://stcharles.wd1.myworkdayjobs.com/External/job/Bend-OR/HIM-Specialist-1_R1021570": {
-    "fingerprint": "8b9471cf9b0c",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-ewfb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Careers/job/6027": {
-    "fingerprint": "0ef84a6897e8",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-ewfb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Careers/job/5658": {
-    "fingerprint": "fab493ad5af5",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-ewfb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Careers/job/5046": {
-    "fingerprint": "578c7d92df3e",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-ewfb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Careers/job/5845": {
-    "fingerprint": "1d1f33c35c8d",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308632": {
-    "fingerprint": "312fad9ef61f",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/309381": {
-    "fingerprint": "daa4c96dd2fd",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/309541": {
-    "fingerprint": "31be4133474a",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/309780": {
-    "fingerprint": "9c70eb6f39dd",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308255": {
-    "fingerprint": "496e6d69e011",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308476": {
-    "fingerprint": "72fbfa5637f2",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
-  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308565": {
-    "fingerprint": "90de79758104",
-    "first_seen": "2026-06-15",
-    "status": "New",
-    "last_seen": "2026-06-15"
-  },
   "https://tuftsmedicine.wd1.myworkdayjobs.com/Jobs/job/TuftsMedicine/Health---Welfare-Benefits-Analyst-Tufts-Medicine_R24742": {
     "fingerprint": "4047e4b6a95a",
     "first_seen": "2026-06-15",
@@ -1897,6 +1447,438 @@
   },
   "https://sharp.wd1.myworkdayjobs.com/External/job/San-Diego-CA/Compliance-Auditor---SRS_JR201690": {
     "fingerprint": "b9eef42b9e1f",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/13912": {
+    "fingerprint": "c1a295b7ef23",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/13714": {
+    "fingerprint": "c92898a3ae53",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/12018": {
+    "fingerprint": "bcf1107dc4dd",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://eglz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/13096": {
+    "fingerprint": "9fba9770d308",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Senior-Analyst---PD---Days---Financial-Analysis-and-Planning---MV_R00017310": {
+    "fingerprint": "e38541c6ed75",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Clinical-Program-Manager--Integrated-Care---FT---Days---Integrated-Care---MV_R00017149": {
+    "fingerprint": "3dc8f11c2688",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Epic-Security-Architect---FT---Days---IS-Technical-Services---MV_R00017012": {
+    "fingerprint": "9d82344c1ad4",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Sr-Financial-Analyst---FT---Days---Financial-Analysis-and-Planning---MV_R00017155-1": {
+    "fingerprint": "ce3e60cfe8e0",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/HIM-Specialist-I---PD---Days---HIMS---Medical-Records---MV_R00017069": {
+    "fingerprint": "4ce5f30334e1",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Systems-Analyst-II-Cadence--Community-Connect----FT---Days---Epic-Community-Connect_R00015738": {
+    "fingerprint": "3624f3977940",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Senior-Compensation-Analyst---FT---Days---Human-Resources---MV_R00017004": {
+    "fingerprint": "ae89b3fa581e",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Marketing---Communications-Program-Manager---FT---Days---Marketing-and-Communication---MV_R00016652-1": {
+    "fingerprint": "807898006f3c",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://ech.wd5.myworkdayjobs.com/ech/job/Mountain-View-CA/Manager--HIM-Professional-Billing-Coding---FT---Days---HIMS---Medical-Records---MV_R00016148": {
+    "fingerprint": "2f539e8b9095",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://nshs.wd1.myworkdayjobs.com/ns-eeh/job/SRO-Corporate-Center-Warrenville-4201-Winfield-Road/Assistant-Vice-President--Audit_R43168": {
+    "fingerprint": "7858c52e1e4f",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://nshs.wd1.myworkdayjobs.com/ns-eeh/job/SRO-Corporate-Center-Warrenville-4201-Winfield-Road/Senior-Financial-Analyst-1_R42832": {
+    "fingerprint": "be8984442f4a",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://eimy.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/45174": {
+    "fingerprint": "eb1672e05ff3",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://eimy.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/42239": {
+    "fingerprint": "383ca1aa24e3",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-euzb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/6439": {
+    "fingerprint": "ac6fd4475186",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-euzb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/3515": {
+    "fingerprint": "f545b3c8ca01",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Shore-Memorial-Hospital---Onancock-Virginia/Mammographer-Quality-Control-Stereo_2026-035378": {
+    "fingerprint": "cca4835137a3",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Denbigh-Professional-Park---Newport-News-Virginia/Regional-Financial-Analyst_2026-034824": {
+    "fingerprint": "9d1743ee7921",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Denbigh-Professional-Park---Newport-News-Virginia/HIMS-Coding-Auditor_2026-034361": {
+    "fingerprint": "72195525f591",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Diagnostic-and-Breast-Imaging-Center---Oyster-Point---Newport-News-Virginia/Mammographer-Quality-Control-Stereo_2026-034333-1": {
+    "fingerprint": "d12536cadd47",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Denbigh-Professional-Park---Newport-News-Virginia/Consultant---Lifelong-Health-Revenue-Cycle-and-Finance_2026-033475": {
+    "fingerprint": "129de44b820c",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://rivhs.wd1.myworkdayjobs.com/Non-ProviderRHS/job/Riverside-Denbigh-Professional-Park---Newport-News-Virginia/Accounting-Systems-Analyst_2025-025992": {
+    "fingerprint": "8969b95b5d53",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://sfmc.wd1.myworkdayjobs.com/SFHS/job/Cape-Girardeau-MO/Manager---Care-Coordination_2026-109391": {
+    "fingerprint": "aa947851e7e2",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://sfmc.wd1.myworkdayjobs.com/SFHS/job/Cape-Girardeau-MO/Performance-Improvement-Specialist_2026-109559": {
+    "fingerprint": "a8fa70f26086",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Credential-Trainer_SVH-103155-1": {
+    "fingerprint": "4c4f6a1bb197",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-103153": {
+    "fingerprint": "209f51f73140",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Access-Analyst_SVH-102869": {
+    "fingerprint": "a94c06548cf3",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Director-of-Quality-and-Safety_SVH-103134": {
+    "fingerprint": "b853dcc8e508",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-103064": {
+    "fingerprint": "d99b471a3a76",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/IT-Project-Manager_SVH-103061": {
+    "fingerprint": "f97ea7dc6396",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Training-Manager_SVH-102837": {
+    "fingerprint": "9451bdd20825",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/EPIC-Application-Analyst_SVH-103055": {
+    "fingerprint": "2e712d51b6c8",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Ancillary-Application-Manager_SVH-102514": {
+    "fingerprint": "62b63a52cdbd",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://salinasvalleyhealth.wd5.myworkdayjobs.com/SalinasValleyHealth/job/Salinas-CA/Epic-Principal-Trainer_SVH-102631-1": {
+    "fingerprint": "cf45dc910bd0",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Coding-Manager_JR5424-1": {
+    "fingerprint": "f50187b070ea",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Division-Order-Analyst_JR5783": {
+    "fingerprint": "af5b3331ffaa",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Healthcare-Data-Analyst_JR5801": {
+    "fingerprint": "edaf68f34589",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Sr-Investment-Analyst_JR5772": {
+    "fingerprint": "4dd4d14b5a37",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Director-of-Coding-and-HIM_JR5757": {
+    "fingerprint": "b1686f5fa9b6",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://src.wd1.myworkdayjobs.com/scottishriteforchildren/job/Dallas-TX/Revenue-Integrity-Manager_JR5709": {
+    "fingerprint": "49adc491129e",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Clinical-Support-Analyst---House-Support---Full-Time_JR12423": {
+    "fingerprint": "f85f7ce4e0e5",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Director--Enterprise-Epic-Applications--Clinical---SolutionHealth---Full-Time_JR12398": {
+    "fingerprint": "31cc007957e6",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Manchester-NH/RN-Case-Manager-NE--Care-Coordination--Per-Diem_JR12302": {
+    "fingerprint": "b1f4fabc5f46",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Patient-Access-Auditor-Trainer---Patient-Registration---Full-Time_JR11662-1": {
+    "fingerprint": "f5f39c904d89",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Certified-Medical-Coding-Specialist---Professional-Based---PB---Full-Time_JR12185": {
+    "fingerprint": "261702745f19",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Solution-Health---Epic-Applications-Analyst--1-4---HOSPITAL-BILLING---Rev-Cycle-Application-and-Epic-Operations---Full-Time_JR9393": {
+    "fingerprint": "0268218e7baa",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Data-Analyst-III---IT-Reporting---Full-Time_JR11587": {
+    "fingerprint": "7defc7add7fe",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Revenue-Cycle-Optimization-Manager---Hybrid--w--office-hours-in-Nashua--NH-_JR12213": {
+    "fingerprint": "7003968579de",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Nashua-NH/Medical-Coding-Manager---HB---PB---Full-Time---Hybrid---Nashua--NH_JR12186": {
+    "fingerprint": "3c2287d226e2",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Epic-Applications-Analyst--1-4---Digital-Patient-Experience--MyChart--Cheers--Welcome---IT-Services---Full-Time_JR11865-1": {
+    "fingerprint": "b5c9adf73f01",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/EPIC-Applications-Analyst--1-4---Professional-Billing-Admin-and-Professional-Billing-Claims----IT-Services---Full-Time_JR11860": {
+    "fingerprint": "022f1f8faf26",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/EPIC-Applications-Analyst--1-4---Hospital-Billing-Admin-and-Hospital-Billing-Claims---IT-Services---Full-Time_JR11859": {
+    "fingerprint": "2f5164845929",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/EPIC-Applications-Analyst--1-4---Hospital-Billing-Admin-and-Hospital-Billing-Claims---IT-Services---Full-Time_JR11856": {
+    "fingerprint": "2f5164845929",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Manager--Revenue-Cycle-Applications-Transformation---IT-Services---Full-Time_JR11875": {
+    "fingerprint": "b2ed58d1049a",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Epic-Applications-Analyst--1-4---HOSPITAL-BILLING---Rev-Cycle-Application-and-Epic-Operations---Full-Time_JR11779": {
+    "fingerprint": "b8caa79688af",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Solutionthealth---Epic-Applications-Analyst-1-4--EpicCare-Ambulatory----Full-Time_JR11370": {
+    "fingerprint": "814daedaed62",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://stcharles.wd1.myworkdayjobs.com/External/job/Bend-OR/Patient-Safety-Assistant-Float_R1022441": {
+    "fingerprint": "672f8fb9bfc0",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://stcharles.wd1.myworkdayjobs.com/External/job/Bend-OR/HIM-Specialist-1_R1021570": {
+    "fingerprint": "8b9471cf9b0c",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-ewfb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Careers/job/6027": {
+    "fingerprint": "0ef84a6897e8",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-ewfb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Careers/job/5658": {
+    "fingerprint": "fab493ad5af5",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-ewfb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Careers/job/5046": {
+    "fingerprint": "578c7d92df3e",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-ewfb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Careers/job/5845": {
+    "fingerprint": "1d1f33c35c8d",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308632": {
+    "fingerprint": "312fad9ef61f",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/309381": {
+    "fingerprint": "daa4c96dd2fd",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/309541": {
+    "fingerprint": "31be4133474a",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/309780": {
+    "fingerprint": "9c70eb6f39dd",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308255": {
+    "fingerprint": "496e6d69e011",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308476": {
+    "fingerprint": "72fbfa5637f2",
+    "first_seen": "2026-06-15",
+    "status": "New",
+    "last_seen": "2026-06-15"
+  },
+  "https://fa-evly-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/308565": {
+    "fingerprint": "90de79758104",
     "first_seen": "2026-06-15",
     "status": "New",
     "last_seen": "2026-06-15"
