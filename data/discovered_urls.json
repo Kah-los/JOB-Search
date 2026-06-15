@@ -34,5 +34,13 @@
   "194": {"name": "Pacific Dental Services", "url": "https://jobs.pacificdentalservices.com/jobs", "ats": null},
   "221": {"name": "Montage Health", "url": "https://jobs.montagehealth.org/jobs", "ats": null},
   "197": {"name": "SAC Health System", "url": "https://www.sachealth.org/careers", "ats": null},
-  "87": {"name": "CommUnityCare Health Centers", "url": "https://www.centralhealth.net/about-central-health/careers/", "ats": null}
+  "87": {"name": "CommUnityCare Health Centers", "url": "https://www.centralhealth.net/about-central-health/careers/", "ats": null},
+  "227": {"name": "Sutter Health", "url": "https://jobs.sutterhealth.org/us/en", "ats": "Phenom"},
+  "229": {"name": "UC San Diego Health", "url": "https://employment.ucsd.edu/uc-san-diego-health", "ats": null},
+  "230": {"name": "Advent Health", "url": "https://jobs.adventhealth.com/", "ats": "Phenom"},
+  "231": {"name": "Baptist Health (FL)", "url": "https://careers.baptisthealth.net/us/en/", "ats": "Phenom"},
+  "240": {"name": "Orlando Health", "url": "https://careers.orlandohealth.com/jobs", "ats": "Phenom"},
+  "222": {"name": "Mount Sinai Health System", "url": "https://careers.mountsinai.org/home", "ats": "Phenom"},
+  "232": {"name": "Broward Health", "url": "https://careers.browardhealth.org/us/en", "ats": null},
+  "217": {"name": "Invitae", "url": "https://www.invitae.com/us/careers/search", "ats": null}
 }

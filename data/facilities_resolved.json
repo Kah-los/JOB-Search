@@ -3466,10 +3466,10 @@
     "url_source": null,
     "ats": null,
     "needs_discovery": true,
-    "resolved_url": null,
+    "resolved_url": "https://www.invitae.com/us/careers/search",
     "resolved_status": null,
-    "resolve_method": "failed",
-    "still_blank": true
+    "resolve_method": "web-discovered",
+    "still_blank": false
   },
   {
     "id": 218,
@@ -3544,12 +3544,12 @@
     "hyperlink": null,
     "career_url": null,
     "url_source": null,
-    "ats": null,
+    "ats": "Phenom",
     "needs_discovery": true,
-    "resolved_url": null,
+    "resolved_url": "https://careers.mountsinai.org/home",
     "resolved_status": null,
-    "resolve_method": "failed",
-    "still_blank": true
+    "resolve_method": "web-discovered",
+    "still_blank": false
   },
   {
     "id": 223,
@@ -3624,12 +3624,12 @@
     "hyperlink": null,
     "career_url": null,
     "url_source": null,
-    "ats": null,
+    "ats": "Phenom",
     "needs_discovery": true,
-    "resolved_url": null,
+    "resolved_url": "https://jobs.sutterhealth.org/us/en",
     "resolved_status": null,
-    "resolve_method": "failed",
-    "still_blank": true
+    "resolve_method": "web-discovered",
+    "still_blank": false
   },
   {
     "id": 228,
@@ -3658,10 +3658,10 @@
     "url_source": null,
     "ats": null,
     "needs_discovery": true,
-    "resolved_url": null,
+    "resolved_url": "https://employment.ucsd.edu/uc-san-diego-health",
     "resolved_status": null,
-    "resolve_method": "failed",
-    "still_blank": true
+    "resolve_method": "web-discovered",
+    "still_blank": false
   },
   {
     "id": 230,
@@ -3672,12 +3672,12 @@
     "hyperlink": null,
     "career_url": null,
     "url_source": null,
-    "ats": null,
+    "ats": "Phenom",
     "needs_discovery": true,
-    "resolved_url": null,
+    "resolved_url": "https://jobs.adventhealth.com/",
     "resolved_status": null,
-    "resolve_method": "failed",
-    "still_blank": true
+    "resolve_method": "web-discovered",
+    "still_blank": false
   },
   {
     "id": 231,
@@ -3688,12 +3688,12 @@
     "hyperlink": null,
     "career_url": null,
     "url_source": null,
-    "ats": null,
+    "ats": "Phenom",
     "needs_discovery": true,
-    "resolved_url": null,
+    "resolved_url": "https://careers.baptisthealth.net/us/en/",
     "resolved_status": null,
-    "resolve_method": "failed",
-    "still_blank": true
+    "resolve_method": "web-discovered",
+    "still_blank": false
   },
   {
     "id": 232,
@@ -3706,10 +3706,10 @@
     "url_source": null,
     "ats": null,
     "needs_discovery": true,
-    "resolved_url": null,
+    "resolved_url": "https://careers.browardhealth.org/us/en",
     "resolved_status": null,
-    "resolve_method": "failed",
-    "still_blank": true
+    "resolve_method": "web-discovered",
+    "still_blank": false
   },
   {
     "id": 233,
@@ -3832,12 +3832,12 @@
     "hyperlink": null,
     "career_url": null,
     "url_source": null,
-    "ats": null,
+    "ats": "Phenom",
     "needs_discovery": true,
-    "resolved_url": null,
+    "resolved_url": "https://careers.orlandohealth.com/jobs",
     "resolved_status": null,
-    "resolve_method": "failed",
-    "still_blank": true
+    "resolve_method": "web-discovered",
+    "still_blank": false
   },
   {
     "id": 241,

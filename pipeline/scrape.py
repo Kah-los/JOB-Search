@@ -287,6 +287,52 @@ def scrape_ultipro(url, employer, queries=None, cap=2000):
     return jobs
 
 
+# ---------------- Phenom (CareerSite /api/jobs JSON) ----------------
+def scrape_phenom(url, employer, queries=None, cap=3000):
+    """Phenom career sites expose /api/jobs as JSON with descriptions inline.
+    Covers the common variant (e.g. Mount Sinai, Orlando Health). Some Phenom
+    tenants instead serve /search-jobs/results HTML — those return [] here."""
+    host = urlparse(url if "://" in url else "https://" + url).netloc
+    if not host:
+        return []
+    api = f"https://{host}/api/jobs"
+    seen, jobs, page = set(), [], 1
+    while len(jobs) < cap:
+        try:
+            r = requests.get(api, headers={**HEADERS, "Accept": "application/json"},
+                             params={"page": page, "limit": 100}, timeout=TIMEOUT)
+            if r.status_code != 200 or "application/json" not in r.headers.get("content-type", ""):
+                break
+            d = r.json()
+        except Exception:
+            break
+        page_jobs = d.get("jobs", [])
+        if not page_jobs:
+            break
+        for jw in page_jobs:
+            j = jw.get("data", {}) or {}
+            slug = j.get("slug") or j.get("req_id")
+            if not slug or slug in seen:
+                continue
+            seen.add(slug)
+            loc = ", ".join(filter(None, [j.get("city"), j.get("state")])) or j.get("location_name", "")
+            sal = j.get("salary_value") or j.get("salary_min_value") or ""
+            jobs.append({
+                "employer": employer, "title": j.get("title"), "location": loc,
+                "url": f"https://{host}/jobs/{slug}",
+                "description": re.sub(r"\s+", " ", re.sub("<[^>]+>", " ", j.get("description", "") or "")).strip()[:8000],
+                "salary_text": str(sal), "remote_type": "", "employment_type": "",
+                "date_posted": j.get("posted_date", ""), "source_platform": "Phenom",
+            })
+        tc = d.get("totalCount")
+        if tc and len(seen) >= tc:
+            break
+        if len(page_jobs) < 100:
+            break
+        page += 1
+    return jobs
+
+
 # ---------------- iCIMS (best-effort) ----------------
 # NOTE: many iCIMS tenants force-redirect the job iframe to a custom JS SPA domain
 # and render listings client-side, which a requests-based scraper cannot follow.
@@ -413,7 +459,8 @@ def main():
     all_jobs, seen = [], set()
     for i, f in enumerate(targets, 1):
         url = f["resolved_url"]
-        adapter = pick_adapter(url)
+        # Phenom hosts vary (careers.X / jobs.X), so route by the facility's ats tag
+        adapter = scrape_phenom if (f.get("ats") == "Phenom") else pick_adapter(url)
         if args.only_api and adapter is scrape_generic:
             continue
         try:
