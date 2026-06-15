@@ -10,3 +10,6 @@ data/*.log
 
 # Telegram bot credentials — never commit
 pipeline/telegram_config.json
+
+# Resume PDF — keep local, never publish
+Carlos-Adabe-Resume.pdf
