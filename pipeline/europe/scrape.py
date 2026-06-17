@@ -16,6 +16,10 @@ from europe.config import DATA, JOBS_RAW, FORBIDDEN_SOURCES
 from europe.scrapers.jobtech import scrape_jobtech
 from europe.scrapers.eures import scrape_eures
 from europe.scrapers.employers import scrape_eu_employers
+from europe.scrapers.jobindex import scrape_jobindex
+from europe.scrapers.finn import scrape_finn
+from europe.scrapers.jobbsafari import scrape_jobbsafari
+from europe.scrapers.stepstone import scrape_stepstone
 
 DATA.mkdir(parents=True, exist_ok=True)
 
@@ -86,6 +90,26 @@ def main():
     emp = scrape_eu_employers()
     print(f"     +{len(emp)} jobs")
     all_jobs.extend(emp)
+
+    print("  → Jobindex.dk (Denmark)…")
+    ji = scrape_jobindex()
+    print(f"     +{len(ji)} jobs")
+    all_jobs.extend(ji)
+
+    print("  → Finn.no / Arbeidsplassen (Norway)…")
+    fn = scrape_finn()
+    print(f"     +{len(fn)} jobs")
+    all_jobs.extend(fn)
+
+    print("  → Jobbsafari (Sweden / Nordic)…")
+    js = scrape_jobbsafari()
+    print(f"     +{len(js)} jobs")
+    all_jobs.extend(js)
+
+    print("  → StepStone (Germany / Europe)…")
+    ss = scrape_stepstone()
+    print(f"     +{len(ss)} jobs")
+    all_jobs.extend(ss)
 
     filtered = [j for j in all_jobs if is_valid_source(j) and is_europe_location(j)]
     jobs = dedupe(filtered)
