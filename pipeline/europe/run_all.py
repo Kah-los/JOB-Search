@@ -122,7 +122,8 @@ def write_dashboard(matches, new_today):
     country_opts = "".join(f'<option value="{esc(c)}">{esc(c)}</option>' for c in countries)
     html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Europe Jobs — Health Informatics</title>
+<title>Europe Jobs — {len(matches)} matches · Health Informatics</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{EU_CSS}{ROW_OUT}</style></head><body>
 {site_nav_html("europe")}
