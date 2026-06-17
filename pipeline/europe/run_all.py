@@ -148,7 +148,7 @@ def write_dashboard(matches, new_today):
 <div class="wrap">
 <div class="top">
   <h1>Europe Jobs</h1>
-  <p>Health informatics &amp; healthcare IT — EU/EEA, UK, Switzerland. English-friendly roles ranked first; startups/private employers that hire internationally are boosted. Sources: Arbetsförmedlingen, EURES, Jobindex.dk, Finn.no, Jobbsafari, StepStone, FlexJobs, LinkedIn, EU employer seed list.</p>
+  <p>Health informatics &amp; healthcare IT — EU/EEA, UK, Switzerland. Ranked by fit to your CV and target titles (all employer types). Sources: Arbetsförmedlingen, EURES, Jobindex.dk, Finn.no, Jobbsafari, StepStone, FlexJobs, LinkedIn, EU employer seed list.</p>
   <div class="kpis">
     <div class="kpi"><b>{len(matches)}</b><span>Matches</span></div>
     <div class="kpi"><b>{len(new_today)}</b><span>New this run</span></div>
@@ -248,11 +248,10 @@ def main():
         if is_new or is_updated:
             new_today.append(rec)
 
-    # Sort: foreigner-friendly startups first, then English, then priority
+    # Sort: best CV/title fit first, then English-friendly, then overall priority
     tier_order = {"high": 0, "medium": 1, "low": 2}
     matches.sort(key=lambda r: (
-        tier_order.get(r.get("foreigner_tier"), 9),
-        0 if r.get("startup_match") else 1,
+        -(r.get("fit_score") or 0),
         tier_order.get(r.get("english_priority"), 9),
         -(r.get("language_score") or 0),
         -(r.get("priority") or 0),

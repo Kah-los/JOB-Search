@@ -1,11 +1,11 @@
-"""LinkedIn Jobs guest API scraper — Europe health-informatics + health-tech startups.
+"""LinkedIn Jobs guest API scraper — full Europe coverage for all target titles.
 
-Uses LinkedIn's public guest endpoints (no login required):
+Uses LinkedIn public guest endpoints (no login):
   /jobs-guest/jobs/api/seeMoreJobPostings/search
   /jobs-guest/jobs/api/jobPosting/{id}
 
-Prioritises remote/hybrid roles and private health-tech companies that hire
-international candidates. Optional LINKEDIN_COOKIE for richer results.
+Searches every EU/EEA target title across all European countries (remote,
+hybrid, and on-site). Optional LINKEDIN_COOKIE for richer results.
 """
 
 from __future__ import annotations
@@ -16,18 +16,17 @@ import re
 import time
 from html import unescape
 from pathlib import Path
-from urllib.parse import quote_plus
 
 import requests
 
-from ..config import DATA, SEARCH_QUERIES_BY_BOARD
-from ..employer_signals import match_seed_employer
+from ..config import DATA
+from ..target_titles import ALL_TARGET_TITLES, SEARCH_QUERIES
 
 BASE = "https://www.linkedin.com"
 SEARCH_URL = f"{BASE}/jobs-guest/jobs/api/seeMoreJobPostings/search"
 JOB_URL = f"{BASE}/jobs-guest/jobs/api/jobPosting"
 IMPORT_PATH = DATA / "linkedin_import.json"
-STARTUP_SEED_PATH = DATA / "healthtech_startups.json"
+CHECKPOINT_PATH = DATA / "linkedin_checkpoint.json"
 
 HEADERS = {
     "User-Agent": (
@@ -38,13 +37,10 @@ HEADERS = {
     "Accept-Language": "en-GB,en;q=0.9",
 }
 TIMEOUT = (5, 20)
-DELAY = 0.7
-MAX_PAGES = 1
+DELAY = 0.45
 PAGE_SIZE = 25
-MAX_KEYWORD_LOC_PAIRS = 24
-MAX_STARTUP_COMPANIES = 12
 
-# LinkedIn geoId values for priority EU markets
+# LinkedIn geoId per EU/EEA + UK + CH country
 EU_LOCATIONS = [
     {"location": "Sweden", "geo_id": "105117694", "country": "Sweden"},
     {"location": "United Kingdom", "geo_id": "101165590", "country": "UK"},
@@ -56,15 +52,35 @@ EU_LOCATIONS = [
     {"location": "Norway", "geo_id": "103819153", "country": "Norway"},
     {"location": "Finland", "geo_id": "100456013", "country": "Finland"},
     {"location": "Switzerland", "geo_id": "106693272", "country": "Switzerland"},
+    {"location": "Belgium", "geo_id": "100565514", "country": "Belgium"},
+    {"location": "Austria", "geo_id": "103883259", "country": "Austria"},
+    {"location": "Spain", "geo_id": "105646813", "country": "Spain"},
+    {"location": "Italy", "geo_id": "103350119", "country": "Italy"},
+    {"location": "Portugal", "geo_id": "101174742", "country": "Portugal"},
+    {"location": "Poland", "geo_id": "105072130", "country": "Poland"},
+    {"location": "Czech Republic", "geo_id": "104508036", "country": "Czech Republic"},
+    {"location": "Greece", "geo_id": "104677530", "country": "Greece"},
+    {"location": "Hungary", "geo_id": "100288700", "country": "Hungary"},
+    {"location": "Romania", "geo_id": "106670623", "country": "Romania"},
+    {"location": "Bulgaria", "geo_id": "105333783", "country": "Bulgaria"},
+    {"location": "Croatia", "geo_id": "104688944", "country": "Croatia"},
+    {"location": "Slovenia", "geo_id": "106137033", "country": "Slovenia"},
+    {"location": "Slovakia", "geo_id": "106061489", "country": "Slovakia"},
+    {"location": "Lithuania", "geo_id": "101464403", "country": "Lithuania"},
+    {"location": "Latvia", "geo_id": "104341318", "country": "Latvia"},
+    {"location": "Estonia", "geo_id": "102425227", "country": "Estonia"},
+    {"location": "Luxembourg", "geo_id": "104042105", "country": "Luxembourg"},
+    {"location": "Malta", "geo_id": "100961908", "country": "Malta"},
+    {"location": "Cyprus", "geo_id": "106774002", "country": "Cyprus"},
+    {"location": "Iceland", "geo_id": "105238872", "country": "Iceland"},
 ]
 
-CARD_RE = re.compile(
-    r'data-entity-urn="urn:li:jobPosting:(\d+)"[\s\S]*?'
-    r'base-search-card__title[^>]*>\s*([^<]+?)\s*</h3>[\s\S]*?'
-    r'base-search-card__subtitle[^>]*>[\s\S]*?>\s*([^<]+?)\s*</a>[\s\S]*?'
-    r'job-search-card__location[^>]*>\s*([^<]+?)\s*</span>',
-    re.I | re.S,
-)
+COUNTRY_ALIASES = {
+    "United Kingdom": "UK",
+    "Czech Republic": "Czech Republic",
+    "Czechia": "Czech Republic",
+}
+
 DATE_RE = re.compile(
     r'job-search-card__listdate[^>]*--new[^>]*>\s*([^<]+?)\s*</time>|'
     r'job-search-card__listdate[^>]*>\s*([^<]+?)\s*</time>',
@@ -74,7 +90,17 @@ DESC_RE = re.compile(
     r'<div[^>]+class="[^"]*description[^"]*"[^>]*>([\s\S]*?)</div>',
     re.I,
 )
-SHOW_MORE_RE = re.compile(r"Show more", re.I)
+
+
+def _linkedin_queries() -> list[str]:
+    seen, out = set(), []
+    for q in list(ALL_TARGET_TITLES) + list(SEARCH_QUERIES):
+        key = (q or "").lower().strip()
+        if not key or key in seen or len(q) > 90:
+            continue
+        seen.add(key)
+        out.append(q)
+    return out
 
 
 def _session() -> requests.Session:
@@ -104,6 +130,7 @@ def _strip_html(html: str) -> str:
 
 def _parse_cards(html: str, default_country: str = "") -> list[dict]:
     jobs, seen = [], set()
+    country_names = [loc["location"] for loc in EU_LOCATIONS] + ["UK", "Czechia"]
     for block in re.findall(r"<li>[\s\S]*?</li>", html):
         urn = re.search(r'data-entity-urn="urn:li:jobPosting:(\d+)"', block)
         if not urn:
@@ -122,18 +149,17 @@ def _parse_cards(html: str, default_country: str = "") -> list[dict]:
         title = unescape(re.sub(r"\s+", " ", title_m.group(1)).strip())
         employer = unescape(re.sub(r"\s+", " ", (company_m.group(1) if company_m else "")).strip())
         location = unescape(re.sub(r"\s+", " ", (loc_m.group(1) if loc_m else default_country)).strip())
-        date_posted = ""
-        if date_m:
-            date_posted = unescape((date_m.group(1) or date_m.group(2) or "").strip())
+        date_posted = unescape((date_m.group(1) or date_m.group(2) or "").strip()) if date_m else ""
 
         work_mode = "Remote" if re.search(r"\bremote\b", location, re.I) else (
             "Hybrid" if re.search(r"\bhybrid\b", location, re.I) else "On-site"
         )
-        country = default_country
-        for c in ("Sweden", "United Kingdom", "Germany", "Netherlands", "Ireland",
-                  "France", "Denmark", "Norway", "Finland", "Switzerland", "Poland", "Spain"):
+        country = COUNTRY_ALIASES.get(default_country, default_country)
+        for c in country_names:
             if re.search(rf"\b{re.escape(c)}\b", location, re.I):
-                country = "UK" if c == "United Kingdom" else c
+                country = COUNTRY_ALIASES.get(c, c)
+                if country == "United Kingdom":
+                    country = "UK"
                 break
 
         jobs.append({
@@ -165,22 +191,10 @@ def _fetch_description(session: requests.Session, job_id: str) -> str:
         return ""
     for m in DESC_RE.finditer(html):
         chunk = _strip_html(m.group(1))
-        if len(chunk) > 80 and not SHOW_MORE_RE.search(chunk[:40]):
+        if len(chunk) > 80:
             return chunk[:2500]
-    # Fallback: show-more block
     sm = re.search(r"show-more-less-html__markup[^>]*>([\s\S]*?)</div>", html, re.I)
-    if sm:
-        return _strip_html(sm.group(1))[:2500]
-    return ""
-
-
-def _load_startup_seed() -> list[dict]:
-    if not STARTUP_SEED_PATH.exists():
-        return []
-    try:
-        return json.loads(STARTUP_SEED_PATH.read_text())
-    except Exception:
-        return []
+    return _strip_html(sm.group(1))[:2500] if sm else ""
 
 
 def _load_import() -> list[dict]:
@@ -221,9 +235,7 @@ def _search(
     location: str,
     geo_id: str,
     country: str,
-    company_id: str = "",
-    remote_only: bool = False,
-    max_pages: int = MAX_PAGES,
+    max_pages: int = 1,
 ) -> list[dict]:
     jobs = []
     for page in range(max_pages):
@@ -232,12 +244,9 @@ def _search(
             "location": location,
             "geoId": geo_id,
             "start": page * PAGE_SIZE,
-            "f_TPR": "r2592000",  # past month
+            "f_TPR": "r2592000",
+            "f_JT": "F",
         }
-        if remote_only:
-            params["f_WT"] = "2"
-        if company_id:
-            params["f_C"] = company_id
         html = _fetch(session, SEARCH_URL, params)
         time.sleep(DELAY)
         if not html:
@@ -249,83 +258,73 @@ def _search(
     return jobs
 
 
+def _save_checkpoint(jobs: list[dict], seen: set[str], done: int) -> None:
+    CHECKPOINT_PATH.write_text(json.dumps({
+        "done": done,
+        "jobs": jobs,
+        "seen": list(seen),
+    }))
+
+
+def _load_checkpoint() -> tuple[list[dict], set[str], int]:
+    if not CHECKPOINT_PATH.exists():
+        return [], set(), 0
+    try:
+        raw = json.loads(CHECKPOINT_PATH.read_text())
+        return raw.get("jobs", []), set(raw.get("seen", [])), int(raw.get("done", 0))
+    except Exception:
+        return [], set(), 0
+
+
 def scrape_linkedin(
     *,
     fetch_descriptions: bool = True,
-    max_description_fetches: int = 40,
-    remote_first: bool = True,
+    max_description_fetches: int = 120,
+    resume: bool = True,
 ) -> list[dict]:
     session = _session()
-    queries = SEARCH_QUERIES_BY_BOARD.get("linkedin", [])
-    jobs, seen = [], set()
-    failures = 0
+    queries = _linkedin_queries()
+    jobs, seen, skip = _load_checkpoint() if resume else ([], set(), 0)
+    total_searches = len(EU_LOCATIONS) * len(queries)
+    done = 0
 
-    # 1) Remote keyword searches across EU hubs (best for foreign candidates)
-    locs = EU_LOCATIONS[:6]
-    pairs_done = 0
-    for loc in locs:
-        for q in queries[:6]:
-            if pairs_done >= MAX_KEYWORD_LOC_PAIRS:
-                break
+    if skip:
+        print(f"     (resuming LinkedIn from search {skip + 1}/{total_searches}, {len(jobs)} jobs cached)")
+
+    print(f"     ({len(queries)} titles × {len(EU_LOCATIONS)} countries = {total_searches} searches)")
+
+    for loc in EU_LOCATIONS:
+        for q in queries:
+            done += 1
+            if done <= skip:
+                continue
+            if done % 50 == 0:
+                print(f"     … LinkedIn {done}/{total_searches} searches, {len(jobs)} jobs so far")
+                _save_checkpoint(jobs, seen, done)
             batch = _search(
                 session,
                 keywords=q,
                 location=loc["location"],
                 geo_id=loc["geo_id"],
                 country=loc["country"],
-                remote_only=True,
-                max_pages=1,
             )
-            pairs_done += 1
             for job in batch:
                 if job["url"] in seen:
                     continue
                 seen.add(job["url"])
+                job["search_query"] = q
+                job["search_country"] = loc["country"]
                 jobs.append(job)
-        if pairs_done >= MAX_KEYWORD_LOC_PAIRS:
-            break
 
-    # 2) Health-tech startup / private company pages
-    for row in _load_startup_seed()[:MAX_STARTUP_COMPANIES]:
-        cid = row.get("linkedin_company_id")
-        if not cid:
-            continue
-        batch = _search(
-            session,
-            keywords="informatics OR health OR clinical OR data OR implementation OR integration",
-            location=row.get("country", "Europe"),
-            geo_id=next(
-                (l["geo_id"] for l in EU_LOCATIONS if l["country"] == row.get("country")),
-                EU_LOCATIONS[0]["geo_id"],
-            ),
-            country=row.get("country", ""),
-            company_id=str(cid),
-            max_pages=1,
-        )
-        for job in batch:
-            if job["url"] in seen:
-                continue
-            seen.add(job["url"])
-            seed = match_seed_employer(job["employer"]) or row
-            job["employer"] = seed.get("name") or job["employer"]
-            job["startup_match"] = True
-            jobs.append(job)
+    if CHECKPOINT_PATH.exists():
+        CHECKPOINT_PATH.unlink(missing_ok=True)
 
-    # 3) Enrich descriptions for startup matches + remote roles first
     if fetch_descriptions and jobs:
-        priority = sorted(
-            jobs,
-            key=lambda j: (
-                0 if j.get("startup_match") else 1,
-                0 if "remote" in (j.get("work_mode") or "").lower() else 1,
-            ),
-        )
         fetched = 0
-        for job in priority:
+        for job in jobs:
             if fetched >= max_description_fetches:
                 break
-            jid = job.get("linkedin_job_id") or re.search(r"/jobs/view/(\d+)", job["url"])
-            jid = jid if isinstance(jid, str) else (jid.group(1) if jid else "")
+            jid = job.get("linkedin_job_id") or ""
             if not jid or job.get("description"):
                 continue
             desc = _fetch_description(session, jid)
@@ -340,7 +339,7 @@ def scrape_linkedin(
             seen.add(job["url"])
             jobs.append(job)
 
-    if not jobs and failures > 5 and not imported:
+    if not jobs and not imported:
         print(
             "     (LinkedIn guest API returned no jobs — try LINKEDIN_COOKIE "
             "or add data/europe/linkedin_import.json)"

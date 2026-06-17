@@ -242,10 +242,10 @@ def score_job(job: dict, profile: dict) -> dict:
     prefs = profile.get("employer_preferences", {})
     if prefs.get("prefer_startups_private"):
         if emp_info["employer_type"] in ("startup", "scaleup", "private", "consulting"):
-            priority += 4
+            priority += 2
             reasons.append(f"Preferred employer type: {emp_info['employer_type']}")
-        elif emp_info["employer_type"] in ("public_sector", "hospital"):
-            priority -= 3
+        elif prefs.get("deprioritize_public_sector") and emp_info["employer_type"] in ("public_sector", "hospital"):
+            priority -= 2
             reasons.append("Public-sector/hospital employer (lower priority)")
 
     if prefs.get("prefer_foreigner_friendly"):
@@ -259,8 +259,8 @@ def score_job(job: dict, profile: dict) -> dict:
             priority -= 4
             reasons.append("Local-only hiring signals")
 
-    if emp_info.get("startup_match"):
-        priority += 3
+    if emp_info.get("startup_match") and prefs.get("prefer_startups_private"):
+        priority += 2
         reasons.append(f"Health-tech startup match ({emp_info.get('startup_name')})")
 
     mode = (job.get("work_mode") or job.get("remote_type") or "").lower()
