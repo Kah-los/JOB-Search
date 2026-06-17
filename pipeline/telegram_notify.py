@@ -21,7 +21,20 @@ from pathlib import Path
 import requests
 
 ROOT = Path(__file__).resolve().parent.parent
-CFG = ROOT / "pipeline" / "telegram_config.json"
+
+
+def _config_path():
+    """Resolve telegram_config.json — local pipeline/ first, then parent JOB-Search/."""
+    here = ROOT / "pipeline" / "telegram_config.json"
+    if here.exists():
+        return here
+    parent = ROOT.parent / "pipeline" / "telegram_config.json"
+    if parent.exists():
+        return parent
+    return here
+
+
+CFG = _config_path()
 NEW = ROOT / "data" / "new_today.json"
 MATCHES = ROOT / "data" / "matches.json"
 RAW = ROOT / "data" / "jobs_raw.json"
