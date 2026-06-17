@@ -152,9 +152,9 @@
     "hyperlink": null,
     "career_url": null,
     "url_source": null,
-    "ats": "Phenom",
+    "ats": null,
     "needs_discovery": true,
-    "resolved_url": "https://careers.ecuhealth.org/",
+    "resolved_url": "https://careers.ecuhealth.org/search/jobs",
     "resolved_status": null,
     "resolve_method": "web-discovered",
     "still_blank": false

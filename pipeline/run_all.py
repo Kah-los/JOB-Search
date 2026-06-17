@@ -113,7 +113,13 @@ def main(make_apps=True):
             "app_folder": None,
         }
         if make_apps:
-            rec["app_folder"] = tailor.save_application(job, scored)
+            if is_new or is_updated:
+                rec["app_folder"] = tailor.save_application(job, scored)
+            else:
+                # Reuse existing bundle path when already generated
+                prev_folder = prev_matches.get(url, {}).get("app_folder")
+                if prev_folder:
+                    rec["app_folder"] = prev_folder
 
         matches.append(rec)
         seen[url] = {"fingerprint": fp, "first_seen": rec["first_seen"],
