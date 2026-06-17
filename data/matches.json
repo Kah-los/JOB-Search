@@ -436,6 +436,39 @@
     "app_folder": "applications/california/molina-healthcare__senior-analyst-reporting-analytics-data-"
   },
   {
+    "title": "Epic Applications Analyst (1-4): HOSPITAL BILLING - Rev Cycle Application and Epic Operations - Full Time",
+    "employer": "Covenant HealthCare",
+    "location": "Remote - NH",
+    "state": "",
+    "no_tax_state": false,
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-03",
+    "days_old": 14,
+    "fit_score": 7.3,
+    "priority": 9.2,
+    "role_type": "Non-technical",
+    "technical": false,
+    "min_years": 4,
+    "benefits": [
+      "401(k)"
+    ],
+    "big_employer": false,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://solutionhealth.wd1.myworkdayjobs.com/Careers/job/Remote---NH/Solution-Health---Epic-Applications-Analyst--1-4---HOSPITAL-BILLING---Rev-Cycle-Application-and-Epic-Operations---Full-Time_JR9393",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-17",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Epic",
+      "Requires 4+ yrs (mid-career fit)"
+    ],
+    "app_folder": "applications/tenessee/covenant-healthcare__epic-applications-analyst-1-4-hospital-b"
+  },
+  {
     "title": "Coding Specialist II, Remote",
     "employer": "Mass General Brigham",
     "location": "Somerville-MA",
@@ -650,6 +683,38 @@
       "Skills present: BI, CPT"
     ],
     "app_folder": "applications/massachusetts/mass-general-brigham__coding-specialist-ii-anesthesia"
+  },
+  {
+    "title": "Operations Manager, Shift Lieutenant",
+    "employer": "Mass General Brigham",
+    "location": "Boston-MA",
+    "state": "MA",
+    "no_tax_state": false,
+    "salary": "$101,202",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-10",
+    "days_old": 7,
+    "fit_score": 6.1,
+    "priority": 9.0,
+    "role_type": "Non-technical",
+    "technical": false,
+    "min_years": 3,
+    "benefits": [],
+    "big_employer": true,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://massgeneralbrigham.wd1.myworkdayjobs.com/MGBExternal/job/Boston-MA/Operations-Manager--Shift-Lieutenant_RQ4060853",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-17",
+    "updated": false,
+    "reasons": [
+      "Title matches: Operations Manager",
+      "Skills present: BI",
+      "Requires 3+ yrs (mid-career fit)"
+    ],
+    "app_folder": "applications/massachusetts/mass-general-brigham__operations-manager-shift-lieutenant"
   },
   {
     "title": "Senior Financial Analyst \u2013 Regulatory Reporting & Healthcare Finance (Remote)",
@@ -1615,6 +1680,37 @@
     "app_folder": "applications/california/molina-healthcare__sr-business-analyst-credentialing-experi"
   },
   {
+    "title": "VP, National Quality Data Management & Performance",
+    "employer": "Molina Healthcare",
+    "location": "United States",
+    "state": "CA",
+    "no_tax_state": false,
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-06-01",
+    "days_old": 16,
+    "fit_score": 6.8,
+    "priority": 8.4,
+    "role_type": "Non-technical",
+    "technical": false,
+    "min_years": 7,
+    "benefits": [],
+    "big_employer": false,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2037677",
+    "source_platform": "OracleORC",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-17",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Change management, Quality assurance",
+      "Requires 7+ yrs (mid-career fit)"
+    ],
+    "app_folder": "applications/california/molina-healthcare__vp-national-quality-data-management-perf"
+  },
+  {
     "title": "Senior Data Analyst",
     "employer": "Molina Healthcare",
     "location": "United States",
@@ -2544,6 +2640,36 @@
     "app_folder": "applications/new-york/montefiore-medical-center__engagement-manager-revenue-cycle"
   },
   {
+    "title": "Assistant Vice President, Audit",
+    "employer": "Edward-Elmhurst Health",
+    "location": "SRO Corporate Center Warrenville 4201 Winfield Road",
+    "state": "IL",
+    "no_tax_state": false,
+    "salary": "Salary Not Disclosed",
+    "work_mode": "On-site",
+    "date_posted": "2026-06-01",
+    "days_old": 16,
+    "fit_score": 6.6,
+    "priority": 7.8,
+    "role_type": "Non-technical",
+    "technical": false,
+    "min_years": null,
+    "benefits": [],
+    "big_employer": false,
+    "visa_flag": "",
+    "onsite_flag": "On-site",
+    "url": "https://nshs.wd1.myworkdayjobs.com/ns-eeh/job/SRO-Corporate-Center-Warrenville-4201-Winfield-Road/Assistant-Vice-President--Audit_R43168",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-17",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Change management, HIPAA"
+    ],
+    "app_folder": "applications/illinois/edward-elmhurst-health__assistant-vice-president-audit"
+  },
+  {
     "title": "Epic Principal Trainer",
     "employer": "King's Daughters Health System",
     "location": "Salinas, CA",
@@ -2913,6 +3039,36 @@
       "Skills present: BI"
     ],
     "app_folder": "applications/california/eisenhower-health__project-manager-process-improvement-sr"
+  },
+  {
+    "title": "Actuarial Analyst Senior, Geisinger Health Plan (Eastern United States resident)",
+    "employer": "Geisinger Health System",
+    "location": "Work from Home",
+    "state": "",
+    "no_tax_state": false,
+    "salary": "Salary Not Disclosed",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-10",
+    "days_old": 7,
+    "fit_score": 6.1,
+    "priority": 7.4,
+    "role_type": "Mixed",
+    "technical": false,
+    "min_years": 1,
+    "benefits": [],
+    "big_employer": true,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://geisinger.wd5.myworkdayjobs.com/GeisingerExternal/job/Work-from-Home/Actuarial-Analyst-Senior--Geisinger-Health-Plan--Eastern-United-States-resident-_R-95542",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-17",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI, Data governance"
+    ],
+    "app_folder": "applications/pensilvania/geisinger-health-system__actuarial-analyst-senior-geisinger-healt"
   },
   {
     "title": "Lead Application Engineer - EPIC Hospital Billing (REMOTE)",
@@ -3558,6 +3714,39 @@
     "app_folder": "applications/california/molina-healthcare__analyst-claims-research-remote"
   },
   {
+    "title": "Retirement Analyst Tufts Medicine",
+    "employer": "Tufts Medicine",
+    "location": "TuftsMedicine",
+    "state": "",
+    "no_tax_state": false,
+    "salary": "$98,603",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-03",
+    "days_old": 14,
+    "fit_score": 6.1,
+    "priority": 6.7,
+    "role_type": "Mixed",
+    "technical": false,
+    "min_years": null,
+    "benefits": [
+      "401(k)",
+      "Pension"
+    ],
+    "big_employer": false,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://tuftsmedicine.wd1.myworkdayjobs.com/Jobs/job/TuftsMedicine/Retirement-Analyst-Tufts-Medicine_R24740",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-17",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/massachussets/tufts-medicine__retirement-analyst-tufts-medicine"
+  },
+  {
     "title": "Applications Analyst-Business (Epic PB/HB)",
     "employer": "Eisenhower Health",
     "location": "Eisenhower Medical Center",
@@ -3647,6 +3836,38 @@
       "Requires 5+ yrs (mid-career fit)"
     ],
     "app_folder": "applications/texas/university-of-texas-southweste__lawson-app-systems-analyst-iii"
+  },
+  {
+    "title": "Health & Welfare Benefits Analyst Tufts Medicine",
+    "employer": "Tufts Medicine",
+    "location": "TuftsMedicine",
+    "state": "",
+    "no_tax_state": false,
+    "salary": "$90,464",
+    "work_mode": "Remote",
+    "date_posted": "2026-06-03",
+    "days_old": 14,
+    "fit_score": 6.1,
+    "priority": 6.4,
+    "role_type": "Mixed",
+    "technical": false,
+    "min_years": null,
+    "benefits": [
+      "401(k)"
+    ],
+    "big_employer": false,
+    "visa_flag": "",
+    "onsite_flag": "",
+    "url": "https://tuftsmedicine.wd1.myworkdayjobs.com/Jobs/job/TuftsMedicine/Health---Welfare-Benefits-Analyst-Tufts-Medicine_R24742",
+    "source_platform": "Workday",
+    "status": "New",
+    "first_seen": "2026-06-15",
+    "last_seen": "2026-06-17",
+    "updated": false,
+    "reasons": [
+      "Skills present: BI"
+    ],
+    "app_folder": "applications/massachussets/tufts-medicine__health-welfare-benefits-analyst-tufts-me"
   },
   {
     "title": "Applications Analyst-Clinical-Sr",

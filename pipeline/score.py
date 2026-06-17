@@ -94,12 +94,13 @@ HYBRID_RE = re.compile(r"\bhybrid\b", re.I)
 # Entry-level markers (EXCLUDED — candidate has 10 yrs, targets 3-5+ yrs roles)
 ENTRY_TITLE_RE = re.compile(
     r"\b(intern|internship|trainee|apprentice|entry[\s-]?level|new grad|"
-    r"graduate (program|trainee)|junior|jr\.?|assistant\b)\b|\b(analyst|"
+    r"graduate (program|trainee)|junior|jr\.?)\b|\b(analyst|"
     r"specialist|coordinator|technician)\s+(i|1)\b", re.I)
 ENTRY_DESC_RE = re.compile(
     r"\b(entry[\s-]?level|no (prior )?experience (required|necessary)|"
-    r"0[\s-]?2 years|1[\s-]?2 years|less than (one|1|two|2) year|"
     r"recent graduate|new graduate)\b", re.I)
+SENIOR_TITLE_RE = re.compile(
+    r"\b(senior|sr\.?|lead|principal|manager|director|supervisor|head of)\b", re.I)
 YEARS_RE = re.compile(r"(\d{1,2})\s*\+?\s*(?:-|to|–)?\s*(\d{1,2})?\s*\+?\s*years?", re.I)
 
 # Benefits signals (PREFERRED)
@@ -303,8 +304,15 @@ def score_job(job, profile):
 
     # ---- experience / seniority ----
     min_yrs = required_years(desc)
-    is_entry = bool(ENTRY_TITLE_RE.search(title) and "internal" not in title) or \
-        bool(ENTRY_DESC_RE.search(desc)) or (min_yrs is not None and min_yrs < 2)
+    # Only exclude clearly entry-level titles or roles asking for ≤1 yr experience.
+    if SENIOR_TITLE_RE.search(title):
+        is_entry = False
+    elif ENTRY_TITLE_RE.search(title) and "internal" not in title:
+        is_entry = True
+    elif min_yrs is not None and min_yrs <= 1:
+        is_entry = True
+    else:
+        is_entry = False
     # mid-career fit: 3-5+ yrs target. Reward roles asking for >= target experience.
     if min_yrs is None:
         seniority_align = 0.85

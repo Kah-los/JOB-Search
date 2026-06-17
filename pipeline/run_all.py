@@ -149,9 +149,9 @@ body{
   font-variant-numeric:tabular-nums; letter-spacing:-0.02em; font-size:12px}
 
 /* ---- app shell ---- */
-.app{display:grid; grid-template-columns:var(--sidebar-w) 1fr; min-height:100vh}
+.app{display:grid; grid-template-columns:var(--sidebar-w) 1fr; min-height:100vh; align-items:stretch}
 .sidebar{
-  position:sticky; top:0; align-self:start; height:100vh; z-index:var(--z-sidebar);
+  position:sticky; top:0; align-self:start; height:100vh; max-height:100vh; z-index:var(--z-sidebar);
   background:var(--surface); border-right:1px solid var(--line);
   display:flex; flex-direction:column; overflow:hidden;
 }
@@ -173,7 +173,7 @@ body{
 }
 .preset:hover{background:var(--primary-soft); border-color:#a5f3fc; color:var(--primary-ink)}
 .preset.on{background:var(--primary-soft); border-color:var(--primary); color:var(--primary-ink)}
-.main{min-width:0; display:flex; flex-direction:column}
+.main{min-width:0; min-height:100vh; display:flex; flex-direction:column; overflow:visible}
 
 /* ---- topbar ---- */
 .topbar{
@@ -255,9 +255,13 @@ body{
 .toggle.on{border-color:var(--primary); background:var(--primary-soft); color:var(--primary-ink)}
 
 /* ---- table ---- */
-.table-panel{padding:0 14px 48px; flex:1}
-.table-scroll{overflow:auto; border:1px solid var(--line); border-radius:12px;
-  background:var(--surface); box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.table-panel{padding:12px 14px 48px; flex:1; min-height:0; display:flex; flex-direction:column}
+.table-scroll{
+  overflow:auto; -webkit-overflow-scrolling:touch;
+  border:1px solid var(--line); border-radius:12px;
+  background:var(--surface); box-shadow:0 1px 2px rgba(15,23,42,.04);
+  min-height:min(70vh,720px); max-height:calc(100vh - 220px);
+}
 table{width:100%; border-collapse:collapse; min-width:1100px}
 thead th{
   position:sticky; top:0; z-index:var(--z-thead);
@@ -274,9 +278,12 @@ thead th:first-child{position:sticky; left:0; z-index:calc(var(--z-thead)+1);
 tbody td{padding:9px 12px; border-bottom:1px solid var(--line-soft); vertical-align:middle}
 tbody tr:last-child td{border-bottom:none}
 tbody tr{transition:background-color 120ms var(--ease)}
-tbody tr:nth-child(even){background:#fbfdff}
+tbody tr:nth-child(even){background:#f8fafc}
+tbody tr:nth-child(even) td:first-child{background:#f8fafc}
+tbody tr:nth-child(odd) td:first-child{background:var(--surface)}
 @media (hover:hover){tbody tr:hover{background:#f0f9ff}}
-tbody td:first-child{position:sticky; left:0; z-index:1; background:inherit;
+@media (hover:hover){tbody tr:hover td:first-child{background:#f0f9ff}}
+tbody td:first-child{position:sticky; left:0; z-index:1;
   box-shadow:1px 0 0 var(--line-soft)}
 tr.is-new td:first-child{box-shadow:inset 3px 0 0 var(--primary),1px 0 0 var(--line-soft)}
 .c-title{max-width:280px}
@@ -448,11 +455,13 @@ $('#pNotax')?.addEventListener('click',()=>{fState.value=fState.value==='__notax
 $('#pNontech')?.addEventListener('click',()=>{fRole.value=fRole.value==='Non-technical'?'':'Non-technical';filter();});
 $('#pRemote')?.addEventListener('click',()=>{fMode.value=fMode.value==='Remote'?'':'Remote';filter();});
 $('#pNew')?.addEventListener('click',()=>{tNew.checked=!tNew.checked;filter();});
-$('#clearFilters')?.addEventListener('click',()=>{
+$('#clearFilters')?.addEventListener('click',()=>{resetFilters(); filter();});
+
+function resetFilters(){
   q.value=''; fState.value=''; fRole.value=''; fPosted.value='9999';
   fMode.value=''; fStatus.value=''; fFit.value='0';
-  tNew.checked=false; tBig.checked=false; filter();
-});
+  tNew.checked=false; tBig.checked=false;
+}
 
 // keyboard: / focuses search
 document.addEventListener('keydown',e=>{
@@ -482,6 +491,7 @@ $$('thead th').forEach((th,i)=>{
     }).forEach(r=>tb.appendChild(r));
   });
 });
+resetFilters();
 filter();
 """
 
@@ -574,7 +584,7 @@ def write_dashboard(matches, new_today):
 <div class="app">
 <aside class="sidebar" id="sidebar" aria-label="Filters">
   <div class="sidebar-head">Filters</div>
-  <div class="sidebar-body">
+  <div class="sidebar-body" autocomplete="off">
     <div class="presets">
       <button type="button" class="preset" id="pNontech">Non-technical</button>
       <button type="button" class="preset" id="pNotax">No-tax</button>
@@ -621,7 +631,7 @@ def write_dashboard(matches, new_today):
   <button type="button" class="filter-toggle" id="filterToggle" aria-label="Open filters">Filters</button>
   <div class="search">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-    <input id="q" type="search" placeholder="Search title, employer, location…" aria-label="Search jobs">
+    <input id="q" type="search" placeholder="Search title, employer, location…" aria-label="Search jobs" autocomplete="off">
     <kbd>/</kbd>
   </div>
   <div class="count" id="count"><b>{len(matches)}</b> of {len(matches)}</div>
@@ -631,7 +641,7 @@ def write_dashboard(matches, new_today):
   <div class="table-scroll">
   <table>
     <thead><tr>{thead}</tr></thead>
-    <tbody id="tb">{''.join(rows)}</tbody>
+    <tbody id="tb">{chr(10).join(rows)}</tbody>
   </table>
   </div>
   <div class="empty" id="empty"><b>No matches for these filters</b>Try clearing filters or lowering the fit threshold.</div>
