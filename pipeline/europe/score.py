@@ -9,24 +9,86 @@ from .language import (
 )
 
 TODAY = date.today()
-HEALTH_RE = re.compile(
-    r"(health informatics|informatics|health information|him\b|ehr|emr|epic|hl7|fhir|"
-    r"clinical documentation|cdi\b|medical records|healthcare data|data analyst|"
-    r"interoperab|digital health|health it|healthcare it|information management|"
-    r"data governance|compliance|quality improvement|population health|openEHR|snomed|"
-    r"business analyst|project manager|program manager|analytics|bi\b|"
-    r"ehälsa|e-hälsa|ehelse|ehealth|e-health|esalud|esaúde|esaude|"
-    r"klinisk it|journalsystem|systemanalytiker|verksamhetsutvecklare|"
-    r"gesundheitsinformatik|gesundheitsinformation|santé numérique|informatique médicale|"
-    r"clinical systems|hospital information|clinical decision support|"
-    r"implementation consultant|integration specialist|integration engineer|"
-    r"health data|digital systems|nhs digital|solutions architect|"
-    r"clinical application support|informatics officer|digital health strategist)",
-    re.I)
+
+# Strong health-informatics signals (title alone is enough)
+HEALTH_STRONG_RE = re.compile(
+    r"(health informatics|clinical informatics|health information management|"
+    r"health information|informatics analyst|informatics specialist|informatics officer|"
+    r"informatics manager|informatics consultant|informatics researcher|"
+    r"\bhim\b|health information manager|medical records|journalsystem|"
+    r"\behr\b|\bemr\b|\bepic\b|openEHR|snomed|"
+    r"\bhl7\b|\bfhir\b|interoperab|clinical documentation|\bcdi\b|"
+    r"healthcare it|health it|healthcare data|health data analyst|clinical data analyst|"
+    r"digital health|ehealth|e-health|ehälsa|e-hälsa|ehelse|esalud|esaúde|"
+    r"klinisk it|clinical systems|clinical application|hospital information|"
+    r"nhs digital|digital systems analyst|clinical informatics|"
+    r"gesundheitsinformatik|santé numérique|informatique médicale|"
+    r"implementation consultant.{0,20}health|health.{0,20}implementation|"
+    r"integration (specialist|analyst|engineer).{0,30}(health|clinical|fhir|hl7)|"
+    r"(fhir|hl7).{0,30}integration|"
+    r"vårdnära digital|vård.{0,15}digital|digital.{0,15}vård|"
+    r"affärsanalytiker.{0,20}(ehälsa|e-hälsa|vård|hälsa)|"
+    r"systemanalytiker.{0,20}(ehälsa|e-hälsa|vård|hälsa|health)|"
+    r"hälsoinformatik|ehälso|ehelse ikt|"
+    r"bioinformatik|bioinformatics)",
+    re.I,
+)
+
+# Healthcare setting / domain (must pair with role or strong term for generic titles)
+HEALTH_CONTEXT_RE = re.compile(
+    r"(healthcare|health care|health system|hospital|clinical|patient|medical record|"
+    r"primary care|mental health|nhs\b|gp practice|care home|"
+    r"\binera\b|1177|"
+    r"sjukhus|vård|vården|hälsa|hälso|patientjournal|journalhantering|"
+    r"ehälsa|e-hälsa|ehelse|region.{0,10}(vård|hälsa)|"
+    r"revenue cycle|billing.{0,15}(health|hospital)|"
+    r"physician|nursing informatics|pharmacy system)",
+    re.I,
+)
+
+# Generic role nouns — only pass with health-informatics context
+GENERIC_ROLE_RE = re.compile(
+    r"\b(business analyst|systems? analyst|system analyst|data analyst|"
+    r"project manager|programme manager|program manager|product owner|"
+    r"scrum master|bi[\s-]?(specialist|konsult|developer)|"
+    r"verksamhetsutvecklare|kravanalytiker|testledare|test analyst|"
+    r"compliance officer|digital product|change manager|"
+    r"data governance|transformation manager|capital project)\b",
+    re.I,
+)
+
+# Obvious non-health-informatics roles
+OFF_TOPIC_RE = re.compile(
+    r"\b(cyber\s*security|cybersecurity|signalskydd|säkerhetsstaben|"
+    r"\bsaab\b|defence|defense|military|försvar|"
+    r"calypso|erp.{0,10}(accounting|visualisering)|"
+    r"\bica\b.{0,10}(butik|handel|krav)|"
+    r"assistant professor|postdoktor|postdoc|neurodegenerativ|"
+    r"intensivvårdssjuksköterska|bolničar|negovalec|"
+    r"assistente di negozio|rakodómunkás|komissiózó|"
+    r"tecnico dei macchinari|warehouse|lager|retail|shop assistant|"
+    r"miljö och klimat|va-ekonomi|körkortsbehörighet|"
+    r"contract management(?!.{0,40}health)|"
+    r"capital project manager|people systems project|"
+    r"medical records clerk|healthcare assistant|healthcare science associate|"
+    r"people.{0,10}project manager|"
+    r"psykolog|tandhygienist|fysioterapeut|dialys|"
+    r"sommarjobb|lss-boende|receptionist|administratör/receptionist|"
+    r"annsam söker|sjukskötersk|allmänsjukskötersk|"
+    r"\bit-tekniker\b|systemarkitekt|mjukvaruingenjör|"
+    r"delförvaltningsledare|kommunal digital|högre körkort|finspångs kommun)\b",
+    re.I,
+)
+
 CLINICAL_ROLE_RE = re.compile(
     r"\b(surgeon|physician|doctor|nurse|nursing|midwife|dentist|pharmacist|"
     r"radiologist|radiology career|orthopaedic specialist|pediatric spine|"
-    r"undersköterska|sjuksköterska|läkare|tandläkare)\b", re.I)
+    r"undersköterska|sjuksköterska|läkare|tandläkare|"
+    r"staff nurse|registered nurse|healthcare assistant)\b", re.I,
+)
+
+# Legacy alias used in a few imports/tests
+HEALTH_RE = HEALTH_STRONG_RE
 
 
 def parse_date(value):
@@ -49,22 +111,67 @@ def days_old(job):
     return (TODAY - d).days if d else None
 
 
-def title_relevant(title: str, description: str = "") -> bool:
-    if CLINICAL_ROLE_RE.search(title or ""):
+def _target_in_title(title: str, target: str) -> bool:
+    """Match listed target titles without letting bare Swedish role words slip through."""
+    t = (title or "").lower()
+    tl = target.lower().strip()
+    if not t or not tl:
         return False
-    t_lower = (title or "").lower()
-    for target in ALL_TARGET_TITLES:
-        if target.lower() in t_lower:
-            return True
-    if HEALTH_RE.search(title or ""):
+    if tl in t:
         return True
-    blob = (description or "")[:800].lower()
-    if HEALTH_RE.search(blob):
-        return True
-    for target in ALL_TARGET_TITLES:
-        if target.lower() in blob:
-            return True
+    # "Verksamhetsutvecklare, IT" → require IT/informatics/digital in title too
+    if "verksamhetsutvecklare" in tl and "verksamhetsutvecklare" in t:
+        has_it = bool(re.search(
+            r"\b(it|informatic|digital|ehälsa|e-hälsa|system|journalsystem)\b", t))
+        has_health = bool(HEALTH_STRONG_RE.search(t) or HEALTH_CONTEXT_RE.search(t))
+        return has_it and has_health
+    if "business analyst" in tl or "affärsanalytiker" in tl:
+        if "business analyst" in t or "affärsanalytiker" in t:
+            return bool(HEALTH_STRONG_RE.search(t) or HEALTH_CONTEXT_RE.search(t))
     return False
+
+
+def is_health_informatics_role(title: str, description: str = "") -> bool:
+    """True only for health-informatics / digital-health IT roles."""
+    title = title or ""
+    if CLINICAL_ROLE_RE.search(title) or OFF_TOPIC_RE.search(title):
+        return False
+
+    if HEALTH_STRONG_RE.search(title):
+        return True
+
+    for target in ALL_TARGET_TITLES:
+        if _target_in_title(title, target):
+            return True
+
+    blob = f"{title} {description[:1500]}"
+    if GENERIC_ROLE_RE.search(title):
+        if HEALTH_STRONG_RE.search(blob):
+            return True
+        if HEALTH_CONTEXT_RE.search(blob) and re.search(
+            r"(informatics|ehr|emr|ehälsa|e-hälsa|health it|digital health|"
+            r"journalsystem|klinisk it|cdi|him|fhir|hl7|medical record|patientdata|"
+            r"digital.{0,10}system|transformation.{0,15}(health|nhs|vård))",
+            blob, re.I,
+        ):
+            return True
+        return False
+
+    # Title not generic — description must carry a strong informatics signal
+    if HEALTH_STRONG_RE.search(description[:1500]):
+        if re.search(
+            r"sjuksköterska|psykolog|tand|fysio|dialys|läkare|undersköterska|"
+            r"receptionist|administratör(?!.{0,20}medical record)",
+            title, re.I,
+        ):
+            return False
+        return True
+
+    return False
+
+
+def title_relevant(title: str, description: str = "") -> bool:
+    return is_health_informatics_role(title, description)
 
 
 def _title_hits(title: str, profile: dict) -> int:
@@ -77,7 +184,7 @@ def _title_hits(title: str, profile: dict) -> int:
             if key in seen:
                 continue
             seen.add(key)
-            if key in t_lower:
+            if _target_in_title(title, t) or key in t_lower:
                 hits += 1
     return hits
 
@@ -91,15 +198,14 @@ def score_job(job: dict, profile: dict) -> dict:
     reasons = []
     flags = {}
 
-    # Must be healthcare-informatics related (not generic health/safety)
-    if CLINICAL_ROLE_RE.search(title):
+    if CLINICAL_ROLE_RE.search(title) or OFF_TOPIC_RE.search(title):
         return {"passes_filters": False, "fit_score": 0, "priority": 0,
-                "reasons": ["Clinical/licensed role"], "flags": {}}
-    if not title_relevant(title) and not HEALTH_RE.search(desc[:600]):
+                "reasons": ["Off-topic or clinical role"], "flags": {}}
+
+    if not is_health_informatics_role(title, desc):
         return {"passes_filters": False, "fit_score": 0, "priority": 0,
                 "reasons": ["Not health-informatics related"], "flags": {}}
 
-    # C1/C2 local language exclusion
     if requires_c1_c2_local(title, desc):
         return {"passes_filters": False, "fit_score": 0, "priority": 0,
                 "reasons": ["Requires C1/C2 local language without English"], "flags": {}}
@@ -109,7 +215,6 @@ def score_job(job: dict, profile: dict) -> dict:
     flags.update(lang_info)
     flags["summary"] = summarize(desc)
 
-    # Base fit from profile skills
     skill_hits = 0
     for grp in profile.get("skills", {}).values():
         for s in grp:
@@ -120,18 +225,15 @@ def score_job(job: dict, profile: dict) -> dict:
     fit = min(10, 4 + skill_hits * 0.4 + title_hits * 1.2)
     reasons.append(f"Skill/title match ({skill_hits} skills, {title_hits} title hits)")
 
-    # Language priority (main sort key)
     lang_pts = lang_info["language_score"]
     priority = lang_pts * 10 + fit
 
-    # Remote Europe bonus
     mode = (job.get("work_mode") or "").lower()
     if "remote" in mode:
         priority += LANGUAGE_POINTS["remote_europe"]
         flags["remote_europe"] = True
         reasons.append("Remote-friendly Europe")
 
-    # Recency bonus
     days = days_old(job)
     flags["days_old"] = days
     if days is not None and days <= 14:

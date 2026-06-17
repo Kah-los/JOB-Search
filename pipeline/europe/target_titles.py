@@ -189,8 +189,8 @@ SEARCH_QUERIES: list[str] = [
     "solutions architect healthcare", "clinical application support",
     "informatics officer", "digital health strategist",
     # Sweden
-    "ehälsa", "e-hälsa", "systemanalytiker", "affärsanalytiker",
-    "klinisk IT", "verksamhetsutvecklare", "informationshantering",
+    "ehälsa", "e-hälsa", "systemanalytiker ehälsa", "affärsanalytiker ehälsa",
+    "klinisk IT", "hälsoinformatik", "informationshantering vård",
     # Denmark / Norway
     "ehelse", "klinisk informatik",
     # Germany
@@ -204,10 +204,10 @@ SEARCH_QUERIES: list[str] = [
 
 SEARCH_QUERIES_BY_BOARD: dict[str, list[str]] = {
     "jobtech": [
-        "ehälsa", "e-hälsa", "systemanalytiker inom ehälsa", "affärsanalytiker",
-        "projektledare ehälsa", "klinisk IT", "journalsystem", "verksamhetsutvecklare",
+        "ehälsa", "e-hälsa", "systemanalytiker inom ehälsa", "affärsanalytiker ehälsa",
+        "projektledare ehälsa", "klinisk IT", "journalsystem", "hälsoinformatik",
         "health informatics", "FHIR", "HL7", "healthcare IT", "clinical informatics",
-        "informationshantering", "digital health",
+        "informationshantering vård", "digital health", "vårdnära digital",
     ],
     "jobindex": [
         "eHealth", "clinical systems analyst", "health IT", "digital health",
@@ -220,9 +220,9 @@ SEARCH_QUERIES_BY_BOARD: dict[str, list[str]] = {
         "klinisk IT", "hospital information systems",
     ],
     "jobbsafari": [
-        "ehälsa", "e-hälsa", "systemanalytiker", "klinisk IT", "journalsystem",
+        "ehälsa", "e-hälsa", "systemanalytiker ehälsa", "klinisk IT", "journalsystem",
         "health informatics", "healthcare IT", "FHIR", "HL7", "digital health",
-        "verksamhetsutvecklare", "clinical informatics",
+        "hälsoinformatik", "clinical informatics",
     ],
     "stepstone": [
         "eHealth", "klinischer informatiker", "gesundheitsinformatik",
