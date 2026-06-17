@@ -7,7 +7,7 @@ import re
 from html import unescape
 import requests
 
-from ..config import SEARCH_QUERIES
+from ..config import SEARCH_QUERIES_BY_BOARD
 
 HEADERS = {
     "User-Agent": (
@@ -68,7 +68,7 @@ def _parse_job_posting(html: str, fallback_url: str) -> dict | None:
 
 
 def scrape_jobindex(queries=None, max_per_query: int = 25) -> list[dict]:
-    queries = queries or SEARCH_QUERIES[:8]
+    queries = queries or SEARCH_QUERIES_BY_BOARD["jobindex"]
     jobs, seen = [], set()
     for q in queries:
         try:

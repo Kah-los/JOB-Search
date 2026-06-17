@@ -7,6 +7,8 @@ from html import unescape
 
 import requests
 
+from ..config import SEARCH_QUERIES_BY_BOARD
+
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -16,12 +18,7 @@ HEADERS = {
 }
 TIMEOUT = 45
 BASE = "https://www.stepstone.de"
-STEPSTONE_QUERIES = [
-    "health-informatics",
-    "medizinische-informatik",
-    "krankenhaus-informatik",
-    "healthcare-data",
-]
+STEPSTONE_QUERIES = SEARCH_QUERIES_BY_BOARD["stepstone"]
 
 
 def _slug_parts(path: str) -> tuple[str, str, str]:

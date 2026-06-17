@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT / "pipeline"))
 
 from europe.config import (
     DATA, JOBS_RAW, MATCHES, NEW_TODAY, SEEN, PROFILE_PATH, DASH,
-    DOCS_SEG_PATH, DOCS_SEG_DEFAULT,
+    DOCS_SEG_PATH, DOCS_SEG_DEFAULT, ALL_TARGET_TITLES,
 )
 from europe.score import score_job, days_old, title_relevant
 from dashboard_nav import SITE_NAV_CSS, site_nav_html, site_nav_js
@@ -136,7 +136,7 @@ def write_dashboard(matches, new_today):
     <div class="kpi"><b>{n_english_high}</b><span>English-friendly</span></div>
     <div class="kpi"><b>{n_remote}</b><span>Remote</span></div>
   </div>
-  <p style="margin-top:12px;font-size:11px;opacity:.75">Updated {date.today().isoformat()} · Sources: Jobtech, EURES, Jobindex, Finn, Jobbsafari, StepStone, employers</p>
+  <p style="margin-top:12px;font-size:11px;opacity:.75">Updated {date.today().isoformat()} · {len(ALL_TARGET_TITLES)} target titles · Sources: Jobtech, EURES, Jobindex, Finn, Jobbsafari, StepStone, employers</p>
 </div>
 <div class="toolbar">
   <input id="q" type="search" placeholder="Search title, company, country…" autocomplete="off">
@@ -172,7 +172,7 @@ def main():
 
     matches, new_today = [], []
     for job in raw:
-        if not title_relevant(job.get("title", "")):
+        if not title_relevant(job.get("title", ""), job.get("description", "")):
             continue
         days = days_old(job)
         if days is not None and days > max_days:

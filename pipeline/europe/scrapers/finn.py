@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import requests
 
-from ..config import SEARCH_QUERIES
+from ..config import SEARCH_QUERIES_BY_BOARD
 
 API = "https://arbeidsplassen.nav.no/stillinger/api/search"
 BASE = "https://arbeidsplassen.nav.no/stillinger/stilling"
@@ -31,7 +31,7 @@ def _employer(hit: dict) -> str:
 
 def scrape_finn(queries=None, max_per_query: int = 60) -> list[dict]:
     """Norwegian jobs via Arbeidsplassen search API (same vacancy pool as Finn.no)."""
-    queries = queries or SEARCH_QUERIES[:10]
+    queries = queries or SEARCH_QUERIES_BY_BOARD["finn"]
     jobs, seen = [], set()
     for q in queries:
         offset = 0

@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 
 import scrape as us_scrape  # noqa: E402
-from europe.config import DATA, SEARCH_QUERIES  # noqa: E402
+from europe.config import DATA, SEARCH_QUERIES_BY_BOARD  # noqa: E402
 from europe.scrapers.nhs_jobs import scrape_nhs_jobs  # noqa: E402
 from europe.scrapers.portals import (  # noqa: E402
     scrape_karolinska,
@@ -55,7 +55,7 @@ def scrape_eu_employers() -> list[dict]:
         if adapter is us_scrape.scrape_generic:
             continue
         try:
-            raw = adapter(url, emp["name"], SEARCH_QUERIES[:8])
+            raw = adapter(url, emp["name"], SEARCH_QUERIES_BY_BOARD["employers"])
         except Exception:
             raw = []
         for j in raw:

@@ -4,7 +4,7 @@ import re
 import requests
 from datetime import datetime
 
-from ..config import SEARCH_QUERIES
+from ..config import SEARCH_QUERIES_BY_BOARD
 
 API = "https://jobsearch.api.jobtechdev.se/search"
 HEADERS = {"User-Agent": "JOB-Search-Europe/1.0", "Accept": "application/json"}
@@ -64,7 +64,7 @@ def _normalize(hit: dict) -> dict | None:
 
 
 def scrape_jobtech(queries=None, max_per_query=80) -> list[dict]:
-    queries = queries or SEARCH_QUERIES[:12]
+    queries = queries or SEARCH_QUERIES_BY_BOARD["jobtech"]
     jobs, seen = [], set()
     for q in queries:
         offset = 0

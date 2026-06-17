@@ -260,7 +260,7 @@
     "last_seen": "2026-06-17"
   },
   "https://www.jobs.nhs.uk/candidate/jobadvert/B0263-26-0236?employer=Guy's%20and%20St%20Thomas'%20NHS%20Foundation%20Trust&page=7&language=en": {
-    "fingerprint": "1e2a5c4a3662",
+    "fingerprint": "45af5364a522",
     "first_seen": "2026-06-17",
     "last_seen": "2026-06-17"
   },
@@ -626,6 +626,761 @@
   },
   "https://veritaz.se/jobs/epic-owner-backup-recovery-cybersecurity-transformation-17979/?utm_source=jobbsafari.se&utm_medium=referral": {
     "fingerprint": "a4d124f45dac",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.jobs.nhs.uk/candidate/jobadvert/C9180-26-0756?employer=Cambridge%20University%20Hospitals%20NHS%20Foundation%20Trust&language=en": {
+    "fingerprint": "2a41afc21e76",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.jobs.nhs.uk/candidate/jobadvert/C9321-26-0861?employer=Liverpool%20University%20Hospitals%20NHS%20Foundation%20Trust&page=9&language=en": {
+    "fingerprint": "2a41afc21e76",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://ju.varbi.com/en/what:job/jobID:940606/type:job/where:125/apply:1": {
+    "fingerprint": "ef8d5e24d072",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://career2.successfactors.eu/sfcareer/jobreqcareerpvt?jobId=786582&company=Ericsson&st=E627A9E8F72114AF1552FFFCBB780C3C088F281E": {
+    "fingerprint": "0949ba208c9d",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://umu.varbi.com/se/what:job/jobID:946541/type:job/where:125/apply:1": {
+    "fingerprint": "505ca358cf4a",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobb.agilarbetskraft.se/jobs/7853291-kravanalytiker-skatteverket-stockholm/applications/new?promotion=2036492-arbetsformedlingen": {
+    "fingerprint": "c60983a0fc2d",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://sorosconsulting.se/2026/06/05/kravanalytiker/": {
+    "fingerprint": "3f183bda75f5",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://career.sharkmob.com/jobs/7856117-release-manager/applications/new?promotion=2046050-arbetsformedlingen": {
+    "fingerprint": "434811fd7700",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.recruto.se/apps/listings/view/id/93214/tracking/5": {
+    "fingerprint": "68a3256696b4",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MTUyNTEzNjgwMjQgMTY?lang=en": {
+    "fingerprint": "d9a11400b48c",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/OTYyMjE4IDE3?lang=en": {
+    "fingerprint": "69e83f62cb68",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/NjE2Mjk2MiAxMjE?lang=en": {
+    "fingerprint": "aaa77f2d218f",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzI5MjE0NjA3OTIgNg?lang=en": {
+    "fingerprint": "de74e0b0bfa5",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/NTQxYWQxNDktOTY0ZC03OTBhLWUwNjMtNjg5M2IyMGEyYTRmIDQy?lang=en": {
+    "fingerprint": "c0c52d898d9c",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/NTQxYWQxNDUtZWE4Ny03OTBhLWUwNjMtNjg5M2IyMGEyYTRmIDQy?lang=en": {
+    "fingerprint": "38a18ad8b9e3",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/NTQ1NzJhYWQtYjZmNS00MGE2LWUwNjMtNjg5M2IyMGFkMzAwIDQy?lang=en": {
+    "fingerprint": "42878dfdae0e",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/NTQ1NzJhYWQtYjY3Zi00MGE2LWUwNjMtNjg5M2IyMGFkMzAwIDQy?lang=en": {
+    "fingerprint": "1441ec4ed3bf",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/NTQ1NzJhYWQtYWZmZi00MGE2LWUwNjMtNjg5M2IyMGFkMzAwIDQy?lang=en": {
+    "fingerprint": "93daecfa9175",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MTUyNzkyOTI4MTkgMTY?lang=en": {
+    "fingerprint": "60a531fa3002",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/OTYzNTc2IDE3?lang=en": {
+    "fingerprint": "948a1e9ae514",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://arbeidsplassen.nav.no/stillinger/stilling/9ed74a66-82c6-4d5c-acea-6b6cd3e2f519": {
+    "fingerprint": "c2ebcfdb43b0",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://lnu.se/mot-linneuniversitetet/jobba-hos-oss/lediga-jobb/?rmpage=job&rmjob=9153&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "3faaba4f5fc9",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://web103.reachmee.com/ext/I005/333/main?site=2&validator=a75fbd88f1b2a3a49de2af9c8b7bc228&lang=SE&rmpage=job&rmjob=49471&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "6bed70ddda6c",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.academicwork.se/lediga-jobb/p/platsbanken/13QLTZ": {
+    "fingerprint": "c82e88fa0075",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://careers.progalaxy.se/jobs/7904753-bi-specialist/applications/new?promotion=2051767-arbetsformedlingen": {
+    "fingerprint": "29a42fa19e6f",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://pnty-apply.ponty-system.se/quest?id=8146&pnty_src=platsbanken": {
+    "fingerprint": "6ffe6c962be0",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://careers.qbemanning.se/jobs/7780446-bi-konsult-inom-erp-och-visualisering/applications/new?promotion=2013734-arbetsformedlingen": {
+    "fingerprint": "78268f8b3079",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://careers.qbemanning.se/jobs/7722766-business-analyst-med-stark-drivkraft-och-analysformaga-sokes/applications/new?promotion=1994741-arbetsformedlingen": {
+    "fingerprint": "8bc44e969213",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobs.avaron.se/jobs/7929219-program-business-analyst/applications/new?promotion=2057629-arbetsformedlingen": {
+    "fingerprint": "6ff734d5d90a",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobs.smartrecruiters.com/HMGroup/744000131647354-data-analyst-business-intelligence": {
+    "fingerprint": "7f0f6cc671d1",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobs.avaron.se/jobs/7892327-program-business-analyst/applications/new?promotion=2048151-arbetsformedlingen": {
+    "fingerprint": "64c12d2cfa07",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobs.smartrecruiters.com/CERN/744000127816689-business-analyst-fap-bc-pm-2026-109-ld-": {
+    "fingerprint": "476343515f4b",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://career.telavox.com/jobs/7661845-analytics-engineer?promotion=2008759-arbetsformedlingen": {
+    "fingerprint": "453aee2ed94e",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://hitachi.wd1.myworkdayjobs.com/hitachi/job/Ludvika-Dalarna-County-Sweden/IT-Business-Analyst_R0126961": {
+    "fingerprint": "ef4d656bee56",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobb.agilarbetskraft.se/jobs/7913172-erfaren-kravanalytiker-till-ica/applications/new?promotion=2054361-arbetsformedlingen": {
+    "fingerprint": "e33a00e56ed7",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://pnty-apply.ponty-system.se/quest?id=8153&pnty_src=platsbanken": {
+    "fingerprint": "ada3a7e9bb35",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://ars2.equest.com/?response_id=42e60105c086b02ca04407670c2af534": {
+    "fingerprint": "c59382b7f444",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://arbetsformedlingen.varbi.com/se/what:job/jobID:930626/type:job/where:125/apply:1": {
+    "fingerprint": "d6695980f215",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.jobseurope.com/jobs/birkirkara-product-business-analyst-12242efd-e3d4-49b8-8706-c7f6792fdc82": {
+    "fingerprint": "5c8b2769efd3",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobs.swedbank.com/jobs/26893-calypso-accounting-business-analyst-scrum-master-hybrid-role/applications/new?promotion=18949-arbetsformedlingen": {
+    "fingerprint": "cf9495d86fe4",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://careers.abb/global/en/job/JR00035877/IS-Business-analyst-PCP-Go-to-Market-and-R-D-solutions": {
+    "fingerprint": "82cba8131745",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://careers.abb/global/en/job/JR00036054/Business-analyst-PCP-Productization-specialist": {
+    "fingerprint": "56270538fee9",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.academicwork.se/lediga-jobb/p/platsbanken/46X7DG": {
+    "fingerprint": "71aae6fece56",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://regionstockholm.varbi.com/se/what:job/jobID:945662/type:job/where:125/apply:1": {
+    "fingerprint": "473aea2830d0",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.recruto.se/apps/listings/view/id/83198/tracking/5": {
+    "fingerprint": "0a9677b82af3",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://annsam.se/lediga-uppdrag?mtrpage=assignment&mtrt=ams&mtrid=9287": {
+    "fingerprint": "92e8062dfe8c",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://annsam.se/lediga-uppdrag?mtrpage=assignment&mtrt=ams&mtrid=9281": {
+    "fingerprint": "1eed89d4de4f",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://annsam.se/lediga-uppdrag?mtrpage=assignment&mtrt=ams&mtrid=9278": {
+    "fingerprint": "32f932ce10d9",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://ltd.heroma.se/prod/ltdpp01/externwebbv2/Ansokan/EW2PageBesvaraFragor.aspx?arenderef=8342139761418340564": {
+    "fingerprint": "964cad17537d",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://annsam.se/lediga-uppdrag?mtrpage=assignment&mtrt=ams&mtrid=9275": {
+    "fingerprint": "6485839bc83b",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=a1abfc81-851f-499b-9e3f-a307e79c0c2d&publishCode=PB&TK=c8a53694-38d5-4dec-b5cc-954750194fbf": {
+    "fingerprint": "afd60245ae74",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://web103.reachmee.com/ext/I005/1008/main?site=6&validator=33f479194eff40738ee0555b85976a36&lang=SE&rmpage=job&rmjob=2820&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "2a3f6a28186e",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=32491dc5-27fa-4ac5-a575-b40e22060774&publishCode=PB&TK=42b092fb-585a-4f14-988c-40fb7b77bfc0": {
+    "fingerprint": "67d9132e7c94",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://sorosconsulting.se/2026/06/17/verksamhetsutvecklare-sakerhetsskydd/": {
+    "fingerprint": "b5d5e09c811c",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=927aafcf-3772-49b7-953d-68ecbf78f75b&publishCode=PB&TK=90931569-2ccd-4942-83e2-fd55eb743160": {
+    "fingerprint": "74ae953fb66a",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://web103.reachmee.com/ext/I005/1008/main?site=6&validator=33f479194eff40738ee0555b85976a36&lang=SE&rmpage=job&rmjob=2821&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "3eab1ad07f4e",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobb.funkisgruppen.se/jobs/7849693-verksamhetsutvecklare-till-funkisgruppen/applications/new?promotion=2048820-arbetsformedlingen": {
+    "fingerprint": "71429bad84d3",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://vgregion.varbi.com/se/what:job/jobID:937591/type:job/where:125/apply:1": {
+    "fingerprint": "43f9f7f39f2d",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://kronofogden.varbi.com/se/what:job/jobID:942878/type:job/where:125/apply:1": {
+    "fingerprint": "035d6415d88d",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://ang.heroma.se/prod/angpp01/ExternWebbV2/LedigaJobb/EW2PageAnnons.aspx?arenderef=8341751365173801817": {
+    "fingerprint": "eecc69ffc6c8",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://trv.heroma.se/prod/TRVpp01/ExternWebbV2/LedigaJobb/EW2PageAnnons.aspx?arenderef=8342137825924386201": {
+    "fingerprint": "93bc9aea91df",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobs.avaron.se/jobs/7858640-senior-verksamhetsutvecklare-inkop/applications/new?promotion=2038427-arbetsformedlingen": {
+    "fingerprint": "7bda04668ada",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobs.avaron.se/jobs/7930858-senior-verksamhetsutvecklare-inom-sua/applications/new?promotion=2057940-arbetsformedlingen": {
+    "fingerprint": "04489c0cce85",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=436c6aa0-050e-47d4-9834-aeae5f2f309b&publishCode=PB&TK=b8b01a03-28d6-4c29-b4b4-3d5a0d693d12": {
+    "fingerprint": "c133b72ec8de",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobs.avaron.se/jobs/7909625-verksamhetsutvecklare-dynamics-365-crm/applications/new?promotion=2053413-arbetsformedlingen": {
+    "fingerprint": "65409fa31e9c",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "http://web103.reachmee.com/ext/I005/1013/main?site=6&validator=61e84dc0c178c1f5fd4ebfb8b7ac37be&lang=SE&rmpage=job&rmjob=2442&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "4011fe674e1e",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "http://web103.reachmee.com/ext/I005/1013/main?site=6&validator=61e84dc0c178c1f5fd4ebfb8b7ac37be&lang=SE&rmpage=job&rmjob=2419&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "7c8591c2dafa",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobb.humana.se/jobs/7859833-verksamhetsutvecklare-ai-till-humana/applications/new?promotion=2041930-arbetsformedlingen": {
+    "fingerprint": "236584228ae7",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=9fcfdbf3-1223-4c85-a513-7b4df7d8408c&publishCode=PB&TK=fd717605-3526-46fd-a50f-45f3f93471a6": {
+    "fingerprint": "f6a810e02fd6",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://web103.reachmee.com/ext/I017/662/main?site=2&validator=a8902bc2fa67733e80f0e7f45ffb7dcb&lang=SE&rmpage=job&rmjob=5192&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "902f7505c26e",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.aplitrak.com/?adid=YS5vbGl3LjQ2NDc3LjEzNzY1QHNhYWIuYXBsaXRyYWsuY29t": {
+    "fingerprint": "8dc019a71d11",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://pensionsmyndigheten.varbi.com/se/what:job/jobID:940346/type:job/where:125/apply:1": {
+    "fingerprint": "14f765650baf",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://pensionsmyndigheten.varbi.com/what:job/jobID:940346/": {
+    "fingerprint": "d9d011607418",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=fd3fd54d-562c-4146-9940-de2912cfa5e3&publishCode=PB&TK=e93473e5-3d13-4330-a704-d341cf0df41d": {
+    "fingerprint": "146fa9a31fbd",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://forskolanflygandemattan.se/": {
+    "fingerprint": "9a85a0bb1c9e",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://ars2.equest.com/?response_id=f2a539c6153de4ab97ede27ca42751e8": {
+    "fingerprint": "9bc5ba607b40",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://nexergroup.teamtailor.com/jobs/7776700-ai-transformation-consultant-ai-driven-verksamhetsutvecklare/applications/new?promotion=2012962-arbetsformedlingen": {
+    "fingerprint": "a93c88d046bc",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=6c8db20c-c8d1-42ff-baa7-c65cc1d6d79f&publishCode=PB&TK=172ac819-f8a9-478e-be78-2f5d52d3e1fb": {
+    "fingerprint": "73e29c4cab05",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=af6ea5ca-3707-4b15-b2b1-30f3c594cc49&publishCode=PB&TK=4bd6ea0b-9372-4649-bd34-0529162a0887": {
+    "fingerprint": "28342064031c",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://go.talentech.io/pj8O0?utm_source=jobtip": {
+    "fingerprint": "dd660d62d24b",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://go.talentech.io/bOLtV?utm_source=jobtip": {
+    "fingerprint": "b03cbd75debc",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.aplitrak.com/?adid=bi5zdGVuYmVyZy45OTE4Ny4xMzc2NUBzYWFiLmFwbGl0cmFrLmNvbQ": {
+    "fingerprint": "1b13132c4803",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://finspang.varbi.com/se/what:job/jobID:945534/type:job/where:125/apply:1": {
+    "fingerprint": "08b18f01f992",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "http://www.sala.se/ledigajobb?rmpage=job&rmjob=3691&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "e00784044d52",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.aplitrak.com/?adid=bWFyaWUuam9oYW5zc29uLjgzODY2LjEzNzY1QHNhYWIuYXBsaXRyYWsuY29t": {
+    "fingerprint": "6fa0b84fef15",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://volvo-information-technology-ab.contactrh.com/jobs/9669/44245524": {
+    "fingerprint": "a95b42dd63e6",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.aplitrak.com/?adid=cC5zdmVuc3Nvbi40NzkzMS4xMzc2NUBzYWFiLmFwbGl0cmFrLmNvbQ": {
+    "fingerprint": "40630dac0d5a",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/OTYzMTk4IDE3?lang=en": {
+    "fingerprint": "853e9c64dcad",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MTUyNjY1NDIwOTAgMTY?lang=en": {
+    "fingerprint": "5a52e36efdcd",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/OTY0MTE3IDE3?lang=en": {
+    "fingerprint": "85129e4c6db0",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzQzNjk5NSAxNA?lang=en": {
+    "fingerprint": "fc9bb58481ea",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzQzOTEwOCAxNA?lang=en": {
+    "fingerprint": "322430af46c9",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzIyNjAyNC0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "979d71743827",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzI3NDIzNi0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "869227fb0c96",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM3ODEwMi0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "afa6e2c98a33",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM5MTIyMC0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "acd12a41a02c",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM5MzkwOC0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "cff912bc05c4",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzQzNzUxOSAxNA?lang=en": {
+    "fingerprint": "a2fc7e828f8a",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM0NzE0NS0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "3eda8fd546dd",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzMzMjYwOS0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "3a601088474b",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzI1Mzg1Ni0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "a20459995e28",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM3MjcwMS0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "33466d55e608",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM3MzE5NC0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "9cdafc4fd75d",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM3NDU4OS0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "66902dbe446d",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM3NTI3Ny0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "58ca68f58b64",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM3NzQ1OC0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "ee4e649a8114",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM3ODEyMi0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "40cd809dc4da",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM3NTI3NS0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "b07daf897d03",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzQzMjcxNS0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "01bf6a226b89",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM3NDU4OC0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "add53ff2914f",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM5OTQ4Ny0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "df5e931bbf31",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzM0NTgzMi0yMDI2MjUgMTQ?lang=en": {
+    "fingerprint": "abd45a3d397b",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzQzZWIyZTUtNjZiOC00ZjJkLThjOWItMWVjYzU0NTA2ODQ2IDYx?lang=en": {
+    "fingerprint": "be3ce0bee4b8",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/NjZjODk5YzMtMmRiYi00NDc4LWE2YzEtN2YxMjE3OTM0NzU0IDYx?lang=en": {
+    "fingerprint": "e9b0bed33411",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/NjE2MzMzMyAxMjE?lang=en": {
+    "fingerprint": "92132a2d993e",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MzQzNjIwNiAxNA?lang=en": {
+    "fingerprint": "2378777648a6",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/NjE2NDQ2MyAxMjE?lang=en": {
+    "fingerprint": "25b5b2185632",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/MmRjYzk0MjgtZGExMC00YmExLWIxNmQtNmIxYTEwMTE2ZjEzIDgx?lang=en": {
+    "fingerprint": "a4b7ad8d87e7",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://europa.eu/eures/portal/jv-se/jv-details/NjE2MzA0MSAxMjE?lang=en": {
+    "fingerprint": "435e68df5239",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.jobindex.dk/vis-job/h1673057": {
+    "fingerprint": "4dbe9fb70a39",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.jobindex.dk/vis-job/h1674919": {
+    "fingerprint": "356c06c33e4d",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.jobindex.dk/vis-job/h1666396": {
+    "fingerprint": "8544295d486f",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.jobindex.dk/vis-job/h1674029": {
+    "fingerprint": "efc705d2ed47",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://arbeidsplassen.nav.no/stillinger/stilling/529de800-4a3f-4ad4-91cb-38bdebc7aa15": {
+    "fingerprint": "7456a09ed70a",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://arbeidsplassen.nav.no/stillinger/stilling/2b93cd3f-138c-4f54-b18a-ba0803388c96": {
+    "fingerprint": "22edc4531d6f",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://arbeidsplassen.nav.no/stillinger/stilling/4fb6be65-564f-4fc5-9105-02797f90748c": {
+    "fingerprint": "a47cefc7a3d7",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://arbeidsplassen.nav.no/stillinger/stilling/fc9a38c3-acfb-4dfc-a29e-d3cbb6c39b0c": {
+    "fingerprint": "a7086d795782",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.jeffersonwells.se/sv/candidate/jobapply?id=b5f1b0d7-dba0-4e92-abc9-aac98680c335&utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "6cb0d4a5d0bd",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://careers.consoden.cag.se/jobs/1235495-krav-och-systemanalytiker-med-hjarta-for-sveriges-sakerhet?utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "6cb0d4a5d0bd",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://clients.njoyn.com/corp/ex/JobBoards/JobBoards_jobdetails.asp?CLID=21001&BDID=22427&JID=J0526-1888&BRID=1302480&LGID=1&utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "afb429172d15",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://clients.njoyn.com/corp/ex/JobBoards/JobBoards_jobdetails.asp?CLID=21001&BDID=22427&JID=J0526-1889&BRID=1302479&LGID=1&utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "ce5c709477d2",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://arbetsformedlingen.varbi.com/se/what:job/jobID:945010/type:job/where:125/apply:1?utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "0278d7e18d21",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://forskolanflygandemattan.se/?utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "a752c4501df9",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://web103.reachmee.com/ext/I005/1013/main?site=6&validator=61e84dc0c178c1f5fd4ebfb8b7ac37be&lang=SE&rmpage=job&rmjob=2442&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "086260477534",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobs.avaron.se/jobs/7909625-verksamhetsutvecklare-dynamics-365-crm/applications/new?utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "ed060d153f74",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://finspang.varbi.com/se/what:job/jobID:945534/type:job/where:125/apply:1?utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "0cf78464cc48",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=a1abfc81-851f-499b-9e3f-a307e79c0c2d&publishCode=PB&TK=c8a53694-38d5-4dec-b5cc-954750194fbf&utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "6fcb340ca20e",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=9464bdce-575b-44b6-adff-8e53c8a117f1&publishCode=PB&TK=8dcf6dbb-3c99-499c-8d0f-0e363faae2ed&utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "f0166993261a",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=436c6aa0-050e-47d4-9834-aeae5f2f309b&publishCode=PB&TK=abbd7808-ffe5-404b-a37d-3a0a49c1a3b8&utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "0f95fba23fcc",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://trv.heroma.se/prod/trvpp01/ExternWebbV2/Ansokan/EW2OnePageJobApplication.aspx?jobpostingid=8342137825924386201&utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "064a375ac689",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.sala.se/ledigajobb?rmpage=job&rmjob=3691&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "6adc773a22e8",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://polisen.se/jobb-och-utbildning/lediga-jobb/2026/juni/verksamhetsutvecklare--finuc/?utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "2aeaa6d1a917",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://assessment.predictiveindex.com/5MSN/92930c2f-5bc7-4fb0-a42c-12023fe9e65c?type=candidateba&utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "eac30523917d",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobb.funkisgruppen.se/jobs/7849693-verksamhetsutvecklare-till-funkisgruppen/applications/new?utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "b82a5e7ffd8c",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://recruit.visma.com/spa/public/apply?guidAssignment=927aafcf-3772-49b7-953d-68ecbf78f75b&publishCode=PB&TK=90931569-2ccd-4942-83e2-fd55eb743160&utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "38ffc9900059",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://pensionsmyndigheten.varbi.com/se/what:job/jobID:940346/type:job/where:125/apply:1?utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "e5bfde04a713",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://jobs.avaron.se/jobs/7884941-verksamhetsutvecklare-inom-it-modernisering/applications/new?utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "84cdb56fcfca",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.aplitrak.com/?adid=YS5vbGl3LjQ2NDc3LjEzNzY1QHNhYWIuYXBsaXRyYWsuY29t&utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "006a03af162d",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://www.adecco.com/sv-se/ansok?zlid=6e761aff-94b1-41b8-8faa-218d8a2fbd3d&src=ams_direct&utm_source=jobbsafari.se&utm_medium=referral": {
+    "fingerprint": "521919a74624",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://web103.reachmee.com/ext/I017/687/main?site=805&validator=378d9601612969cb920b21a9de534b9b&lang=SE&rmpage=job&rmjob=453&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "91ddd99c28cb",
+    "first_seen": "2026-06-17",
+    "last_seen": "2026-06-17"
+  },
+  "https://web103.reachmee.com/ext/I005/1013/main?site=6&validator=61e84dc0c178c1f5fd4ebfb8b7ac37be&lang=SE&rmpage=job&rmjob=2419&utm_medium=talentech_publishing&utm_source=jobtip": {
+    "fingerprint": "93be4ebb1ab1",
     "first_seen": "2026-06-17",
     "last_seen": "2026-06-17"
   }

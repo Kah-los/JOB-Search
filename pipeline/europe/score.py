@@ -3,7 +3,7 @@
 import re
 from datetime import datetime, date
 
-from .config import LANGUAGE_POINTS
+from .config import LANGUAGE_POINTS, ALL_TARGET_TITLES
 from .language import (
     extract_languages, score_language, requires_c1_c2_local, summarize,
 )
@@ -12,10 +12,16 @@ TODAY = date.today()
 HEALTH_RE = re.compile(
     r"(health informatics|informatics|health information|him\b|ehr|emr|epic|hl7|fhir|"
     r"clinical documentation|cdi\b|medical records|healthcare data|data analyst|"
-    r"interoperab|digital health|health it|information management|data governance|"
-    r"compliance|quality improvement|population health|openEHR|snomed|"
+    r"interoperab|digital health|health it|healthcare it|information management|"
+    r"data governance|compliance|quality improvement|population health|openEHR|snomed|"
     r"business analyst|project manager|program manager|analytics|bi\b|"
-    r"health & safety manager|health safety|medical device|healthcare|hospital administration)",
+    r"ehälsa|e-hälsa|ehelse|ehealth|e-health|esalud|esaúde|esaude|"
+    r"klinisk it|journalsystem|systemanalytiker|verksamhetsutvecklare|"
+    r"gesundheitsinformatik|gesundheitsinformation|santé numérique|informatique médicale|"
+    r"clinical systems|hospital information|clinical decision support|"
+    r"implementation consultant|integration specialist|integration engineer|"
+    r"health data|digital systems|nhs digital|solutions architect|"
+    r"clinical application support|informatics officer|digital health strategist)",
     re.I)
 CLINICAL_ROLE_RE = re.compile(
     r"\b(surgeon|physician|doctor|nurse|nursing|midwife|dentist|pharmacist|"
@@ -43,10 +49,37 @@ def days_old(job):
     return (TODAY - d).days if d else None
 
 
-def title_relevant(title: str) -> bool:
+def title_relevant(title: str, description: str = "") -> bool:
     if CLINICAL_ROLE_RE.search(title or ""):
         return False
-    return bool(HEALTH_RE.search(title or ""))
+    t_lower = (title or "").lower()
+    for target in ALL_TARGET_TITLES:
+        if target.lower() in t_lower:
+            return True
+    if HEALTH_RE.search(title or ""):
+        return True
+    blob = (description or "")[:800].lower()
+    if HEALTH_RE.search(blob):
+        return True
+    for target in ALL_TARGET_TITLES:
+        if target.lower() in blob:
+            return True
+    return False
+
+
+def _title_hits(title: str, profile: dict) -> int:
+    t_lower = (title or "").lower()
+    hits = 0
+    seen = set()
+    for source in (profile.get("title_synonyms", []), ALL_TARGET_TITLES):
+        for t in source:
+            key = t.lower().strip()
+            if key in seen:
+                continue
+            seen.add(key)
+            if key in t_lower:
+                hits += 1
+    return hits
 
 
 def score_job(job: dict, profile: dict) -> dict:
@@ -82,8 +115,7 @@ def score_job(job: dict, profile: dict) -> dict:
         for s in grp:
             if s.lower() in blob.lower():
                 skill_hits += 1
-    title_hits = sum(1 for t in profile.get("title_synonyms", [])
-                     if t.lower() in title.lower())
+    title_hits = _title_hits(title, profile)
 
     fit = min(10, 4 + skill_hits * 0.4 + title_hits * 1.2)
     reasons.append(f"Skill/title match ({skill_hits} skills, {title_hits} title hits)")

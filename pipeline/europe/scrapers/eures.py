@@ -4,7 +4,7 @@ import re
 import uuid
 import requests
 
-from ..config import SEARCH_QUERIES, EURES_LOCATIONS
+from ..config import SEARCH_QUERIES, SEARCH_QUERIES_BY_BOARD, EURES_LOCATIONS
 
 API = "https://europa.eu/eures/api/jv-searchengine/public/jv-search/search"
 DETAIL_API = "https://europa.eu/eures/api/jv-searchengine/public/jv/id/{id}"
@@ -129,7 +129,7 @@ def _normalize(jv: dict, detail: dict | None = None) -> dict | None:
 
 
 def scrape_eures(queries=None, max_pages_per_query=3, locations=None) -> list[dict]:
-    queries = queries or SEARCH_QUERIES[:10]
+    queries = queries or SEARCH_QUERIES_BY_BOARD["eures"]
     locations = locations or EURES_LOCATIONS
     jobs, seen = [], set()
     for q in queries:

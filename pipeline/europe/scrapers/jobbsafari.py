@@ -8,7 +8,7 @@ from urllib.parse import quote
 
 import requests
 
-from ..config import SEARCH_QUERIES
+from ..config import SEARCH_QUERIES_BY_BOARD
 
 HEADERS = {
     "User-Agent": (
@@ -49,7 +49,7 @@ def _location(entry: dict) -> str:
 
 
 def scrape_jobbsafari(queries=None, max_per_query: int = 40) -> list[dict]:
-    queries = queries or SEARCH_QUERIES[:10]
+    queries = queries or SEARCH_QUERIES_BY_BOARD["jobbsafari"]
     jobs, seen = [], set()
     for q in queries:
         try:

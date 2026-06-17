@@ -2,6 +2,13 @@
 
 from pathlib import Path
 
+from .target_titles import (
+    ALL_TARGET_TITLES,
+    SEARCH_QUERIES,
+    SEARCH_QUERIES_BY_BOARD,
+    TARGET_TITLES_BY_COUNTRY,
+)
+
 ROOT = Path(__file__).resolve().parent.parent.parent
 DATA = ROOT / "data" / "europe"
 JOBS_RAW = DATA / "jobs_raw.json"
@@ -49,15 +56,8 @@ APPROVED_BOARDS = {
     "stepstone": "StepStone",
 }
 
-# Search terms aligned with health informatics CV
-SEARCH_QUERIES = [
-    "health informatics", "health information", "clinical informatics",
-    "informatics", "EHR", "EMR", "Epic", "medical records", "HIM",
-    "clinical documentation", "CDI", "data analyst healthcare",
-    "healthcare data", "interoperability", "FHIR", "HL7",
-    "quality improvement healthcare", "compliance healthcare",
-    "digital health", "health IT", "information management",
-]
+# Search terms — see target_titles.py for full 150+ title list by country
+# SEARCH_QUERIES imported from target_titles
 
 # EURES location codes (country-level NUTS)
 EURES_LOCATIONS = [
