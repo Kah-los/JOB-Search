@@ -9,10 +9,14 @@ remote/location, and employment_type. Only title-relevant jobs are enriched
 """
 import json
 import re
+import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import requests
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from target_titles import ALL_TARGET_TITLES
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "jobs_raw.json"
@@ -27,8 +31,10 @@ TIMEOUT = 20
 # this gate only decides what to fetch a description for.
 TITLE_INCLUDE = re.compile(
     r"(informatics|health information|\bhim\b|\bhims\b|\bcdi\b|clinical document|"
-    r"medical record|\behr\b|\bemr\b|epic|interoperab|health information exchange|\bhie\b|"
-    r"\bhl7\b|\bfhir\b|analyst|analytics|business intelligence|\bbi\b|reporting|"
+    r"medical record|\behr\b|\bemr\b|epic|resolute|cogito|clarity|cadence|prelude|beaker|"
+    r"interoperab|health information exchange|\bhie\b|"
+    r"\bhl7\b|\bfhir\b|interface (analyst|developer|engineer)|integration (analyst|engineer)|"
+    r"analyst|analytics|business intelligence|\bbi\b|reporting|"
     r"data (quality|integrity|governance|steward|management|analy)|decision support|"
     r"compliance|regulatory|privacy|governance|hipaa|audit|"
     r"revenue cycle|revenue integrity|coding|coder|billing|reimbursement|charge|"
@@ -37,11 +43,12 @@ TITLE_INCLUDE = re.compile(
     r"operations (manager|analyst|coordinator|specialist)|process improvement|"
     r"case management|care coordination|utilization|"
     r"business analyst|systems analyst|application analyst|clinical systems|"
+    r"health (it|IT)|healthcare (it|IT)|digital health|"
+    r"implementation|go-live|service desk|help desk|trainer|change management|"
     r"informatics|training|educator|education specialist|"
-    r"consultant|advisory|digital health|transformation|policy|registry|"
+    r"consultant|advisory|transformation|policy|registry|"
     r"document (specialist|control)|records (specialist|manager|coordinator)|"
-    # generic mid-career role nouns — admitted broadly; scoring + healthcare-context
-    # gate + >=6 threshold decide relevance. (User: stop excluding these titles.)
+    r"patient access|denial management|"
     r"\bcoordinator\b|\bspecialist\b|\bassociate\b|\btechnician\b|\bofficer\b|"
     r"\badministrator\b|\banalyst\b|\bmanager\b|\bsupervisor\b|\bdirector\b)", re.I)
 # Hard non-matches: clinical/manual/unrelated/pure-engineering — never enrich.
@@ -70,6 +77,10 @@ def title_relevant(title):
     t = title or ""
     if TITLE_EXCLUDE.search(t):
         return False
+    t_lower = t.lower()
+    for target in ALL_TARGET_TITLES:
+        if target.lower() in t_lower:
+            return True
     return bool(TITLE_INCLUDE.search(t))
 
 WD_VIEW_RE = re.compile(r"https?://([^.]+)\.(wd\d+)\.myworkdayjobs\.com/([^/]+)(/.*)")

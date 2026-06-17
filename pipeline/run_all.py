@@ -21,6 +21,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from score import score_job
+from target_titles import ALL_TARGET_TITLES
 import tailor
 from dashboard_nav import SITE_NAV_CSS, site_nav_html, site_nav_js
 
@@ -649,7 +650,7 @@ def write_dashboard(matches, new_today):
       <h1>Healthcare Job<span class="mark">.</span>Search</h1>
       <span class="meta">Direct from {n_emp} employer career pages · no job boards</span>
     </div>
-    <span class="updated">Updated {date.today().isoformat()}</span>
+    <span class="updated">Updated {date.today().isoformat()} · {len(ALL_TARGET_TITLES)} target titles</span>
   </div>
   <div class="kpis">
     <div class="kpi accent"><b>{len(matches)}</b><span>Matches</span></div>

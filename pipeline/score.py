@@ -31,7 +31,12 @@ clinical licensure, excludes pure software engineering, must connect to
 healthcare information. Visa-sponsorship + onsite remain *flags*, not exclusions.
 """
 import re
+import sys
 from datetime import datetime, date
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from target_titles import ALL_TARGET_TITLES
 
 # Requirement-anchored: only fires when a clinical license/credential is
 # genuinely REQUIRED, not merely mentioned in passing.
@@ -271,21 +276,28 @@ def score_job(job, profile):
     min_years_target = fil.get("min_years_target", 3)
 
     # ---- title_fit ----
-    syn_hits = [s for s in profile["title_synonyms"] if _norm(s) in title]
+    all_titles = list(dict.fromkeys(
+        profile.get("title_synonyms", []) + ALL_TARGET_TITLES
+    ))
+    syn_hits = [s for s in all_titles if _norm(s) in title]
     if syn_hits:
         title_fit = min(1.0, 0.6 + 0.25 * (len(syn_hits) - 1))
         reasons.append(f"Title matches: {', '.join(syn_hits[:3])}")
     else:
         title_fit = 0.0
     hv = {"informatics", "health information", "him", "cdi", "documentation",
-          "ehr", "emr", "epic", "interoperab", "hl7", "fhir", "privacy",
-          "governance", "revenue cycle", "revenue integrity", "clinical systems",
-          "decision support", "compliance", "coding", "analytics", "analyst",
-          "quality", "patient safety", "population health", "regulatory",
-          "data integrity", "data quality", "case management", "care coordination",
-          "project manager", "program manager", "business analyst", "audit",
-          "accreditation", "reimbursement", "utilization", "medical records",
-          "process improvement", "performance improvement", "policy", "registry"}
+          "ehr", "emr", "epic", "resolute", "cogito", "clarity", "cadence",
+          "prelude", "beaker", "interoperab", "hl7", "fhir", "interface",
+          "privacy", "governance", "revenue cycle", "revenue integrity",
+          "clinical systems", "decision support", "compliance", "coding",
+          "analytics", "analyst", "quality", "patient safety", "population health",
+          "regulatory", "data integrity", "data quality", "case management",
+          "care coordination", "project manager", "program manager", "business analyst",
+          "audit", "accreditation", "reimbursement", "utilization", "medical records",
+          "process improvement", "performance improvement", "policy", "registry",
+          "application analyst", "implementation", "go-live", "service desk",
+          "help desk", "trainer", "change management", "digital health",
+          "health it", "healthcare it", "billing", "patient access", "denial"}
     hv_hits = [w for w in hv if w in title]
     if hv_hits:
         title_fit = max(title_fit, min(1.0, 0.5 + 0.15 * len(hv_hits)))

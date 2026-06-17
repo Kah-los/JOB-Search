@@ -30,6 +30,9 @@ from urllib.parse import urlparse
 
 import requests
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from target_titles import SEARCH_QUERIES
+
 ROOT = Path(__file__).resolve().parent.parent
 FACS = ROOT / "data" / "facilities_resolved.json"
 OUT = ROOT / "data" / "jobs_raw.json"
@@ -39,22 +42,8 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
            "Accept": "application/json,text/html"}
 TIMEOUT = 20
 
-# Broad query terms spanning ALL of the candidate's domains. Epic/EHR is just one
-# slice among many. Kept generic so the list APIs surface the full relevant universe
-# (analyst/coordinator/manager/specialist roles across HIM, CDI, data, quality,
-# compliance, revenue cycle, population health, project mgmt, operations, etc.).
-DEFAULT_QUERIES = [
-    "analyst", "informatics", "health information", "data", "data analyst",
-    "analytics", "business intelligence", "reporting", "documentation",
-    "clinical documentation", "CDI", "coding", "revenue cycle", "revenue integrity",
-    "compliance", "regulatory", "privacy", "governance", "quality",
-    "quality improvement", "patient safety", "population health", "interoperability",
-    "project manager", "program manager", "project coordinator", "operations",
-    "case management", "care coordination", "medical records", "health information management",
-    "informatics analyst", "business analyst", "systems analyst", "decision support",
-    "EHR", "Epic", "clinical informatics", "training", "education", "consultant",
-    "digital health", "transformation", "policy", "auditor", "registry",
-]
+# Search terms — see target_titles.py for full 200+ U.S. title list
+DEFAULT_QUERIES = SEARCH_QUERIES
 
 
 # ---------------- Workday ----------------
