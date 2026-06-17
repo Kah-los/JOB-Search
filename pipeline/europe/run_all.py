@@ -73,18 +73,21 @@ tbody tr:hover{background:#f8fafc}
 
 EU_JS = """
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const rows=$$('#tb tr'), q=$('#q'), fCountry=$('#fCountry'), fLang=$('#fLang'), fMode=$('#fMode');
+const rows=$$('#tb tr'), q=$('#q'), fCountry=$('#fCountry'), fLang=$('#fLang'), fMode=$('#fMode'),
+  fEmp=$('#fEmp'), fForeigner=$('#fForeigner');
 function filter(){
-  const term=(q?.value||'').toLowerCase(), c=fCountry?.value||'', lg=fLang?.value||'', md=fMode?.value||'';
+  const term=(q?.value||'').toLowerCase(), c=fCountry?.value||'', lg=fLang?.value||'', md=fMode?.value||'',
+    emp=fEmp?.value||'', fr=fForeigner?.value||'';
   let n=0;
   rows.forEach(r=>{
     const ok=(!term||r.dataset.search.includes(term))&&(!c||r.dataset.country===c)
-      &&(!lg||r.dataset.lang===lg)&&(!md||r.dataset.mode===md);
+      &&(!lg||r.dataset.lang===lg)&&(!md||r.dataset.mode===md)
+      &&(!emp||r.dataset.emp===emp)&&(!fr||r.dataset.foreigner===fr);
     r.classList.toggle('row-out',!ok); if(ok) n++;
   });
   $('#count').textContent=n+' of '+rows.length;
 }
-[q,fCountry,fLang,fMode].forEach(e=>e?.addEventListener('input',filter));
+[q,fCountry,fLang,fMode,fEmp,fForeigner].forEach(e=>e?.addEventListener('input',filter));
 filter();
 """
 
@@ -96,26 +99,41 @@ def write_dashboard(matches, new_today):
     countries = sorted({r.get("country") for r in matches if r.get("country")})
     n_english_high = sum(1 for r in matches if r.get("english_priority") == "high")
     n_remote = sum(1 for r in matches if "remote" in (r.get("work_mode") or "").lower())
+    n_startup = sum(1 for r in matches if r.get("employer_type") in ("startup", "scaleup", "private", "consulting"))
+    n_foreigner = sum(1 for r in matches if r.get("foreigner_tier") == "high")
     rows = []
     for r in matches:
         is_new = r["url"] in new_urls
         pri = r.get("english_priority", "medium")
         pill_cls = {"high": "pill-high", "medium": "pill-medium", "low": "pill-low"}.get(pri, "pill-medium")
         langs = esc(r.get("languages_display") or "—")
-        search = esc(f"{r['title']} {r['employer']} {r.get('country','')} {r.get('city','')}".lower())
+        emp_type = r.get("employer_type") or "unknown"
+        f_tier = r.get("foreigner_tier") or "low"
+        emp_pill = {
+            "startup": "pill-high", "scaleup": "pill-high", "private": "pill-medium",
+            "consulting": "pill-medium", "public_sector": "pill-low", "hospital": "pill-low",
+        }.get(emp_type, "pill-medium")
+        f_pill = {"high": "pill-high", "medium": "pill-medium", "low": "pill-low"}.get(f_tier, "pill-low")
+        startup_badge = '<span class="pill pill-high" style="margin-left:4px">startup</span>' if r.get("startup_match") else ""
+        search = esc(f"{r['title']} {r['employer']} {r.get('country','')} {r.get('city','')} {emp_type}".lower())
         rows.append(
             f'<tr data-search="{search}" data-country="{esc(r.get("country") or "")}" '
-            f'data-lang="{esc(pri)}" data-mode="{esc(r.get("work_mode") or "")}">'
+            f'data-lang="{esc(pri)}" data-mode="{esc(r.get("work_mode") or "")}" '
+            f'data-emp="{esc(emp_type)}" data-foreigner="{esc(f_tier)}">'
             f'<td class="c-title"><a href="{esc(r["url"], quote=True)}" target="_blank" rel="noopener">'
             f'{esc(r["title"] or "Untitled")}</a>'
             f'{"<span class=\"pill pill-high\" style=\"margin-left:6px\">NEW</span>" if is_new else ""}'
             f'<div class="src">{esc(r.get("source_platform") or "")}</div></td>'
-            f'<td>{esc(r.get("employer") or "")}</td>'
+            f'<td>{esc(r.get("employer") or "")}'
+            f'<br><span class="pill {emp_pill}">{esc(emp_type.replace("_", " "))}</span>'
+            f'{startup_badge}'
+            f'</td>'
             f'<td>{esc((r.get("city") or "") + (", " if r.get("city") and r.get("country") else "") + (r.get("country") or ""))}</td>'
             f'<td>{esc(r.get("experience_level") or "—")}</td>'
             f'<td>{esc(r.get("work_mode") or "—")}</td>'
             f'<td>{esc(r.get("date_posted") or "—")}</td>'
-            f'<td>{langs}<br><span class="pill {pill_cls}">{esc(r.get("english_flag") or pri)}</span></td>'
+            f'<td>{langs}<br><span class="pill {pill_cls}">{esc(r.get("english_flag") or pri)}</span>'
+            f'<br><span class="pill {f_pill}">foreigner: {esc(f_tier)}</span></td>'
             f'<td class="c-desc">{esc(r.get("summary") or "")}</td></tr>'
         )
 
@@ -130,14 +148,16 @@ def write_dashboard(matches, new_today):
 <div class="wrap">
 <div class="top">
   <h1>Europe Jobs</h1>
-  <p>Health informatics &amp; healthcare IT — EU/EEA, UK, Switzerland. English-friendly roles ranked first. Sources: Arbetsförmedlingen, EURES, Jobindex.dk, Finn.no, Jobbsafari, StepStone, FlexJobs, EU employer seed list.</p>
+  <p>Health informatics &amp; healthcare IT — EU/EEA, UK, Switzerland. English-friendly roles ranked first; startups/private employers that hire internationally are boosted. Sources: Arbetsförmedlingen, EURES, Jobindex.dk, Finn.no, Jobbsafari, StepStone, FlexJobs, LinkedIn, EU employer seed list.</p>
   <div class="kpis">
     <div class="kpi"><b>{len(matches)}</b><span>Matches</span></div>
     <div class="kpi"><b>{len(new_today)}</b><span>New this run</span></div>
     <div class="kpi"><b>{n_english_high}</b><span>English-friendly</span></div>
     <div class="kpi"><b>{n_remote}</b><span>Remote</span></div>
+    <div class="kpi"><b>{n_startup}</b><span>Private/startup</span></div>
+    <div class="kpi"><b>{n_foreigner}</b><span>Foreigner-friendly</span></div>
   </div>
-  <p style="margin-top:12px;font-size:11px;opacity:.75">Updated {date.today().isoformat()} · {len(ALL_TARGET_TITLES)} target titles · Sources: Jobtech, EURES, Jobindex, Finn, Jobbsafari, StepStone, FlexJobs, employers</p>
+  <p style="margin-top:12px;font-size:11px;opacity:.75">Updated {date.today().isoformat()} · {len(ALL_TARGET_TITLES)} target titles · Sources: Jobtech, EURES, Jobindex, Finn, Jobbsafari, StepStone, FlexJobs, LinkedIn, employers</p>
 </div>
 <div class="toolbar">
   <input id="q" type="search" placeholder="Search title, company, country…" autocomplete="off">
@@ -148,6 +168,13 @@ def write_dashboard(matches, new_today):
     <option value="low">Local language focus</option></select>
   <select id="fMode"><option value="">All modes</option>
     <option>Remote</option><option>Hybrid</option><option>On-site</option></select>
+  <select id="fEmp"><option value="">All employers</option>
+    <option value="startup">Startup</option><option value="scaleup">Scale-up</option>
+    <option value="private">Private</option><option value="consulting">Consulting</option>
+    <option value="public_sector">Public sector</option><option value="hospital">Hospital</option></select>
+  <select id="fForeigner"><option value="">All mobility tiers</option>
+    <option value="high">Foreigner-friendly (high)</option>
+    <option value="medium">Medium</option><option value="low">Local focus</option></select>
   <span class="count" id="count">{len(matches)} of {len(matches)}</span>
 </div>
 <table><thead><tr>
@@ -206,6 +233,11 @@ def main():
             "priority": scored["priority"],
             "source_platform": job.get("source_platform"),
             "source_board": job.get("source_board"),
+            "employer_type": fl.get("employer_type"),
+            "foreigner_tier": fl.get("foreigner_tier"),
+            "foreigner_score": fl.get("foreigner_score"),
+            "startup_match": fl.get("startup_match"),
+            "startup_name": fl.get("startup_name"),
             "first_seen": prev.get("first_seen") if prev else today,
             "last_seen": today,
             "updated": is_new or is_updated,
@@ -216,9 +248,11 @@ def main():
         if is_new or is_updated:
             new_today.append(rec)
 
-    # Sort: English-friendly first, then language score, then recency
+    # Sort: foreigner-friendly startups first, then English, then priority
     tier_order = {"high": 0, "medium": 1, "low": 2}
     matches.sort(key=lambda r: (
+        tier_order.get(r.get("foreigner_tier"), 9),
+        0 if r.get("startup_match") else 1,
         tier_order.get(r.get("english_priority"), 9),
         -(r.get("language_score") or 0),
         -(r.get("priority") or 0),

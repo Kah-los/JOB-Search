@@ -55,6 +55,7 @@ APPROVED_BOARDS = {
     "jobbsafari": "Jobbsafari",
     "stepstone": "StepStone",
     "flexjobs": "FlexJobs",
+    "linkedin": "LinkedIn",
 }
 
 # Search terms — see target_titles.py for full 150+ title list by country

@@ -4,6 +4,7 @@ import re
 from datetime import datetime, date
 
 from .config import LANGUAGE_POINTS, ALL_TARGET_TITLES
+from .employer_signals import score_foreigner_friendly
 from .language import (
     extract_languages, score_language, requires_c1_c2_local, summarize,
 )
@@ -228,7 +229,41 @@ def score_job(job: dict, profile: dict) -> dict:
     lang_pts = lang_info["language_score"]
     priority = lang_pts * 10 + fit
 
-    mode = (job.get("work_mode") or "").lower()
+    emp_info = score_foreigner_friendly(
+        job.get("employer") or "",
+        title,
+        desc,
+        country=country,
+        work_mode=job.get("work_mode") or job.get("remote_type") or "",
+    )
+    flags.update(emp_info)
+    flags["employer_type"] = emp_info["employer_type"]
+
+    prefs = profile.get("employer_preferences", {})
+    if prefs.get("prefer_startups_private"):
+        if emp_info["employer_type"] in ("startup", "scaleup", "private", "consulting"):
+            priority += 4
+            reasons.append(f"Preferred employer type: {emp_info['employer_type']}")
+        elif emp_info["employer_type"] in ("public_sector", "hospital"):
+            priority -= 3
+            reasons.append("Public-sector/hospital employer (lower priority)")
+
+    if prefs.get("prefer_foreigner_friendly"):
+        fs = emp_info["foreigner_score"]
+        if fs >= 6:
+            priority += 5
+            reasons.append("Foreigner-friendly signals")
+        elif fs >= 3:
+            priority += 2
+        elif fs < 0:
+            priority -= 4
+            reasons.append("Local-only hiring signals")
+
+    if emp_info.get("startup_match"):
+        priority += 3
+        reasons.append(f"Health-tech startup match ({emp_info.get('startup_name')})")
+
+    mode = (job.get("work_mode") or job.get("remote_type") or "").lower()
     if "remote" in mode:
         priority += LANGUAGE_POINTS["remote_europe"]
         flags["remote_europe"] = True
@@ -242,7 +277,7 @@ def score_job(job: dict, profile: dict) -> dict:
         priority += 1
 
     flags["experience_level"] = job.get("experience_level") or "Not specified"
-    flags["work_mode"] = job.get("work_mode") or "On-site"
+    flags["work_mode"] = job.get("work_mode") or job.get("remote_type") or "On-site"
     flags["country"] = country
     flags["city"] = job.get("city") or ""
 

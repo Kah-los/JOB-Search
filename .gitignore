@@ -14,6 +14,7 @@ data/*.log
 
 # Optional FlexJobs subscriber cookie / manual import (never commit)
 data/europe/flexjobs_import.json
+data/europe/linkedin_import.json
 
 # Resume / personal documents — keep local, never publish
 *.pdf

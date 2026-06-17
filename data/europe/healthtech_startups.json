@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Kry",
+    "aliases": ["kry", "livi"],
+    "country": "Sweden",
+    "linkedin_company_id": "3766484",
+    "employer_type": "scaleup",
+    "foreigner_friendly": true,
+    "notes": "Digital health / telemedicine; English-friendly product org"
+  },
+  {
+    "name": "Doctrin",
+    "aliases": ["doctrin"],
+    "country": "Sweden",
+    "linkedin_company_id": "10511637",
+    "employer_type": "startup",
+    "foreigner_friendly": true,
+    "notes": "Care navigation platform; hires internationally in tech"
+  },
+  {
+    "name": "Platform24",
+    "aliases": ["platform24", "platform 24"],
+    "country": "Sweden",
+    "linkedin_company_id": "43278570",
+    "employer_type": "startup",
+    "foreigner_friendly": true,
+    "notes": "Digital care pathways"
+  },
+  {
+    "name": "Mindler",
+    "aliases": ["mindler"],
+    "country": "Sweden",
+    "linkedin_company_id": "7939250",
+    "employer_type": "scaleup",
+    "foreigner_friendly": true,
+    "notes": "Digital mental health"
+  },
+  {
+    "name": "Sectra",
+    "aliases": ["sectra"],
+    "country": "Sweden",
+    "linkedin_company_id": "8726",
+    "employer_type": "private",
+    "foreigner_friendly": true,
+    "notes": "Medical imaging / health IT; global English teams"
+  },
+  {
+    "name": "Cambio",
+    "aliases": ["cambio healthcare", "cambio cosmic"],
+    "country": "Sweden",
+    "linkedin_company_id": "81965315",
+    "employer_type": "private",
+    "foreigner_friendly": true,
+    "notes": "EHR vendor; Nordic + international projects"
+  },
+  {
+    "name": "Doctolib",
+    "aliases": ["doctolib"],
+    "country": "France",
+    "linkedin_company_id": "4999584",
+    "employer_type": "scaleup",
+    "foreigner_friendly": true,
+    "notes": "Health SaaS; international engineering hubs"
+  },
+  {
+    "name": "Ada Health",
+    "aliases": ["ada health"],
+    "country": "Germany",
+    "linkedin_company_id": "10682979",
+    "employer_type": "scaleup",
+    "foreigner_friendly": true,
+    "notes": "Clinical AI; Berlin/London; English working language"
+  },
+  {
+    "name": "Infermedica",
+    "aliases": ["infermedica"],
+    "country": "Poland",
+    "linkedin_company_id": "3504273",
+    "employer_type": "startup",
+    "foreigner_friendly": true,
+    "notes": "Symptom checker / triage; remote-friendly EU"
+  },
+  {
+    "name": "DocPlanner",
+    "aliases": ["docplanner", "znanylekarz"],
+    "country": "Poland",
+    "linkedin_company_id": "2254852",
+    "employer_type": "scaleup",
+    "foreigner_friendly": true,
+    "notes": "Health marketplace; multi-country EU ops"
+  },
+  {
+    "name": "Alan",
+    "aliases": ["alan insurance", "alan"],
+    "country": "France",
+    "linkedin_company_id": "10424439",
+    "employer_type": "scaleup",
+    "foreigner_friendly": true,
+    "notes": "Health insurtech; international product teams"
+  },
+  {
+    "name": "Medicover",
+    "aliases": ["medicover"],
+    "country": "Sweden",
+    "linkedin_company_id": "22324209",
+    "employer_type": "private",
+    "foreigner_friendly": true,
+    "notes": "Private healthcare group; multinational staff"
+  },
+  {
+    "name": "Netlight",
+    "aliases": ["netlight"],
+    "country": "Sweden",
+    "linkedin_company_id": "36435",
+    "employer_type": "consulting",
+    "foreigner_friendly": true,
+    "notes": "Consulting; known for hiring non-Swedish tech talent"
+  },
+  {
+    "name": "Tietoevry",
+    "aliases": ["tietoevry", "tieto evry", "tietoevry care"],
+    "country": "Finland",
+    "linkedin_company_id": "40669199",
+    "employer_type": "private",
+    "foreigner_friendly": true,
+    "notes": "Nordic health IT / welfare tech vendor"
+  },
+  {
+    "name": "CompuGroup Medical",
+    "aliases": ["compugroup", "cgm"],
+    "country": "Germany",
+    "linkedin_company_id": "10500",
+    "employer_type": "private",
+    "foreigner_friendly": true,
+    "notes": "Ambulatory EHR vendor across EU"
+  }
+]

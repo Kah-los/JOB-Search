@@ -235,4 +235,9 @@ SEARCH_QUERIES_BY_BOARD: dict[str, list[str]] = {
         "health informatics", "clinical informatics", "health IT", "healthcare IT",
         "digital health", "EHR", "medical records", "HIM", "FHIR", "HL7",
     ],
+    "linkedin": [
+        "health informatics", "clinical informatics", "healthcare IT", "digital health",
+        "FHIR", "HL7", "EHR", "health data analyst", "clinical systems",
+        "implementation consultant healthcare", "health information management",
+    ],
 }
