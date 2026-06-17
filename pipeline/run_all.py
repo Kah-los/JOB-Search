@@ -613,6 +613,10 @@ def write_dashboard(matches, new_today):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Fira+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{DASH_CSS}</style></head><body>
+<nav style="display:flex;gap:10px;padding:10px 22px;background:#fff;border-bottom:1px solid var(--line)">
+  <a href="#" style="font-size:13px;font-weight:600;color:var(--primary-ink);text-decoration:none">🇺🇸 U.S. Jobs</a>
+  <a href="../europe-jobs/" style="font-size:13px;color:var(--muted);text-decoration:none">🌍 Europe Jobs</a>
+</nav>
 <div class="app">
 <aside class="sidebar" id="sidebar" aria-label="Filters">
   <div class="sidebar-head">Filters</div>

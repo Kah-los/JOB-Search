@@ -513,7 +513,8 @@ def main():
     args = ap.parse_args()
 
     facs = json.loads(FACS.read_text())
-    targets = [f for f in facs if f.get("resolved_url")]
+    US_COUNTRIES = {"U.S.", "USA", "United States", "U.S"}
+    targets = [f for f in facs if f.get("resolved_url") and f.get("country") in US_COUNTRIES]
     if args.ats:
         targets = [f for f in targets if (f.get("ats") or "").lower() == args.ats.lower()]
     if args.limit:

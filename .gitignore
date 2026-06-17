@@ -4,6 +4,7 @@
 applications/
 # name, email, phone, and visa-sponsorship status
 pipeline/profile.json
+pipeline/profile_europe.json
 
 # Build/scratch artifacts
 data/*.log
