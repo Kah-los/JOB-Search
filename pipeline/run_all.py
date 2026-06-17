@@ -300,6 +300,7 @@ thead th:first-child{position:sticky; left:0; z-index:calc(var(--z-thead)+1);
 tbody td{padding:9px 12px; border-bottom:1px solid var(--line-soft); vertical-align:middle}
 tbody tr:last-child td{border-bottom:none}
 tbody tr{transition:background-color 120ms var(--ease)}
+tbody tr.row-out{display:none}
 tbody tr:nth-child(even){background:#f8fafc}
 tbody tr:nth-child(even) td:first-child{background:#f8fafc}
 tbody tr:nth-child(odd) td:first-child{background:var(--surface)}
@@ -372,12 +373,13 @@ input.notes:focus{outline:none; background:var(--surface); border-color:var(--pr
 .empty b{display:block; font-size:15px; color:var(--ink); margin-bottom:6px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
 @media (max-width:960px){
-  .app{grid-template-columns:1fr}
+  .app{display:block}
   .sidebar{
     position:fixed; left:0; top:0; width:min(300px,88vw); height:100vh;
     transform:translateX(-100%); transition:transform 200ms var(--ease);
-    box-shadow:8px 0 32px rgba(15,23,42,.12);
+    box-shadow:8px 0 32px rgba(15,23,42,.12); z-index:var(--z-sidebar);
   }
+  .main{min-height:100vh}
   .sidebar.open{transform:translateX(0)}
   .filter-toggle{
     display:inline-flex; align-items:center; gap:6px; font:inherit; font-size:13px;
@@ -395,8 +397,9 @@ DASH_JS = """
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const tb=$('#tb'), rows=$$('#tb tr');
 const ST_KEY='jobsearch_status', NT_KEY='jobsearch_notes';
-const stStore=JSON.parse(localStorage.getItem(ST_KEY)||'{}');
-const ntStore=JSON.parse(localStorage.getItem(NT_KEY)||'{}');
+let stStore={}, ntStore={};
+try{stStore=JSON.parse(localStorage.getItem(ST_KEY)||'{}');}catch(e){stStore={};}
+try{ntStore=JSON.parse(localStorage.getItem(NT_KEY)||'{}');}catch(e){ntStore={};}
 
 // restore + persist status
 $$('select.status').forEach(s=>{
@@ -444,21 +447,20 @@ function updateChips(){
   $$('.chip[data-x]').forEach((c,i)=>c.addEventListener('click',active[i][1]));
 }
 function filter(){
-  const term=q.value.trim().toLowerCase(), state=fState.value, role=fRole.value,
-        maxDays=parseInt(fPosted.value)||9999, mode=fMode.value, st=fStatus.value,
-        fit=parseFloat(fFit.value)||0, onlyNew=tNew.checked, onlyBig=tBig.checked;
+  const term=(q?.value||'').trim().toLowerCase(), state=fState?.value||'', role=fRole?.value||'',
+        maxDays=parseInt(fPosted?.value,10)||9999, mode=fMode?.value||'', st=fStatus?.value||'',
+        fit=parseFloat(fFit?.value)||0, onlyNew=!!tNew?.checked, onlyBig=!!tBig?.checked;
   let shown=0;
   rows.forEach(r=>{
-    let stateOk = !state || (state==='__notax' ? r.dataset.notax==='1' : r.dataset.state===state);
-    let ok = (!term || r.dataset.search.includes(term))
-      && stateOk && (!role || r.dataset.role===role)
-      && (parseInt(r.dataset.days)<=maxDays)
-      && (!mode || r.dataset.mode===mode)
-      && (!st || r.dataset.status===st)
-      && (parseFloat(r.dataset.fit)>=fit)
-      && (!onlyNew || r.dataset.new==='1')
-      && (!onlyBig || r.dataset.big==='1');
-    r.hidden=!ok; if(ok) shown++;
+    const d=r.dataset;
+    const search=(d.search||'').toLowerCase();
+    const days=parseInt(d.days,10); const daysOk=isNaN(days)||days<=maxDays;
+    const rowFit=parseFloat(d.fit)||0;
+    const stateOk=!state||(state==='__notax'?d.notax==='1':d.state===state);
+    const ok=(!term||search.includes(term))&&stateOk&&(!role||d.role===role)&&daysOk
+      &&(!mode||d.mode===mode)&&(!st||d.status===st)&&(rowFit>=fit)
+      &&(!onlyNew||d.new==='1')&&(!onlyBig||d.big==='1');
+    r.classList.toggle('row-out',!ok); if(ok) shown++;
   });
   count.innerHTML='<b>'+shown+'</b> of '+rows.length;
   $('#empty').classList.toggle('show', shown===0);
@@ -513,6 +515,8 @@ $$('thead th').forEach((th,i)=>{
     }).forEach(r=>tb.appendChild(r));
   });
 });
+if(q){q.setAttribute('readonly','readonly');
+  q.addEventListener('focus',()=>q.removeAttribute('readonly'),{once:true});}
 resetFilters();
 filter();
 """
@@ -653,7 +657,7 @@ def write_dashboard(matches, new_today):
   <button type="button" class="filter-toggle" id="filterToggle" aria-label="Open filters">Filters</button>
   <div class="search">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-    <input id="q" type="search" placeholder="Search title, employer, location…" aria-label="Search jobs" autocomplete="off">
+    <input id="q" type="search" name="job-q" placeholder="Search title, employer, location…" aria-label="Search jobs" autocomplete="off" autocorrect="off" spellcheck="false">
     <kbd>/</kbd>
   </div>
   <div class="count" id="count"><b>{len(matches)}</b> of {len(matches)}</div>
