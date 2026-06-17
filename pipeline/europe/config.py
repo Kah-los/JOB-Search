@@ -41,6 +41,8 @@ APPROVED_BOARDS = {
     "jobtech": "Arbetsförmedlingen (Sweden)",
     "eures": "EURES",
     "employer": "Employer career page",
+    "nhs_jobs": "NHS Jobs (UK)",
+    "varbi": "Varbi (Nordic regions)",
     "jobindex": "Jobindex.dk",
     "finn": "Finn.no",
     "jobbsafari": "Jobbsafari",

@@ -12,9 +12,34 @@ sys.path.insert(0, str(ROOT / "pipeline"))
 
 import scrape as us_scrape  # noqa: E402
 from europe.config import DATA, SEARCH_QUERIES  # noqa: E402
+from europe.scrapers.nhs_jobs import scrape_nhs_jobs  # noqa: E402
+from europe.scrapers.portals import (  # noqa: E402
+    scrape_karolinska,
+    scrape_region_stockholm,
+    scrape_rss,
+    scrape_varbi,
+)
 
 SEED = DATA / "employers_seed.json"
 scrape_phenom = us_scrape.scrape_phenom
+
+EU_ADAPTERS = {
+    "nhs jobs": scrape_nhs_jobs,
+    "rss": scrape_rss,
+    "karolinska": scrape_karolinska,
+    "region stockholm": scrape_region_stockholm,
+    "varbi": scrape_varbi,
+}
+
+
+def pick_eu_adapter(emp: dict):
+    ats = (emp.get("ats") or "").strip().lower()
+    if ats in EU_ADAPTERS:
+        return EU_ADAPTERS[ats]
+    url = emp.get("career_url") or ""
+    if emp.get("ats") == "Phenom":
+        return scrape_phenom
+    return us_scrape.pick_adapter(url)
 
 
 def scrape_eu_employers() -> list[dict]:
@@ -26,7 +51,7 @@ def scrape_eu_employers() -> list[dict]:
         url = emp.get("career_url")
         if not url:
             continue
-        adapter = scrape_phenom if emp.get("ats") == "Phenom" else us_scrape.pick_adapter(url)
+        adapter = pick_eu_adapter(emp)
         if adapter is us_scrape.scrape_generic:
             continue
         try:

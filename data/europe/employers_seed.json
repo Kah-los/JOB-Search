@@ -2,49 +2,175 @@
   {
     "name": "Great Ormond Street Hospital",
     "country": "UK",
-    "career_url": "https://careers.gosh.org",
-    "ats": null
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Great%20Ormond%20Street%20Hospital%20for%20Children%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
   },
   {
     "name": "Royal Brompton and Harefield Hospitals",
     "country": "UK",
-    "career_url": "https://www.rbht.nhs.uk/careers",
-    "ats": null
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Royal%20Brompton%20and%20Harefield%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Guy's and St Thomas' NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Guy%27s%20and%20St%20Thomas%27%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "University College London Hospitals (UCLH)",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=University%20College%20London%20Hospitals%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Imperial College Healthcare NHS Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Imperial%20College%20Healthcare%20NHS%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "King's College Hospital NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=King%27s%20College%20Hospital%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Moorfields Eye Hospital NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Moorfields%20Eye%20Hospital%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Barts Health NHS Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Barts%20Health%20NHS%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Royal Free London NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Royal%20Free%20London%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Manchester University NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Manchester%20University%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Sheffield Teaching Hospitals NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Sheffield%20Teaching%20Hospitals%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Leeds Teaching Hospitals NHS Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Leeds%20Teaching%20Hospitals%20NHS%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Nottingham University Hospitals NHS Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Nottingham%20University%20Hospitals%20NHS%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Oxford University Hospitals NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Oxford%20University%20Hospitals%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Cambridge University Hospitals NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Cambridge%20University%20Hospitals%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Liverpool University Hospitals NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Liverpool%20University%20Hospitals%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Newcastle upon Tyne Hospitals NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Newcastle%20upon%20Tyne%20Hospitals%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "University Hospitals Birmingham NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=University%20Hospitals%20Birmingham%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Portsmouth Hospitals University NHS Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Portsmouth%20Hospitals%20University%20NHS%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "University Hospitals Sussex NHS Foundation Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=University%20Hospitals%20Sussex%20NHS%20Foundation%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "North Bristol NHS Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=North%20Bristol%20NHS%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Royal Devon University Healthcare NHS Trust",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=Royal%20Devon%20University%20Healthcare%20NHS%20Trust",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "NHS Blood and Transplant",
+    "country": "UK",
+    "career_url": "https://www.jobs.nhs.uk/candidate/search/results?employer=NHS%20Blood%20and%20Transplant",
+    "ats": "NHS Jobs"
+  },
+  {
+    "name": "Nuffield Health",
+    "country": "UK",
+    "career_url": "https://nuffieldhealth.wd3.myworkdayjobs.com/NH_Careers",
+    "ats": "Workday"
   },
   {
     "name": "Karolinska University Hospital",
     "country": "Sweden",
-    "career_url": "https://karolinska.wd3.myworkdayjobs.com/karolinska",
-    "ats": "Workday"
+    "career_url": "https://www.karolinska.se/jobba-hos-oss/lediga-jobb/",
+    "ats": "Karolinska"
+  },
+  {
+    "name": "Region Stockholm",
+    "country": "Sweden",
+    "career_url": "https://regionstockholm.varbi.com/se/function:searchforjob",
+    "ats": "Varbi"
+  },
+  {
+    "name": "Danderyd Hospital (Region Stockholm)",
+    "country": "Sweden",
+    "career_url": "https://www.regionstockholm.se/jobb/lediga-jobb/danderyds-sjukhus/",
+    "ats": "Region Stockholm"
+  },
+  {
+    "name": "Region V\u00e4stra G\u00f6taland (Sahlgrenska)",
+    "country": "Sweden",
+    "career_url": "https://vgregion.varbi.com/se/function:searchforjob",
+    "ats": "Varbi"
   },
   {
     "name": "Capio",
     "country": "Sweden",
     "career_url": "https://capio.wd3.myworkdayjobs.com/External",
-    "ats": "Workday"
-  },
-  {
-    "name": "Region Stockholm",
-    "country": "Sweden",
-    "career_url": "https://regionstockholm.wd102.myworkdayjobs.com/Region_Stockholm",
-    "ats": "Workday"
-  },
-  {
-    "name": "Danderyd Hospital",
-    "country": "Sweden",
-    "career_url": "https://danderyd.wd3.myworkdayjobs.com/Danderyds_sjukhus",
-    "ats": "Workday"
-  },
-  {
-    "name": "Erasmus MC",
-    "country": "Netherlands",
-    "career_url": "https://erasmusmc.wd3.myworkdayjobs.com/erasmusmc",
-    "ats": "Workday"
-  },
-  {
-    "name": "Amsterdam UMC",
-    "country": "Netherlands",
-    "career_url": "https://amsterdamumc.wd3.myworkdayjobs.com/AmsterdamUMC",
     "ats": "Workday"
   },
   {
@@ -60,7 +186,19 @@
     "ats": "Workday"
   },
   {
-    "name": "Charité – Universitätsmedizin Berlin",
+    "name": "Erasmus MC",
+    "country": "Netherlands",
+    "career_url": "https://erasmusmc.wd3.myworkdayjobs.com/erasmusmc",
+    "ats": "Workday"
+  },
+  {
+    "name": "Amsterdam UMC",
+    "country": "Netherlands",
+    "career_url": "https://amsterdamumc.wd3.myworkdayjobs.com/AmsterdamUMC",
+    "ats": "Workday"
+  },
+  {
+    "name": "Charit\u00e9 \u2013 Universit\u00e4tsmedizin Berlin",
     "country": "Germany",
     "career_url": "https://charite.wd3.myworkdayjobs.com/CHC",
     "ats": "Workday"

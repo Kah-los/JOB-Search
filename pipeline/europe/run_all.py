@@ -19,6 +19,7 @@ from europe.config import (
     DOCS_SEG_PATH, DOCS_SEG_DEFAULT,
 )
 from europe.score import score_job, days_old, title_relevant
+from dashboard_nav import SITE_NAV_CSS, site_nav_html, site_nav_js
 
 
 def job_fingerprint(job):
@@ -41,7 +42,7 @@ def publish_dashboard():
     return dest
 
 
-EU_CSS = """
+EU_CSS = SITE_NAV_CSS + """
 :root{--bg:#f0f4f8;--surface:#fff;--ink:#0f172a;--text:#1e293b;--muted:#64748b;
 --line:#dbe3ec;--primary:#1d4ed8;--primary-soft:#dbeafe;--hi:#047857;--hi-soft:#d1fae5;
 --mid:#b45309;--mid-soft:#fef3c7;--lo:#94a3b8}
@@ -50,10 +51,6 @@ font-family:'Fira Sans',system-ui,sans-serif;font-size:14px;line-height:1.5}
 a{color:var(--primary)}.wrap{max-width:1280px;margin:0 auto;padding:20px}
 .top{background:linear-gradient(135deg,#1e3a5f,#1d4ed8);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:18px}
 .top h1{margin:0 0 6px;font-size:24px}.top p{margin:0;opacity:.9;font-size:13px}
-.nav{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}
-.nav a{font-size:13px;padding:6px 12px;background:var(--surface);border:1px solid var(--line);
-border-radius:8px;text-decoration:none;color:var(--ink);font-weight:500}
-.nav a.on{background:var(--primary-soft);border-color:var(--primary);color:#1e40af}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:16px 0}
 .kpi{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:12px}
 .kpi b{display:block;font-size:22px}.kpi span{font-size:11px;opacity:.85}
@@ -99,8 +96,6 @@ def write_dashboard(matches, new_today):
     countries = sorted({r.get("country") for r in matches if r.get("country")})
     n_english_high = sum(1 for r in matches if r.get("english_priority") == "high")
     n_remote = sum(1 for r in matches if "remote" in (r.get("work_mode") or "").lower())
-    us_link = "../5b49cmxred/" if (ROOT / "docs" / "5b49cmxred").exists() else "#"
-
     rows = []
     for r in matches:
         is_new = r["url"] in new_urls
@@ -130,11 +125,8 @@ def write_dashboard(matches, new_today):
 <title>Europe Jobs — Health Informatics</title>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{EU_CSS}{ROW_OUT}</style></head><body>
+{site_nav_html("europe")}
 <div class="wrap">
-<nav class="nav">
-  <a href="{esc(us_link)}">🇺🇸 U.S. Jobs</a>
-  <a href="#" class="on">🌍 Europe Jobs</a>
-</nav>
 <div class="top">
   <h1>Europe Jobs</h1>
   <p>Health informatics &amp; healthcare IT — EU/EEA, UK, Switzerland. English-friendly roles ranked first. Sources: Arbetsförmedlingen, EURES, EU employer seed list — not the U.S. Epic employer database.</p>
@@ -163,7 +155,7 @@ def write_dashboard(matches, new_today):
 </tr></thead><tbody id="tb">{"".join(rows)}</tbody></table>
 <p class="empty" id="empty" style="display:none">No matches for these filters.</p>
 </div>
-<script>{EU_JS}</script></body></html>"""
+<script>{EU_JS}{site_nav_js()}</script></body></html>"""
     DASH.parent.mkdir(parents=True, exist_ok=True)
     DASH.write_text(html)
 
