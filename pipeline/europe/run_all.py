@@ -137,7 +137,7 @@ def write_dashboard(matches, new_today):
 </nav>
 <div class="top">
   <h1>Europe Jobs</h1>
-  <p>Health informatics &amp; healthcare IT — EU/EEA, UK, Switzerland. English-friendly roles ranked first. Direct employer links only.</p>
+  <p>Health informatics &amp; healthcare IT — EU/EEA, UK, Switzerland. English-friendly roles ranked first. Sources: Arbetsförmedlingen, EURES, EU employer seed list — not the U.S. Epic employer database.</p>
   <div class="kpis">
     <div class="kpi"><b>{len(matches)}</b><span>Matches</span></div>
     <div class="kpi"><b>{len(new_today)}</b><span>New this run</span></div>

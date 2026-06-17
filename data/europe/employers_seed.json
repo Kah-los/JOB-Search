@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Great Ormond Street Hospital",
+    "country": "UK",
+    "career_url": "https://careers.gosh.org",
+    "ats": null
+  },
+  {
+    "name": "Royal Brompton and Harefield Hospitals",
+    "country": "UK",
+    "career_url": "https://www.rbht.nhs.uk/careers",
+    "ats": null
+  },
+  {
+    "name": "Karolinska University Hospital",
+    "country": "Sweden",
+    "career_url": "https://karolinska.wd3.myworkdayjobs.com/karolinska",
+    "ats": "Workday"
+  },
+  {
+    "name": "Capio",
+    "country": "Sweden",
+    "career_url": "https://capio.wd3.myworkdayjobs.com/External",
+    "ats": "Workday"
+  },
+  {
+    "name": "Region Stockholm",
+    "country": "Sweden",
+    "career_url": "https://regionstockholm.wd102.myworkdayjobs.com/Region_Stockholm",
+    "ats": "Workday"
+  },
+  {
+    "name": "Danderyd Hospital",
+    "country": "Sweden",
+    "career_url": "https://danderyd.wd3.myworkdayjobs.com/Danderyds_sjukhus",
+    "ats": "Workday"
+  },
+  {
+    "name": "Erasmus MC",
+    "country": "Netherlands",
+    "career_url": "https://erasmusmc.wd3.myworkdayjobs.com/erasmusmc",
+    "ats": "Workday"
+  },
+  {
+    "name": "Amsterdam UMC",
+    "country": "Netherlands",
+    "career_url": "https://amsterdamumc.wd3.myworkdayjobs.com/AmsterdamUMC",
+    "ats": "Workday"
+  },
+  {
+    "name": "Oslo University Hospital",
+    "country": "Norway",
+    "career_url": "https://ous.wd3.myworkdayjobs.com/OUS",
+    "ats": "Workday"
+  },
+  {
+    "name": "Helsinki University Hospital (HUS)",
+    "country": "Finland",
+    "career_url": "https://hus.wd3.myworkdayjobs.com/HUS",
+    "ats": "Workday"
+  },
+  {
+    "name": "Charité – Universitätsmedizin Berlin",
+    "country": "Germany",
+    "career_url": "https://charite.wd3.myworkdayjobs.com/CHC",
+    "ats": "Workday"
+  },
+  {
+    "name": "Insel Gruppe (Bern)",
+    "country": "Switzerland",
+    "career_url": "https://inselgruppe.wd3.myworkdayjobs.com/Insel_Gruppe",
+    "ats": "Workday"
+  }
+]

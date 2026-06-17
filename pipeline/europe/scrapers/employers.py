@@ -1,4 +1,7 @@
-"""Scrape EU employer career pages using existing ATS adapters."""
+"""Scrape European employer career pages from data/europe/employers_seed.json.
+
+NOT sourced from the U.S. Epic employer list (facilities_resolved.json).
+"""
 
 import json
 import sys
@@ -8,27 +11,26 @@ ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 
 import scrape as us_scrape  # noqa: E402
-from europe.config import FACILITY_EU_LABELS, SEARCH_QUERIES  # noqa: E402
+from europe.config import DATA, SEARCH_QUERIES  # noqa: E402
 
-FACS = ROOT / "data" / "facilities_resolved.json"
+SEED = DATA / "employers_seed.json"
+scrape_phenom = us_scrape.scrape_phenom
 
 
 def scrape_eu_employers() -> list[dict]:
-    if not FACS.exists():
+    if not SEED.exists():
         return []
-    facs = json.loads(FACS.read_text())
-    targets = [
-        f for f in facs
-        if f.get("resolved_url") and f.get("country") in FACILITY_EU_LABELS
-    ]
+    employers = json.loads(SEED.read_text())
     jobs, seen = [], set()
-    for f in targets:
-        url = f["resolved_url"]
-        adapter = scrape_phenom if f.get("ats") == "Phenom" else us_scrape.pick_adapter(url)
+    for emp in employers:
+        url = emp.get("career_url")
+        if not url:
+            continue
+        adapter = scrape_phenom if emp.get("ats") == "Phenom" else us_scrape.pick_adapter(url)
         if adapter is us_scrape.scrape_generic:
             continue
         try:
-            raw = adapter(url, f["name"], SEARCH_QUERIES[:8])
+            raw = adapter(url, emp["name"], SEARCH_QUERIES[:8])
         except Exception:
             raw = []
         for j in raw:
@@ -38,10 +40,10 @@ def scrape_eu_employers() -> list[dict]:
             seen.add(u)
             jobs.append({
                 "title": j.get("title"),
-                "employer": j.get("employer") or f["name"],
-                "country": f.get("country") or "",
+                "employer": j.get("employer") or emp["name"],
+                "country": emp.get("country") or "",
                 "city": "",
-                "location": j.get("location") or f.get("country") or "",
+                "location": j.get("location") or emp.get("country") or "",
                 "url": u,
                 "description": j.get("description") or "",
                 "employment_type": j.get("employment_type") or "",
@@ -53,7 +55,3 @@ def scrape_eu_employers() -> list[dict]:
                 "work_mode": j.get("remote_type") or "On-site",
             })
     return jobs
-
-
-# Phenom adapter reference
-scrape_phenom = us_scrape.scrape_phenom

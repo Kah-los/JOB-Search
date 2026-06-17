@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Europe Jobs pipeline — fully separate from U.S. job search.
-# Scrapes Arbetsförmedlingen, EURES, and EU employer career pages only.
+# Does NOT use the U.S. Epic employer list. Sources: Arbetsförmedlingen, EURES,
+# and data/europe/employers_seed.json for direct EU healthcare employer pages.
 set -uo pipefail
 cd "$(dirname "$0")/.."
 

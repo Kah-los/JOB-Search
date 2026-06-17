@@ -9,6 +9,7 @@ JOBS_ENRICHED = DATA / "jobs_enriched.json"
 MATCHES = DATA / "matches.json"
 NEW_TODAY = DATA / "new_today.json"
 SEEN = DATA / "seen.json"
+EMPLOYERS_SEED = DATA / "employers_seed.json"
 PROFILE_PATH = ROOT / "pipeline" / "profile_europe.json"
 DASH = ROOT / "dashboard" / "europe" / "index.html"
 DOCS_SEG_PATH = ROOT / "pipeline" / "dashboard_path_europe.txt"
@@ -29,15 +30,6 @@ EU_COUNTRY_NAMES = {
     "sweden", "switzerland", "iceland", "liechtenstein", "united kingdom", "uk",
     "u.k", "great britain", "england", "scotland", "wales", "northern ireland",
 }
-
-# Facility country labels in Epic Excel → normalized
-FACILITY_EU_LABELS = {
-    "UK", "U.K", "United Kingdom", "Ireland", "Netherlands", "Norway", "Denmark",
-    "Sweden", "Finland", "Germany", "France", "Switzerland", "Belgium", "Austria",
-    "Spain", "Italy", "Poland", "Portugal", "Czech Republic", "Greece", "Hungary",
-}
-
-EXCLUDED_COUNTRIES = {"u.s.", "usa", "united states", "canada", "u.s", "us"}
 
 # Forbidden aggregators / scam-prone boards
 FORBIDDEN_SOURCES = {

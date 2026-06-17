@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Europe Jobs scraper — employer career pages + approved EU job boards only.
-Never mixes with U.S. data. Forbidden: Indeed, Glassdoor, Jooble, ZipRecruiter.
+Europe Jobs scraper — approved EU job boards + EU employer seed list only.
+Never uses the U.S. Epic employer database. Never mixes with U.S. data.
+Forbidden: Indeed, Glassdoor, Jooble, ZipRecruiter.
 """
 import json
 import re
@@ -81,7 +82,7 @@ def main():
     print(f"     +{len(eu)} jobs")
     all_jobs.extend(eu)
 
-    print("  → EU employer career pages…")
+    print("  → EU employer career pages (europe employers seed)…")
     emp = scrape_eu_employers()
     print(f"     +{len(emp)} jobs")
     all_jobs.extend(emp)

@@ -9955,7 +9955,7 @@
     "status": "New",
     "first_seen": "2026-06-15",
     "last_seen": "2026-06-17",
-    "updated": true,
+    "updated": false,
     "reasons": [
       "Skills present: BI"
     ],
@@ -9985,7 +9985,7 @@
     "status": "New",
     "first_seen": "2026-06-15",
     "last_seen": "2026-06-17",
-    "updated": true,
+    "updated": false,
     "reasons": [
       "Skills present: BI"
     ],
