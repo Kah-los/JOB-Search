@@ -250,6 +250,8 @@ body{
 .count{margin-left:auto; font-size:12px; color:var(--muted); white-space:nowrap}
 .count b{color:var(--ink); font-weight:600}
 .filter-toggle{display:none}
+.backdrop{display:none; position:fixed; inset:0; z-index:29; background:rgba(15,23,42,.4)}
+.backdrop.show{display:block}
 
 /* ---- form controls ---- */
 .sel{position:relative; width:100%}
@@ -386,8 +388,6 @@ input.notes:focus{outline:none; background:var(--surface); border-color:var(--pr
     font-weight:500; padding:8px 12px; background:var(--surface); border:1px solid var(--line);
     border-radius:8px; cursor:pointer;
   }
-  .backdrop{display:none; position:fixed; inset:0; background:rgba(15,23,42,.4); z-index:29}
-  .backdrop.show{display:block}
   .topbar,.toolbar{padding-left:14px; padding-right:14px}
   .count{margin-left:0; width:100%}
 }
@@ -634,7 +634,6 @@ def write_dashboard(matches, new_today):
     <button type="button" class="preset" id="clearFilters" style="margin-top:6px;width:100%;border-radius:8px">Clear all filters</button>
   </div>
 </aside>
-<div class="backdrop" id="backdrop" aria-hidden="true"></div>
 <main class="main">
 <header class="topbar">
   <div class="brandrow">
@@ -675,6 +674,7 @@ def write_dashboard(matches, new_today):
 </section>
 </main>
 </div>
+<div class="backdrop" id="backdrop" aria-hidden="true"></div>
 <script>{DASH_JS}</script>
 </body></html>"""
     DASH.parent.mkdir(parents=True, exist_ok=True)
