@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Re-runnable pipeline. Scheduled WEEKLY via launchd (Mondays 08:00) —
-# see ~/Library/LaunchAgents/com.carlos.jobsearch.plist. Safe to run manually too.
+# see ~/Library/LaunchAgents/com.jobsearch.weekly.plist. Safe to run manually too.
 # Scrapes employer career pages, folds in discovered URLs, re-scores, regenerates
 # apps + dashboard, publishes the dashboard to GitHub Pages, then sends a weekly
 # Telegram summary if any new matches appeared (silent otherwise).

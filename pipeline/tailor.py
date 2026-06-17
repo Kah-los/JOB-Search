@@ -10,7 +10,7 @@ worth a hand polish.
 Folder layout:
   applications/<state>/<Employer>__<job-slug>/
       job.json
-      Carlos-Adabe-CV-<role-slug>.md
+      CV-<role-slug>.md
       Cover-Letter-<role-slug>.md
 """
 import json
@@ -135,8 +135,9 @@ def save_application(job, scored):
     folder = APPS / state / f"{slug(job.get('employer'),30)}__{slug(job.get('title'),40)}"
     folder.mkdir(parents=True, exist_ok=True)
     rslug = slug(job.get("title"), 40)
+    name_slug = slug(PROFILE.get("name", "candidate"), 30)
     (folder / "job.json").write_text(json.dumps({**job, "scoring": scored}, indent=2))
-    (folder / f"Carlos-Adabe-CV-{rslug}.md").write_text(build_cv(job, scored))
+    (folder / f"{name_slug}-CV-{rslug}.md").write_text(build_cv(job, scored))
     (folder / f"Cover-Letter-{rslug}.md").write_text(build_cover_letter(job, scored))
     return str(folder.relative_to(ROOT))
 

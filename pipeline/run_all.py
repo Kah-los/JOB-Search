@@ -65,16 +65,31 @@ def main(make_apps=True):
         if is_updated and status == "New":
             status = "New"
 
+        fl = scored["flags"]
+        benefits = []
+        if fl.get("benefits_401k"):
+            benefits.append("401(k)")
+        if fl.get("pension"):
+            benefits.append("Pension")
         rec = {
             "title": job.get("title"), "employer": job.get("employer"),
             "location": job.get("location") or job.get("employer_state"),
-            "salary": (f"${scored['flags']['salary_usd_max']:,}"
-                       if scored["flags"]["salary_usd_max"] else "Salary Not Disclosed"),
-            "work_mode": scored["flags"]["remote_type"],
+            "state": fl.get("state") or "",
+            "no_tax_state": fl.get("no_tax_state", False),
+            "salary": (f"${fl['salary_usd_max']:,}"
+                       if fl["salary_usd_max"] else "Salary Not Disclosed"),
+            "work_mode": fl["remote_type"],
             "date_posted": job.get("date_posted") or "",
+            "days_old": fl.get("days_since_posted"),
             "fit_score": scored["fit_score"],
-            "visa_flag": "⚑ Visa mentioned" if scored["flags"]["visa_sponsorship_mentioned"] else "",
-            "onsite_flag": "On-site" if scored["flags"]["onsite"] else "",
+            "priority": scored["priority"],
+            "role_type": fl.get("role_type") or "Mixed",
+            "technical": fl.get("technical", False),
+            "min_years": fl.get("min_years_required"),
+            "benefits": benefits,
+            "big_employer": fl.get("big_employer", False),
+            "visa_flag": "⚑ Visa mentioned" if fl["visa_sponsorship_mentioned"] else "",
+            "onsite_flag": "On-site" if fl["onsite"] else "",
             "url": url,
             "source_platform": job.get("source_platform"),
             "status": status,
@@ -93,7 +108,8 @@ def main(make_apps=True):
         if is_new or is_updated:
             new_today.append(rec)
 
-    matches.sort(key=lambda r: r["fit_score"], reverse=True)
+    matches.sort(key=lambda r: (r.get("priority", r["fit_score"]), r["fit_score"]),
+                 reverse=True)
     MATCHES.write_text(json.dumps(matches, indent=2))
     NEW_TODAY.write_text(json.dumps(new_today, indent=2))
     SEEN.write_text(json.dumps(seen, indent=2))
@@ -226,6 +242,15 @@ tr.is-new td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
 .fit-hi{color:var(--hi)} .fit-mid{color:var(--mid)} .fit-lo{color:var(--lo)}
 .pill-visa{font-size:11px; font-weight:600; color:#9a5800; background:#fbf0dc;
   padding:2px 8px; border-radius:999px}
+.pill-big{color:#b8860b; font-size:13px; cursor:help}
+.st-chip{display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px;
+  font-weight:600; letter-spacing:0.02em; color:#52585f; background:#eef0f3;
+  padding:2px 7px; border-radius:6px}
+.st-chip.st-notax{color:#0a655a; background:#e3f2ef}
+.role{font-size:12px; font-weight:550; padding:3px 9px; border-radius:999px; white-space:nowrap}
+.role-non-technical,.role-non{color:#0a655a; background:#e3f2ef}
+.role-technical{color:#52585f; background:#eef0f3}
+.role-mixed{color:#7a5a00; background:#f6efda}
 select.status{appearance:none; font:inherit; font-size:12.5px; font-weight:550;
   padding:5px 24px 5px 10px; border-radius:8px; border:1px solid transparent;
   cursor:pointer; background-position:right 7px center; background-repeat:no-repeat;
@@ -281,27 +306,33 @@ $$('input.notes').forEach(n=>{
 });
 
 // ---- filtering ----
-const q=$('#q'), fMode=$('#fMode'), fStatus=$('#fStatus'), fFit=$('#fFit'),
-      tNew=$('#tNew'), tRemote=$('#tRemote'), count=$('#count');
+const q=$('#q'), fState=$('#fState'), fRole=$('#fRole'), fPosted=$('#fPosted'),
+      fMode=$('#fMode'), fStatus=$('#fStatus'), fFit=$('#fFit'),
+      tNew=$('#tNew'), tBig=$('#tBig'), count=$('#count');
 function filter(){
-  const term=q.value.trim().toLowerCase(), mode=fMode.value, st=fStatus.value,
-        fit=parseFloat(fFit.value)||0, onlyNew=tNew.checked, onlyRemote=tRemote.checked;
+  const term=q.value.trim().toLowerCase(), state=fState.value, role=fRole.value,
+        maxDays=parseInt(fPosted.value)||9999, mode=fMode.value, st=fStatus.value,
+        fit=parseFloat(fFit.value)||0, onlyNew=tNew.checked, onlyBig=tBig.checked;
   let shown=0;
   rows.forEach(r=>{
+    let stateOk = !state || (state==='__notax' ? r.dataset.notax==='1' : r.dataset.state===state);
     let ok = (!term || r.dataset.search.includes(term))
+      && stateOk
+      && (!role || r.dataset.role===role)
+      && (parseInt(r.dataset.days)<=maxDays)
       && (!mode || r.dataset.mode===mode)
       && (!st || r.dataset.status===st)
       && (parseFloat(r.dataset.fit)>=fit)
       && (!onlyNew || r.dataset.new==='1')
-      && (!onlyRemote || r.dataset.mode==='Remote');
+      && (!onlyBig || r.dataset.big==='1');
     r.hidden=!ok; if(ok) shown++;
   });
   count.innerHTML='<b>'+shown+'</b> of '+rows.length;
   $('#empty').classList.toggle('show', shown===0);
-  [tNew,tRemote].forEach(t=>t.closest('.toggle').classList.toggle('on',t.checked));
+  [tNew,tBig].forEach(t=>t.closest('.toggle').classList.toggle('on',t.checked));
 }
-[q,fMode,fStatus,fFit].forEach(e=>e.addEventListener('input',filter));
-[tNew,tRemote].forEach(e=>e.addEventListener('change',filter));
+[q,fState,fRole,fPosted,fMode,fStatus,fFit].forEach(e=>e.addEventListener('input',filter));
+[tNew,tBig].forEach(e=>e.addEventListener('change',filter));
 
 // ---- sorting ----
 $$('thead th').forEach((th,i)=>{
@@ -325,10 +356,12 @@ def write_dashboard(matches, new_today):
     from html import escape as esc
     new_urls = {r["url"] for r in new_today}
     n_emp = len(set(r["employer"] for r in matches))
-    n_strong = sum(1 for r in matches if r["fit_score"] >= 8)
     n_remote = sum(1 for r in matches if r["work_mode"] == "Remote")
-    n_visa = sum(1 for r in matches if r["visa_flag"])
+    n_notax = sum(1 for r in matches if r.get("no_tax_state"))
+    n_nontech = sum(1 for r in matches if r.get("role_type") == "Non-technical")
+    n_big = sum(1 for r in matches if r.get("big_employer"))
     stat_opts = ["New", "Saved", "Applied", "Interview", "Rejected", "Offer"]
+    all_states = sorted({r["state"] for r in matches if r.get("state")})
 
     rows = []
     for r in matches:
@@ -339,10 +372,20 @@ def write_dashboard(matches, new_today):
         sal = r["salary"]
         sal_html = (f'<span class="sal mono">{esc(sal)}</span>' if sal.startswith("$")
                     else '<span class="sal-none">Not disclosed</span>')
-        posted = (r.get("date_posted") or "")[:10]
+        days = r.get("days_old")
+        posted = (f"{days}d ago" if isinstance(days, int)
+                  else (r.get("date_posted") or "")[:10] or "—")
         title = esc(r["title"] or "Untitled")
         emp = esc(r["employer"] or "")
+        big = ' <span class="pill-big" title="Large health-informatics employer">★</span>' if r.get("big_employer") else ""
         loc = esc(r["location"] or "—")
+        st = r.get("state") or ""
+        st_html = (f'<span class="st-chip{" st-notax" if r.get("no_tax_state") else ""}" '
+                   f'title="{"No state income tax" if r.get("no_tax_state") else ""}">{esc(st)}</span>'
+                   if st else '<span class="sal-none">—</span>')
+        role = r.get("role_type") or "Mixed"
+        role_html = f'<span class="role role-{esc(role.split()[0].lower())}">{esc(role)}</span>'
+        ben = " · ".join(r.get("benefits") or [])
         src = esc(r.get("source_platform") or "")
         url = esc(r["url"], quote=True)
         visa = '<span class="pill-visa">Visa</span>' if r["visa_flag"] else ""
@@ -354,14 +397,20 @@ def write_dashboard(matches, new_today):
         new_tag = '<span class="new-tag">NEW</span>' if is_new else ""
         rows.append(
             f'<tr class="{"is-new" if is_new else ""}" data-search="{search}" '
-            f'data-mode="{esc(mode, quote=True)}" data-fit="{score}" data-new="{"1" if is_new else "0"}">'
+            f'data-mode="{esc(mode, quote=True)}" data-fit="{score}" data-new="{"1" if is_new else "0"}" '
+            f'data-state="{esc(st, quote=True)}" data-notax="{"1" if r.get("no_tax_state") else "0"}" '
+            f'data-role="{esc(role, quote=True)}" data-big="{"1" if r.get("big_employer") else "0"}" '
+            f'data-days="{days if isinstance(days, int) else 9999}">'
             f'<td class="c-title"><a href="{url}" target="_blank" rel="noopener">{title}</a>{new_tag}'
-            f'<span class="src">{src}</span></td>'
-            f'<td class="c-emp">{emp}</td>'
+            f'<span class="src">{src}{(" · " + ben) if ben else ""}</span></td>'
+            f'<td class="c-emp">{emp}{big}</td>'
+            f'<td class="c-st" data-sort="{esc(st, quote=True)}">{st_html}</td>'
             f'<td class="c-loc">{loc}</td>'
+            f'<td>{role_html}</td>'
             f'<td class="c-sal" data-sort="{score}">{sal_html}</td>'
             f'<td><span class="mode mode-{esc(mode.replace(" ", "-"), quote=True)}">{esc(mode)}</span></td>'
-            f'<td class="mono" style="color:var(--muted);font-size:12.5px">{esc(posted)}</td>'
+            f'<td class="mono" style="color:var(--muted);font-size:12.5px" '
+            f'data-sort="{days if isinstance(days, int) else 9999}">{esc(posted)}</td>'
             f'<td data-sort="{score}"><span class="fit {fit_cls}"><b>{score}</b>'
             f'<i style="width:{min(100, score*10):.0f}%"></i></span></td>'
             f'<td>{visa}</td>'
@@ -373,8 +422,8 @@ def write_dashboard(matches, new_today):
         )
 
     heads = [
-        ("Job Title", ""), ("Employer", ""), ("Location", ""),
-        ("Salary", ' data-num'), ("Mode", ""), ("Posted", ""),
+        ("Job Title", ""), ("Employer", ""), ("State", ""), ("Location", ""),
+        ("Role", ""), ("Salary", ' data-num'), ("Mode", ""), ("Posted", ' data-num'),
         ("Fit", ' data-num'), ("Flags", ' data-nosort'),
         ("Status", ""), ("Notes", ' data-nosort'), ("App", ' data-nosort'),
     ]
@@ -383,23 +432,24 @@ def write_dashboard(matches, new_today):
     html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive">
-<title>Carlos Adabe — Job Search</title>
+<title>Healthcare Job Search</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>{DASH_CSS}</style></head><body>
 <header>
   <div class="brandrow">
-    <h1>Carlos Adabe<span class="dot">.</span> Healthcare Job Search</h1>
+    <h1>Healthcare Job Search<span class="dot">.</span></h1>
     <span class="meta">Direct from {n_emp} employer career pages · no job boards · updated {date.today().isoformat()}</span>
   </div>
   <div class="stats">
     <div class="stat accent"><b>{len(matches)}</b><span>Matches</span></div>
     <div class="stat"><b>{len(new_today)}</b><span>New this run</span></div>
-    <div class="stat"><b>{n_strong}</b><span>Strong (≥8)</span></div>
+    <div class="stat"><b>{n_nontech}</b><span>Non-technical</span></div>
+    <div class="stat"><b>{n_notax}</b><span>No-tax states</span></div>
+    <div class="stat"><b>{n_big}</b><span>Large employers</span></div>
     <div class="stat"><b>{n_remote}</b><span>Remote</span></div>
     <div class="stat"><b>{n_emp}</b><span>Employers</span></div>
-    <div class="stat"><b>{n_visa}</b><span>Visa flagged</span></div>
   </div>
 </header>
 <div class="toolbar">
@@ -408,11 +458,14 @@ def write_dashboard(matches, new_today):
     <input id="q" type="search" placeholder="Search title, employer, location…" aria-label="Search jobs">
   </div>
   <div class="filters">
+    <label class="sel"><select id="fState" aria-label="Filter by state"><option value="">All states</option><option value="__notax">No-tax states ★</option>{''.join(f'<option value="{esc(s, quote=True)}">{esc(s)}</option>' for s in all_states)}</select></label>
+    <label class="sel"><select id="fRole" aria-label="Filter by role type"><option value="">All roles</option><option>Non-technical</option><option>Mixed</option><option>Technical</option></select></label>
+    <label class="sel"><select id="fPosted" aria-label="Filter by recency"><option value="9999">Any time</option><option value="7">≤ 7 days</option><option value="14">≤ 14 days</option><option value="30">≤ 30 days</option></select></label>
     <label class="sel"><select id="fMode" aria-label="Filter by work mode"><option value="">All modes</option><option>Remote</option><option>Hybrid</option><option>On-site</option></select></label>
     <label class="sel"><select id="fStatus" aria-label="Filter by status"><option value="">All statuses</option>{''.join(f'<option>{o}</option>' for o in stat_opts)}</select></label>
     <label class="sel"><select id="fFit" aria-label="Filter by minimum fit"><option value="0">Any fit</option><option value="6">6+</option><option value="7">7+</option><option value="8">8+</option><option value="9">9+</option></select></label>
     <label class="toggle"><input id="tNew" type="checkbox">New only</label>
-    <label class="toggle"><input id="tRemote" type="checkbox">Remote only</label>
+    <label class="toggle"><input id="tBig" type="checkbox">Large employers</label>
   </div>
   <div class="count" id="count"><b>{len(matches)}</b> of {len(matches)}</div>
 </div>

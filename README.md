@@ -39,13 +39,36 @@ requests-based scraper cannot follow — those need a headless browser (Playwrig
 they fall through to the generic scraper and are flagged. Their discovered career
 URLs are still recorded in `data/discovered_urls.json` for a future headless pass.
 
-## Scoring (0–10)
-Weighted: title fit 35%, skills match 30%, domain relevance 15%, seniority 10%,
-location 10%. Only roles **≥ 6** surface. Hard filters: US, full-time, salary
-≥ $85k where disclosed, **excludes** roles requiring clinical licensure
-(MD/RN/NP/PharmD…). **Flags** (not exclusions): on-site roles, and any role
-mentioning visa sponsorship / work authorization (important — candidate is
-Stockholm-based and likely needs sponsorship).
+## Scoring (0–10) + priority ranking
+**Fit (0–10)** is weighted: title fit 35%, skills match 30%, domain relevance 15%,
+seniority/experience 10%, location 10%. Only roles **≥ 6** surface.
+
+**Hard filters** (a role is dropped if any fail):
+- US, full-time
+- salary **≥ $70k** where disclosed
+- **posted within the last 30 days** (when a post date is known)
+- **not entry-level** — excludes intern/junior/trainee/"Analyst I" and roles asking
+  for < 2 years (candidate has 10 yrs; targets 3–5+ yr roles)
+- excludes roles requiring clinical licensure (MD/RN/NP/PharmD…)
+- excludes pure software-engineering roles; must connect to healthcare information
+
+**Priority ranking** (sort order on top of fit, reflecting the candidate's stated
+preferences):
+- **Non-technical** roles preferred over technical (+/− adjustment; technical roles
+  still appear but rank lower and can be filtered out)
+- roles in **states with no personal income tax** (AK, FL, NV, NH, SD, TN, TX, WA, WY)
+- **large health-informatics employers** first (Oracle Health, Optum, Humana, Leidos,
+  athenahealth, Epic, major health systems, …)
+- roles disclosing **401(k)/pension** and mid-career (3–5+ yr) requirements
+
+**Flags** (not exclusions): on-site roles, and any role mentioning visa sponsorship /
+work authorization (important — candidate is Stockholm-based and likely needs sponsorship).
+
+## Dashboard filters
+Search + filter by **state** (or "No-tax states ★"), **role type** (Non-technical /
+Mixed / Technical), **recency** (≤ 7 / 14 / 30 days), work mode, status, and minimum
+fit; toggles for *New only* and *Large employers*. Every column is sortable; status +
+notes are editable and persist in the browser.
 
 ## Daily automation
 `pipeline/daily.sh` is idempotent and tracks seen jobs in `data/seen.json`, so

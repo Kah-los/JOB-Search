@@ -1,6 +1,9 @@
 # Personal / sensitive — keep OUT of the public repo
-applications/            # tailored CVs + cover letters with full contact details
-pipeline/profile.json    # email, phone, and visa-sponsorship status
+# (NOTE: git does NOT support inline comments after a pattern, so keep them on their own line)
+# tailored CVs + cover letters with full contact details
+applications/
+# name, email, phone, and visa-sponsorship status
+pipeline/profile.json
 
 # Build/scratch artifacts
 data/*.log
@@ -11,5 +14,7 @@ data/*.log
 # Telegram bot credentials — never commit
 pipeline/telegram_config.json
 
-# Resume PDF — keep local, never publish
-Carlos-Adabe-Resume.pdf
+# Resume / personal documents — keep local, never publish
+*.pdf
+*Resume*.pdf
+*-CV-*.md
