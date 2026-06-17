@@ -31,6 +31,19 @@ SEEN = ROOT / "data" / "seen.json"
 MATCHES = ROOT / "data" / "matches.json"
 NEW_TODAY = ROOT / "data" / "new_today.json"
 DASH = ROOT / "dashboard" / "index.html"
+DOCS_SEG = ROOT / "pipeline" / "dashboard_path.txt"
+
+
+def publish_dashboard():
+    """Copy dashboard to docs/<secret>/ for GitHub Pages."""
+    seg = DOCS_SEG.read_text().strip() if DOCS_SEG.exists() else ""
+    if not seg or not DASH.exists():
+        return None
+    dest_dir = ROOT / "docs" / seg
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest = dest_dir / "index.html"
+    dest.write_text(DASH.read_text())
+    return dest
 
 
 def job_fingerprint(job):
@@ -114,11 +127,14 @@ def main(make_apps=True):
     NEW_TODAY.write_text(json.dumps(new_today, indent=2))
     SEEN.write_text(json.dumps(seen, indent=2))
     write_dashboard(matches, new_today)
+    published = publish_dashboard()
 
     print(f"Scored {len(raw)} raw jobs")
     print(f"Matches (score>={PROFILE['filters']['min_fit_score']}, filters pass): {len(matches)}")
     print(f"New or updated this run: {len(new_today)}")
     print(f"Dashboard: {DASH}")
+    if published:
+        print(f"Published: {published}")
     return matches, new_today
 
 
@@ -254,6 +270,12 @@ body{
 .toggle input{accent-color:var(--primary); width:15px; height:15px; cursor:pointer; flex-shrink:0}
 .toggle.on{border-color:var(--primary); background:var(--primary-soft); color:var(--primary-ink)}
 
+.table-note{
+  padding:8px 14px; font-size:12.5px; color:var(--muted);
+  background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  margin-bottom:10px;
+}
+.table-note b{color:var(--ink)}
 /* ---- table ---- */
 .table-panel{padding:12px 14px 48px; flex:1; min-height:0; display:flex; flex-direction:column}
 .table-scroll{
@@ -638,6 +660,7 @@ def write_dashboard(matches, new_today):
   <div class="chips" id="chips" aria-label="Active filters"></div>
 </div>
 <section class="table-panel">
+  <div class="table-note" id="tableNote"><b>{len(matches)}</b> matched roles loaded — scroll the table below or use filters to narrow results.</div>
   <div class="table-scroll">
   <table>
     <thead><tr>{thead}</tr></thead>
