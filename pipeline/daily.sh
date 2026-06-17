@@ -39,7 +39,7 @@ fi
 
 NEW=$(python3 -c "import json;print(len(json.load(open('data/new_today.json'))))" 2>/dev/null || echo 0)
 echo "[$(date)] Done. New matches this run: $NEW"
-echo "Dashboard: dashboard/index.html  |  https://kah-los.github.io/JOB-Search/"
+echo "Dashboard: dashboard/index.html  |  https://kah-los.github.io/JOB-Search/$(cat pipeline/dashboard_path.txt 2>/dev/null || echo '')/"
 
 # 7. Telegram notification — stays silent unless there are new matches
 python3 pipeline/telegram_notify.py || echo "[warn] telegram notify failed"
