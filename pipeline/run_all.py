@@ -124,159 +124,241 @@ def main(make_apps=True):
 
 DASH_CSS = """
 :root{
-  --bg:#f6f7f9; --surface:#ffffff; --ink:#14171c; --text:#3c434f; --muted:#6b7280;
-  --line:#e6e8ec; --line-soft:#eef0f3; --header:#15181e; --header-2:#1c2026;
-  --header-ink:#eef0f3; --header-muted:#9aa3b0;
-  --accent:#0d7c6c; --accent-ink:#0a655a; --accent-soft:#e6f2ef;
-  --hi:#0a7a4d; --mid:#a9760f; --lo:#7a828f;
-  --ease:cubic-bezier(0.23,1,0.32,1);
-  --z-thead:20; --z-toolbar:25; --z-header:30;
+  --bg:#eef2f6; --surface:#fff; --surface-2:#f8fafc;
+  --ink:#0f172a; --text:#1e293b; --muted:#475569;
+  --line:#dbe3ec; --line-soft:#eef2f6;
+  --primary:#0e7490; --primary-ink:#155e75; --primary-soft:#cffafe;
+  --accent:#0369a1; --accent-soft:#e0f2fe;
+  --amber:#b45309; --amber-soft:#fef3c7;
+  --hi:#047857; --hi-soft:#d1fae5;
+  --mid:#b45309; --mid-soft:#fef3c7;
+  --lo:#64748b;
+  --sidebar-w:248px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --z-sidebar:30; --z-toolbar:25; --z-thead:20;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--bg); color:var(--text);
-  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-  font-size:14px; line-height:1.5; -webkit-font-smoothing:antialiased;
-  font-feature-settings:"cv01","cv03","ss01";
+  font-family:'Fira Sans',system-ui,sans-serif;
+  font-size:13.5px; line-height:1.45;
+  -webkit-font-smoothing:antialiased;
 }
-.mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
-  font-variant-numeric:tabular-nums; letter-spacing:-0.01em}
+.mono{font-family:'Fira Code',ui-monospace,monospace;
+  font-variant-numeric:tabular-nums; letter-spacing:-0.02em; font-size:12px}
 
-/* ---- header ---- */
-header{
-  position:sticky; top:0; z-index:var(--z-header);
-  background:linear-gradient(180deg,var(--header),var(--header-2));
-  color:var(--header-ink); padding:20px 28px 16px;
-  border-bottom:1px solid #000;
+/* ---- app shell ---- */
+.app{display:grid; grid-template-columns:var(--sidebar-w) 1fr; min-height:100vh}
+.sidebar{
+  position:sticky; top:0; align-self:start; height:100vh; z-index:var(--z-sidebar);
+  background:var(--surface); border-right:1px solid var(--line);
+  display:flex; flex-direction:column; overflow:hidden;
 }
-.brandrow{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
-header h1{margin:0; font-size:19px; font-weight:600; letter-spacing:-0.02em; color:#fff}
-header h1 .dot{color:var(--accent)}
-.meta{color:var(--header-muted); font-size:12.5px}
-.stats{display:flex; gap:8px; margin-top:14px; flex-wrap:wrap}
-.stat{
-  display:flex; flex-direction:column; gap:1px; padding:7px 13px;
-  background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08);
-  border-radius:9px; min-width:78px;
+.sidebar-head{
+  padding:18px 16px 12px; border-bottom:1px solid var(--line-soft);
+  font-size:11px; font-weight:600; letter-spacing:0.08em;
+  text-transform:uppercase; color:var(--muted);
 }
-.stat b{font-size:18px; font-weight:600; color:#fff; letter-spacing:-0.02em}
-.stat span{font-size:11px; color:var(--header-muted)}
-.stat.accent b{color:#3fd9bf}
+.sidebar-body{padding:12px 14px 20px; overflow-y:auto; flex:1;
+  display:flex; flex-direction:column; gap:10px}
+.filter-label{font-size:11px; font-weight:600; color:var(--muted);
+  letter-spacing:0.04em; text-transform:uppercase; margin:4px 0 2px}
+.presets{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:4px}
+.preset{
+  font:inherit; font-size:12px; font-weight:500; color:var(--text);
+  background:var(--surface-2); border:1px solid var(--line);
+  border-radius:999px; padding:5px 11px; cursor:pointer;
+  transition:background 140ms var(--ease),border-color 140ms var(--ease),color 140ms var(--ease);
+}
+.preset:hover{background:var(--primary-soft); border-color:#a5f3fc; color:var(--primary-ink)}
+.preset.on{background:var(--primary-soft); border-color:var(--primary); color:var(--primary-ink)}
+.main{min-width:0; display:flex; flex-direction:column}
+
+/* ---- topbar ---- */
+.topbar{
+  background:var(--ink); color:#e2e8f0;
+  padding:16px 22px 14px; border-bottom:1px solid #1e293b;
+}
+.brandrow{display:flex; align-items:flex-end; justify-content:space-between;
+  gap:12px; flex-wrap:wrap; margin-bottom:14px}
+.brand{display:flex; flex-direction:column; gap:3px}
+.topbar h1{margin:0; font-size:20px; font-weight:600; letter-spacing:-0.03em;
+  color:#f8fafc; text-wrap:balance}
+.topbar h1 .mark{color:#67e8f9}
+.meta{font-size:12px; color:#94a3b8}
+.updated{font-size:11px; color:#64748b; font-family:'Fira Code',monospace}
+.kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(108px,1fr)); gap:8px}
+.kpi{
+  padding:10px 12px; background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08); border-radius:10px;
+  border-left:3px solid #334155;
+}
+.kpi.accent{border-left-color:#22d3ee}
+.kpi b{display:block; font-size:22px; font-weight:600; color:#f8fafc;
+  letter-spacing:-0.03em; line-height:1.1}
+.kpi span{font-size:10.5px; color:#94a3b8; letter-spacing:0.02em}
 
 /* ---- toolbar ---- */
 .toolbar{
   position:sticky; top:0; z-index:var(--z-toolbar);
   display:flex; align-items:center; gap:10px; flex-wrap:wrap;
-  padding:12px 28px; background:rgba(246,247,249,.92);
-  backdrop-filter:saturate(1.1) blur(8px); border-bottom:1px solid var(--line);
+  padding:10px 22px; background:rgba(238,242,246,.94);
+  backdrop-filter:blur(10px) saturate(1.1); border-bottom:1px solid var(--line);
 }
-.search{flex:1 1 280px; position:relative; min-width:220px}
+.search{flex:1 1 260px; position:relative; min-width:200px}
 .search input{
-  width:100%; padding:9px 12px 9px 34px; font-size:13.5px; color:var(--ink);
-  background:var(--surface); border:1px solid var(--line); border-radius:9px;
-  transition:border-color 140ms var(--ease), box-shadow 140ms var(--ease);
+  width:100%; padding:9px 12px 9px 34px; font:inherit; font-size:13.5px;
+  color:var(--ink); background:var(--surface); border:1px solid var(--line);
+  border-radius:8px; transition:border-color 140ms var(--ease),box-shadow 140ms var(--ease);
 }
-.search input::placeholder{color:#9aa1ab}
-.search input:focus{outline:none; border-color:var(--accent);
-  box-shadow:0 0 0 3px var(--accent-soft)}
+.search input::placeholder{color:#94a3b8}
+.search input:focus{outline:none; border-color:var(--primary);
+  box-shadow:0 0 0 3px var(--primary-soft)}
 .search svg{position:absolute; left:11px; top:50%; transform:translateY(-50%);
-  width:15px; height:15px; color:#9aa1ab; pointer-events:none}
-.filters{display:flex; gap:8px; flex-wrap:wrap; align-items:center}
-.sel{position:relative}
-.sel select, .chk{
-  appearance:none; font:inherit; font-size:13px; color:var(--ink);
-  background:var(--surface); border:1px solid var(--line); border-radius:9px;
-  padding:8px 30px 8px 12px; cursor:pointer;
-  transition:border-color 140ms var(--ease), box-shadow 140ms var(--ease);
+  width:15px; height:15px; color:#94a3b8; pointer-events:none}
+.search kbd{
+  position:absolute; right:10px; top:50%; transform:translateY(-50%);
+  font-family:'Fira Code',monospace; font-size:10px; color:#94a3b8;
+  background:var(--surface-2); border:1px solid var(--line); border-radius:4px;
+  padding:1px 5px; pointer-events:none;
 }
-.sel::after{content:""; position:absolute; right:12px; top:50%; width:7px; height:7px;
-  border-right:1.6px solid #9aa1ab; border-bottom:1.6px solid #9aa1ab;
-  transform:translateY(-65%) rotate(45deg); pointer-events:none}
-.sel select:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
-.toggle{display:inline-flex; align-items:center; gap:7px; font-size:13px; color:var(--text);
-  padding:8px 12px; background:var(--surface); border:1px solid var(--line);
-  border-radius:9px; cursor:pointer; user-select:none;
-  transition:border-color 140ms var(--ease), background 140ms var(--ease)}
-.toggle input{accent-color:var(--accent); width:15px; height:15px; cursor:pointer}
-.toggle.on{border-color:var(--accent); background:var(--accent-soft); color:var(--accent-ink)}
-.count{margin-left:auto; font-size:12.5px; color:var(--muted); white-space:nowrap}
+.chips{display:flex; gap:6px; flex-wrap:wrap; width:100%}
+.chip{
+  display:none; font-size:11px; font-weight:500; color:var(--primary-ink);
+  background:var(--primary-soft); border:1px solid #a5f3fc;
+  border-radius:999px; padding:3px 10px; cursor:pointer;
+}
+.chip.show{display:inline-flex; align-items:center; gap:4px}
+.chip:hover{background:#a5f3fc}
+.count{margin-left:auto; font-size:12px; color:var(--muted); white-space:nowrap}
 .count b{color:var(--ink); font-weight:600}
+.filter-toggle{display:none}
+
+/* ---- form controls ---- */
+.sel{position:relative; width:100%}
+.sel select{
+  appearance:none; width:100%; font:inherit; font-size:13px; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:8px;
+  padding:8px 30px 8px 10px; cursor:pointer;
+  transition:border-color 140ms var(--ease),box-shadow 140ms var(--ease);
+}
+.sel::after{content:""; position:absolute; right:11px; top:50%; width:7px; height:7px;
+  border-right:1.6px solid #94a3b8; border-bottom:1.6px solid #94a3b8;
+  transform:translateY(-65%) rotate(45deg); pointer-events:none}
+.sel select:focus{outline:none; border-color:var(--primary); box-shadow:0 0 0 3px var(--primary-soft)}
+.toggle{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--text);
+  padding:8px 10px; background:var(--surface-2); border:1px solid var(--line);
+  border-radius:8px; cursor:pointer; user-select:none; width:100%;
+  transition:border-color 140ms var(--ease),background 140ms var(--ease)}
+.toggle input{accent-color:var(--primary); width:15px; height:15px; cursor:pointer; flex-shrink:0}
+.toggle.on{border-color:var(--primary); background:var(--primary-soft); color:var(--primary-ink)}
 
 /* ---- table ---- */
-.wrap{padding:0 16px 60px}
-table{width:100%; border-collapse:separate; border-spacing:0; background:var(--surface);
-  border:1px solid var(--line); border-radius:14px; overflow:hidden;
-  box-shadow:0 1px 2px rgba(20,23,28,.04), 0 8px 24px -16px rgba(20,23,28,.18)}
+.table-panel{padding:0 14px 48px; flex:1}
+.table-scroll{overflow:auto; border:1px solid var(--line); border-radius:12px;
+  background:var(--surface); box-shadow:0 1px 2px rgba(15,23,42,.04)}
+table{width:100%; border-collapse:collapse; min-width:1100px}
 thead th{
-  position:sticky; top:57px; z-index:var(--z-thead);
-  background:#fbfcfd; color:var(--muted); font-weight:600; font-size:11px;
-  letter-spacing:0.04em; text-transform:uppercase; text-align:left;
-  padding:11px 14px; border-bottom:1px solid var(--line); cursor:pointer;
-  white-space:nowrap; transition:color 120ms var(--ease)}
+  position:sticky; top:0; z-index:var(--z-thead);
+  background:var(--surface-2); color:var(--muted); font-weight:600; font-size:10.5px;
+  letter-spacing:0.06em; text-transform:uppercase; text-align:left;
+  padding:10px 12px; border-bottom:1px solid var(--line); cursor:pointer;
+  white-space:nowrap; transition:color 120ms var(--ease); user-select:none;
+}
 thead th:hover{color:var(--ink)}
-thead th .arw{opacity:0; margin-left:4px; font-size:9px; transition:opacity 120ms var(--ease)}
+thead th .arw{opacity:0; margin-left:3px; font-size:8px}
 thead th[data-dir] .arw{opacity:1}
-tbody td{padding:11px 14px; border-bottom:1px solid var(--line-soft); vertical-align:middle}
+thead th:first-child{position:sticky; left:0; z-index:calc(var(--z-thead)+1);
+  background:var(--surface-2); box-shadow:1px 0 0 var(--line)}
+tbody td{padding:9px 12px; border-bottom:1px solid var(--line-soft); vertical-align:middle}
 tbody tr:last-child td{border-bottom:none}
-tbody tr{transition:background-color 130ms var(--ease)}
-@media (hover:hover){tbody tr:hover{background:#fafbfc}}
-tr.is-new td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
-.c-title a{color:var(--ink); font-weight:550; text-decoration:none; letter-spacing:-0.01em}
-.c-title a:hover{color:var(--accent-ink); text-decoration:underline; text-underline-offset:2px}
-.c-title .src{display:block; font-size:11px; color:var(--muted); margin-top:2px}
-.new-tag{display:inline-block; margin-left:7px; font-size:10px; font-weight:600;
-  color:var(--accent-ink); background:var(--accent-soft); padding:1px 6px; border-radius:999px;
-  vertical-align:middle; letter-spacing:0.02em}
-.c-emp{color:var(--text); font-weight:500}
-.c-loc{color:var(--muted); font-size:13px}
-.sal{color:var(--ink); font-weight:550} .sal-none{color:#aab0b9; font-weight:400}
-.mode{font-size:12px; font-weight:550; padding:3px 9px; border-radius:999px; white-space:nowrap}
-.mode-Remote{color:#0a655a; background:#e3f2ef}
-.mode-Hybrid{color:#7a5a00; background:#f6efda}
-.mode-On-site{color:#52585f; background:#eef0f3}
-.fit{display:inline-flex; flex-direction:column; gap:3px; width:46px}
-.fit b{font-size:13.5px; font-weight:650; font-family:'JetBrains Mono',monospace;
-  font-variant-numeric:tabular-nums}
-.fit i{height:3px; border-radius:2px; background:currentColor; opacity:.85}
+tbody tr{transition:background-color 120ms var(--ease)}
+tbody tr:nth-child(even){background:#fbfdff}
+@media (hover:hover){tbody tr:hover{background:#f0f9ff}}
+tbody td:first-child{position:sticky; left:0; z-index:1; background:inherit;
+  box-shadow:1px 0 0 var(--line-soft)}
+tr.is-new td:first-child{box-shadow:inset 3px 0 0 var(--primary),1px 0 0 var(--line-soft)}
+.c-title{max-width:280px}
+.c-title a{color:var(--ink); font-weight:550; text-decoration:none; letter-spacing:-0.01em;
+  cursor:pointer}
+.c-title a:hover{color:var(--primary-ink); text-decoration:underline; text-underline-offset:2px}
+.c-title a:focus-visible{outline:2px solid var(--primary); outline-offset:2px; border-radius:2px}
+.c-title .src{display:block; font-size:10.5px; color:var(--muted); margin-top:2px;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.new-tag{display:inline-block; margin-left:6px; font-size:9.5px; font-weight:600;
+  color:var(--primary-ink); background:var(--primary-soft); padding:1px 6px;
+  border-radius:999px; vertical-align:middle}
+.c-emp{font-weight:500; color:var(--text); max-width:160px;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.c-loc{color:var(--muted); font-size:12.5px; max-width:140px;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.sal{color:var(--ink); font-weight:550}
+.sal-none{color:#94a3b8; font-weight:400}
+.mode{font-size:11px; font-weight:600; padding:2px 8px; border-radius:6px; white-space:nowrap}
+.mode-Remote{color:var(--hi); background:var(--hi-soft)}
+.mode-Hybrid{color:var(--mid); background:var(--mid-soft)}
+.mode-On-site{color:var(--muted); background:var(--line-soft)}
+.fit{display:inline-flex; align-items:center; gap:6px; min-width:72px}
+.fit b{font-size:12.5px; font-weight:600; font-family:'Fira Code',monospace; min-width:24px}
+.fit-bar{flex:1; height:4px; background:var(--line-soft); border-radius:2px; overflow:hidden; min-width:32px}
+.fit-bar i{display:block; height:100%; border-radius:2px; background:currentColor}
 .fit-hi{color:var(--hi)} .fit-mid{color:var(--mid)} .fit-lo{color:var(--lo)}
-.pill-visa{font-size:11px; font-weight:600; color:#9a5800; background:#fbf0dc;
-  padding:2px 8px; border-radius:999px}
-.pill-big{color:#b8860b; font-size:13px; cursor:help}
-.st-chip{display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px;
-  font-weight:600; letter-spacing:0.02em; color:#52585f; background:#eef0f3;
-  padding:2px 7px; border-radius:6px}
-.st-chip.st-notax{color:#0a655a; background:#e3f2ef}
-.role{font-size:12px; font-weight:550; padding:3px 9px; border-radius:999px; white-space:nowrap}
-.role-non-technical,.role-non{color:#0a655a; background:#e3f2ef}
-.role-technical{color:#52585f; background:#eef0f3}
-.role-mixed{color:#7a5a00; background:#f6efda}
-select.status{appearance:none; font:inherit; font-size:12.5px; font-weight:550;
-  padding:5px 24px 5px 10px; border-radius:8px; border:1px solid transparent;
-  cursor:pointer; background-position:right 7px center; background-repeat:no-repeat;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M1 2l3 3 3-3' stroke='%237a828f' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  transition:border-color 130ms var(--ease), box-shadow 130ms var(--ease)}
-select.status:focus{outline:none; box-shadow:0 0 0 3px var(--accent-soft)}
-.st-New{color:#0a655a; background:#e3f2ef} .st-Saved{color:#1d4ed8; background:#e7edfd}
-.st-Applied{color:#5b21b6; background:#efe7fb} .st-Interview{color:#9a5800; background:#fbf0dc}
-.st-Rejected{color:#9f1239; background:#fbe3ea} .st-Offer{color:#0a7a4d; background:#e1f4ea}
-input.notes{width:100%; min-width:130px; font:inherit; font-size:12.5px; color:var(--ink);
-  background:transparent; border:1px solid transparent; border-radius:7px; padding:5px 8px;
-  transition:border-color 130ms var(--ease), background 130ms var(--ease)}
-input.notes::placeholder{color:#b6bcc4}
-input.notes:hover{background:#f4f5f7}
-input.notes:focus{outline:none; background:var(--surface); border-color:var(--accent);
-  box-shadow:0 0 0 3px var(--accent-soft)}
-.c-app a{display:inline-flex; align-items:center; gap:3px; font-size:12px; font-weight:550;
-  color:var(--accent-ink); text-decoration:none; white-space:nowrap}
+.pill-visa{font-size:10.5px; font-weight:600; color:var(--amber);
+  background:var(--amber-soft); padding:2px 7px; border-radius:6px}
+.pill-big{color:#ca8a04; font-size:12px; cursor:help}
+.st-chip{display:inline-block; font-family:'Fira Code',monospace; font-size:11px;
+  font-weight:500; color:var(--muted); background:var(--line-soft);
+  padding:2px 7px; border-radius:5px}
+.st-chip.st-notax{color:var(--hi); background:var(--hi-soft)}
+.role{font-size:11px; font-weight:600; padding:2px 8px; border-radius:6px; white-space:nowrap}
+.role-non-technical,.role-non{color:var(--hi); background:var(--hi-soft)}
+.role-technical{color:var(--muted); background:var(--line-soft)}
+.role-mixed{color:var(--mid); background:var(--mid-soft)}
+select.status{appearance:none; font:inherit; font-size:12px; font-weight:550;
+  padding:4px 22px 4px 8px; border-radius:6px; border:1px solid transparent;
+  cursor:pointer; background-position:right 6px center; background-repeat:no-repeat;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M1 2l3 3 3-3' stroke='%2364748b' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  transition:border-color 130ms var(--ease),box-shadow 130ms var(--ease)}
+select.status:focus{outline:none; box-shadow:0 0 0 3px var(--primary-soft)}
+.st-New{color:var(--hi); background:var(--hi-soft)}
+.st-Saved{color:#1d4ed8; background:#dbeafe}
+.st-Applied{color:#6d28d9; background:#ede9fe}
+.st-Interview{color:var(--amber); background:var(--amber-soft)}
+.st-Rejected{color:#be123c; background:#ffe4e6}
+.st-Offer{color:var(--hi); background:var(--hi-soft)}
+input.notes{width:100%; min-width:120px; font:inherit; font-size:12px; color:var(--ink);
+  background:transparent; border:1px solid transparent; border-radius:6px; padding:4px 7px;
+  transition:border-color 130ms var(--ease),background 130ms var(--ease)}
+input.notes::placeholder{color:#94a3b8}
+input.notes:hover{background:var(--surface-2)}
+input.notes:focus{outline:none; background:var(--surface); border-color:var(--primary);
+  box-shadow:0 0 0 3px var(--primary-soft)}
+.c-app a{font-size:12px; font-weight:550; color:var(--primary-ink); text-decoration:none;
+  cursor:pointer; white-space:nowrap}
 .c-app a:hover{text-decoration:underline; text-underline-offset:2px}
-.empty{display:none; padding:60px 20px; text-align:center; color:var(--muted)}
+.c-app a:focus-visible{outline:2px solid var(--primary); outline-offset:2px; border-radius:2px}
+.empty{display:none; padding:48px 20px; text-align:center; color:var(--muted)}
 .empty.show{display:block}
+.empty b{display:block; font-size:15px; color:var(--ink); margin-bottom:6px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
-@media (max-width:760px){
-  header,.toolbar{padding-left:14px; padding-right:14px}
+@media (max-width:960px){
+  .app{grid-template-columns:1fr}
+  .sidebar{
+    position:fixed; left:0; top:0; width:min(300px,88vw); height:100vh;
+    transform:translateX(-100%); transition:transform 200ms var(--ease);
+    box-shadow:8px 0 32px rgba(15,23,42,.12);
+  }
+  .sidebar.open{transform:translateX(0)}
+  .filter-toggle{
+    display:inline-flex; align-items:center; gap:6px; font:inherit; font-size:13px;
+    font-weight:500; padding:8px 12px; background:var(--surface); border:1px solid var(--line);
+    border-radius:8px; cursor:pointer;
+  }
+  .backdrop{display:none; position:fixed; inset:0; background:rgba(15,23,42,.4); z-index:29}
+  .backdrop.show{display:block}
+  .topbar,.toolbar{padding-left:14px; padding-right:14px}
   .count{margin-left:0; width:100%}
-  thead th{top:0}
 }
 """
 
@@ -309,6 +391,29 @@ $$('input.notes').forEach(n=>{
 const q=$('#q'), fState=$('#fState'), fRole=$('#fRole'), fPosted=$('#fPosted'),
       fMode=$('#fMode'), fStatus=$('#fStatus'), fFit=$('#fFit'),
       tNew=$('#tNew'), tBig=$('#tBig'), count=$('#count');
+const chips=$('#chips');
+
+function setPreset(btn, apply){
+  if(!btn) return;
+  btn.classList.toggle('on', apply);
+}
+function updateChips(){
+  const active=[];
+  if(fState.value==='__notax') active.push(['No-tax states',()=>{fState.value='';filter();}]);
+  else if(fState.value) active.push([fState.value,()=>{fState.value='';filter();}]);
+  if(fRole.value) active.push([fRole.value,()=>{fRole.value='';filter();}]);
+  if(fPosted.value!=='9999') active.push(['≤ '+fPosted.value+'d',()=>{fPosted.value='9999';filter();}]);
+  if(fMode.value) active.push([fMode.value,()=>{fMode.value='';filter();}]);
+  if(fStatus.value) active.push([fStatus.value,()=>{fStatus.value='';filter();}]);
+  if(parseFloat(fFit.value)>0) active.push([fFit.value+'+ fit',()=>{fFit.value='0';filter();}]);
+  if(tNew.checked) active.push(['New only',()=>{tNew.checked=false;filter();}]);
+  if(tBig.checked) active.push(['Large employers',()=>{tBig.checked=false;filter();}]);
+  if(q.value.trim()) active.push(['"'+q.value.trim()+'"',()=>{q.value='';filter();}]);
+  chips.innerHTML=active.map(([label,fn])=>
+    '<button type="button" class="chip show" data-x="1">'+label+' <span aria-hidden="true">×</span></button>'
+  ).join('');
+  $$('.chip[data-x]').forEach((c,i)=>c.addEventListener('click',active[i][1]));
+}
 function filter(){
   const term=q.value.trim().toLowerCase(), state=fState.value, role=fRole.value,
         maxDays=parseInt(fPosted.value)||9999, mode=fMode.value, st=fStatus.value,
@@ -317,8 +422,7 @@ function filter(){
   rows.forEach(r=>{
     let stateOk = !state || (state==='__notax' ? r.dataset.notax==='1' : r.dataset.state===state);
     let ok = (!term || r.dataset.search.includes(term))
-      && stateOk
-      && (!role || r.dataset.role===role)
+      && stateOk && (!role || r.dataset.role===role)
       && (parseInt(r.dataset.days)<=maxDays)
       && (!mode || r.dataset.mode===mode)
       && (!st || r.dataset.status===st)
@@ -330,9 +434,38 @@ function filter(){
   count.innerHTML='<b>'+shown+'</b> of '+rows.length;
   $('#empty').classList.toggle('show', shown===0);
   [tNew,tBig].forEach(t=>t.closest('.toggle').classList.toggle('on',t.checked));
+  setPreset($('#pNotax'), state==='__notax');
+  setPreset($('#pNontech'), role==='Non-technical');
+  setPreset($('#pRemote'), mode==='Remote');
+  setPreset($('#pNew'), onlyNew);
+  updateChips();
 }
 [q,fState,fRole,fPosted,fMode,fStatus,fFit].forEach(e=>e.addEventListener('input',filter));
 [tNew,tBig].forEach(e=>e.addEventListener('change',filter));
+
+// quick presets
+$('#pNotax')?.addEventListener('click',()=>{fState.value=fState.value==='__notax'?'':'__notax';filter();});
+$('#pNontech')?.addEventListener('click',()=>{fRole.value=fRole.value==='Non-technical'?'':'Non-technical';filter();});
+$('#pRemote')?.addEventListener('click',()=>{fMode.value=fMode.value==='Remote'?'':'Remote';filter();});
+$('#pNew')?.addEventListener('click',()=>{tNew.checked=!tNew.checked;filter();});
+$('#clearFilters')?.addEventListener('click',()=>{
+  q.value=''; fState.value=''; fRole.value=''; fPosted.value='9999';
+  fMode.value=''; fStatus.value=''; fFit.value='0';
+  tNew.checked=false; tBig.checked=false; filter();
+});
+
+// keyboard: / focuses search
+document.addEventListener('keydown',e=>{
+  if(e.key==='/' && document.activeElement!==q){
+    e.preventDefault(); q.focus(); q.select();
+  }
+  if(e.key==='Escape' && document.activeElement===q){ q.blur(); }
+});
+
+// mobile filter drawer
+const sidebar=$('#sidebar'), backdrop=$('#backdrop'), ft=$('#filterToggle');
+ft?.addEventListener('click',()=>{sidebar.classList.add('open'); backdrop.classList.add('show');});
+backdrop?.addEventListener('click',()=>{sidebar.classList.remove('open'); backdrop.classList.remove('show');});
 
 // ---- sorting ----
 $$('thead th').forEach((th,i)=>{
@@ -349,6 +482,7 @@ $$('thead th').forEach((th,i)=>{
     }).forEach(r=>tb.appendChild(r));
   });
 });
+filter();
 """
 
 
@@ -412,7 +546,7 @@ def write_dashboard(matches, new_today):
             f'<td class="mono" style="color:var(--muted);font-size:12.5px" '
             f'data-sort="{days if isinstance(days, int) else 9999}">{esc(posted)}</td>'
             f'<td data-sort="{score}"><span class="fit {fit_cls}"><b>{score}</b>'
-            f'<i style="width:{min(100, score*10):.0f}%"></i></span></td>'
+            f'<span class="fit-bar"><i style="width:{min(100, score*10):.0f}%"></i></span></span></td>'
             f'<td>{visa}</td>'
             f'<td><select class="status" data-url="{url}">{opts}</select></td>'
             f'<td><input class="notes" data-url="{url}" placeholder="Add note…" '
@@ -435,46 +569,74 @@ def write_dashboard(matches, new_today):
 <title>Healthcare Job Search</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Fira+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{DASH_CSS}</style></head><body>
-<header>
-  <div class="brandrow">
-    <h1>Healthcare Job Search<span class="dot">.</span></h1>
-    <span class="meta">Direct from {n_emp} employer career pages · no job boards · updated {date.today().isoformat()}</span>
+<div class="app">
+<aside class="sidebar" id="sidebar" aria-label="Filters">
+  <div class="sidebar-head">Filters</div>
+  <div class="sidebar-body">
+    <div class="presets">
+      <button type="button" class="preset" id="pNontech">Non-technical</button>
+      <button type="button" class="preset" id="pNotax">No-tax</button>
+      <button type="button" class="preset" id="pRemote">Remote</button>
+      <button type="button" class="preset" id="pNew">New</button>
+    </div>
+    <div class="filter-label">State</div>
+    <label class="sel"><select id="fState" aria-label="Filter by state"><option value="">All states</option><option value="__notax">No-tax states</option>{''.join(f'<option value="{esc(s, quote=True)}">{esc(s)}</option>' for s in all_states)}</select></label>
+    <div class="filter-label">Role type</div>
+    <label class="sel"><select id="fRole" aria-label="Filter by role type"><option value="">All roles</option><option>Non-technical</option><option>Mixed</option><option>Technical</option></select></label>
+    <div class="filter-label">Posted</div>
+    <label class="sel"><select id="fPosted" aria-label="Filter by recency"><option value="9999">Any time</option><option value="7">Last 7 days</option><option value="14">Last 14 days</option><option value="30">Last 30 days</option></select></label>
+    <div class="filter-label">Work mode</div>
+    <label class="sel"><select id="fMode" aria-label="Filter by work mode"><option value="">All modes</option><option>Remote</option><option>Hybrid</option><option>On-site</option></select></label>
+    <div class="filter-label">Status</div>
+    <label class="sel"><select id="fStatus" aria-label="Filter by status"><option value="">All statuses</option>{''.join(f'<option>{o}</option>' for o in stat_opts)}</select></label>
+    <div class="filter-label">Minimum fit</div>
+    <label class="sel"><select id="fFit" aria-label="Filter by minimum fit"><option value="0">Any fit</option><option value="6">6+</option><option value="7">7+</option><option value="8">8+</option><option value="9">9+</option></select></label>
+    <label class="toggle"><input id="tNew" type="checkbox">New this run only</label>
+    <label class="toggle"><input id="tBig" type="checkbox">Large employers</label>
+    <button type="button" class="preset" id="clearFilters" style="margin-top:6px;width:100%;border-radius:8px">Clear all filters</button>
   </div>
-  <div class="stats">
-    <div class="stat accent"><b>{len(matches)}</b><span>Matches</span></div>
-    <div class="stat"><b>{len(new_today)}</b><span>New this run</span></div>
-    <div class="stat"><b>{n_nontech}</b><span>Non-technical</span></div>
-    <div class="stat"><b>{n_notax}</b><span>No-tax states</span></div>
-    <div class="stat"><b>{n_big}</b><span>Large employers</span></div>
-    <div class="stat"><b>{n_remote}</b><span>Remote</span></div>
-    <div class="stat"><b>{n_emp}</b><span>Employers</span></div>
+</aside>
+<div class="backdrop" id="backdrop" aria-hidden="true"></div>
+<main class="main">
+<header class="topbar">
+  <div class="brandrow">
+    <div class="brand">
+      <h1>Healthcare Job<span class="mark">.</span>Search</h1>
+      <span class="meta">Direct from {n_emp} employer career pages · no job boards</span>
+    </div>
+    <span class="updated">Updated {date.today().isoformat()}</span>
+  </div>
+  <div class="kpis">
+    <div class="kpi accent"><b>{len(matches)}</b><span>Matches</span></div>
+    <div class="kpi"><b>{len(new_today)}</b><span>New this run</span></div>
+    <div class="kpi"><b>{n_nontech}</b><span>Non-technical</span></div>
+    <div class="kpi"><b>{n_notax}</b><span>No-tax states</span></div>
+    <div class="kpi"><b>{n_big}</b><span>Large employers</span></div>
+    <div class="kpi"><b>{n_remote}</b><span>Remote</span></div>
   </div>
 </header>
 <div class="toolbar">
+  <button type="button" class="filter-toggle" id="filterToggle" aria-label="Open filters">Filters</button>
   <div class="search">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
     <input id="q" type="search" placeholder="Search title, employer, location…" aria-label="Search jobs">
-  </div>
-  <div class="filters">
-    <label class="sel"><select id="fState" aria-label="Filter by state"><option value="">All states</option><option value="__notax">No-tax states ★</option>{''.join(f'<option value="{esc(s, quote=True)}">{esc(s)}</option>' for s in all_states)}</select></label>
-    <label class="sel"><select id="fRole" aria-label="Filter by role type"><option value="">All roles</option><option>Non-technical</option><option>Mixed</option><option>Technical</option></select></label>
-    <label class="sel"><select id="fPosted" aria-label="Filter by recency"><option value="9999">Any time</option><option value="7">≤ 7 days</option><option value="14">≤ 14 days</option><option value="30">≤ 30 days</option></select></label>
-    <label class="sel"><select id="fMode" aria-label="Filter by work mode"><option value="">All modes</option><option>Remote</option><option>Hybrid</option><option>On-site</option></select></label>
-    <label class="sel"><select id="fStatus" aria-label="Filter by status"><option value="">All statuses</option>{''.join(f'<option>{o}</option>' for o in stat_opts)}</select></label>
-    <label class="sel"><select id="fFit" aria-label="Filter by minimum fit"><option value="0">Any fit</option><option value="6">6+</option><option value="7">7+</option><option value="8">8+</option><option value="9">9+</option></select></label>
-    <label class="toggle"><input id="tNew" type="checkbox">New only</label>
-    <label class="toggle"><input id="tBig" type="checkbox">Large employers</label>
+    <kbd>/</kbd>
   </div>
   <div class="count" id="count"><b>{len(matches)}</b> of {len(matches)}</div>
+  <div class="chips" id="chips" aria-label="Active filters"></div>
 </div>
-<div class="wrap">
+<section class="table-panel">
+  <div class="table-scroll">
   <table>
     <thead><tr>{thead}</tr></thead>
     <tbody id="tb">{''.join(rows)}</tbody>
   </table>
-  <div class="empty" id="empty">No matches for these filters. Try clearing the search or lowering the fit threshold.</div>
+  </div>
+  <div class="empty" id="empty"><b>No matches for these filters</b>Try clearing filters or lowering the fit threshold.</div>
+</section>
+</main>
 </div>
 <script>{DASH_JS}</script>
 </body></html>"""
