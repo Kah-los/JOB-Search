@@ -130,14 +130,14 @@ def write_dashboard(matches, new_today):
 <div class="wrap">
 <div class="top">
   <h1>Europe Jobs</h1>
-  <p>Health informatics &amp; healthcare IT — EU/EEA, UK, Switzerland. English-friendly roles ranked first. Sources: Arbetsförmedlingen, EURES, Jobindex.dk, Finn.no, Jobbsafari, StepStone, EU employer seed list.</p>
+  <p>Health informatics &amp; healthcare IT — EU/EEA, UK, Switzerland. English-friendly roles ranked first. Sources: Arbetsförmedlingen, EURES, Jobindex.dk, Finn.no, Jobbsafari, StepStone, FlexJobs, EU employer seed list.</p>
   <div class="kpis">
     <div class="kpi"><b>{len(matches)}</b><span>Matches</span></div>
     <div class="kpi"><b>{len(new_today)}</b><span>New this run</span></div>
     <div class="kpi"><b>{n_english_high}</b><span>English-friendly</span></div>
     <div class="kpi"><b>{n_remote}</b><span>Remote</span></div>
   </div>
-  <p style="margin-top:12px;font-size:11px;opacity:.75">Updated {date.today().isoformat()} · {len(ALL_TARGET_TITLES)} target titles · Sources: Jobtech, EURES, Jobindex, Finn, Jobbsafari, StepStone, employers</p>
+  <p style="margin-top:12px;font-size:11px;opacity:.75">Updated {date.today().isoformat()} · {len(ALL_TARGET_TITLES)} target titles · Sources: Jobtech, EURES, Jobindex, Finn, Jobbsafari, StepStone, FlexJobs, employers</p>
 </div>
 <div class="toolbar">
   <input id="q" type="search" placeholder="Search title, company, country…" autocomplete="off">

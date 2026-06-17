@@ -20,6 +20,7 @@ from europe.scrapers.jobindex import scrape_jobindex
 from europe.scrapers.finn import scrape_finn
 from europe.scrapers.jobbsafari import scrape_jobbsafari
 from europe.scrapers.stepstone import scrape_stepstone
+from europe.scrapers.flexjobs import scrape_flexjobs
 
 DATA.mkdir(parents=True, exist_ok=True)
 
@@ -110,6 +111,11 @@ def main():
     ss = scrape_stepstone()
     print(f"     +{len(ss)} jobs")
     all_jobs.extend(ss)
+
+    print("  → FlexJobs (Europe remote/flexible)…")
+    fj = scrape_flexjobs()
+    print(f"     +{len(fj)} jobs")
+    all_jobs.extend(fj)
 
     filtered = [j for j in all_jobs if is_valid_source(j) and is_europe_location(j)]
     jobs = dedupe(filtered)

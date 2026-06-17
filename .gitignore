@@ -12,8 +12,8 @@ data/*.log
 *.pyc
 .DS_Store
 
-# Telegram bot credentials — never commit
-pipeline/telegram_config.json
+# Optional FlexJobs subscriber cookie / manual import (never commit)
+data/europe/flexjobs_import.json
 
 # Resume / personal documents — keep local, never publish
 *.pdf

@@ -231,4 +231,8 @@ SEARCH_QUERIES_BY_BOARD: dict[str, list[str]] = {
     ],
     "eures": SEARCH_QUERIES[:20],
     "employers": SEARCH_QUERIES[:12],
+    "flexjobs": [
+        "health informatics", "clinical informatics", "health IT", "healthcare IT",
+        "digital health", "EHR", "medical records", "HIM", "FHIR", "HL7",
+    ],
 }
