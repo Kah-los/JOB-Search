@@ -24,7 +24,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from scrape import (scrape_teamtailor, scrape_workday, scrape_smartrecruiters,
-                    scrape_greenhouse, scrape_lever, scrape_oracle, scrape_phenom)
+                    scrape_greenhouse, scrape_lever, scrape_oracle, scrape_phenom,
+                    scrape_varbi)
+from job_boards import scrape_all_boards
 
 ROOT = Path(__file__).resolve().parent.parent
 EMPLOYERS = ROOT / "pipeline" / "europe_employers.json"
@@ -38,6 +40,7 @@ ADAPTERS = {
     "Teamtailor": scrape_teamtailor, "Workday": scrape_workday,
     "SmartRecruiters": scrape_smartrecruiters, "Greenhouse": scrape_greenhouse,
     "Lever": scrape_lever, "OracleORC": scrape_oracle, "Phenom": scrape_phenom,
+    "Varbi": scrape_varbi,
 }
 
 # EU/EEA: no work permit needed for a Stockholm-based EU/EEA resident.
@@ -132,6 +135,10 @@ TITLE_EXCLUDE = re.compile(
     r"("
     r"travel (and|&) expense|\bt&e\b|expense (analyst|compliance)|"
     r"procurement|purchasing|payroll|accounts payable|tax |audit fee|"
+    # Swedish/Nordic licensed clinical professions (require legitimation) —
+    # the local equivalent of the RN/MD exclusions in the US pipeline.
+    r"biomedicinsk analytiker|\bbma\b|röntgensjuksköterska|arbetsterapeut|"
+    r"logoped|dietist|tandhygienist|optiker|audionom|kurator|"
     r"\bnurse\b|sjuksköterska|undersköterska|läkare|physician|surgeon|"
     r"barnmorska|fysioterapeut|physiotherap|psycholog|psykolog|"
     r"pharmacist|farmaceut|apotekare|dentist|tandläkare|veterinar|"
@@ -150,17 +157,72 @@ def load(p, d):
         return d
 
 
+def enrich_descriptions(jobs, workers=16):
+    """Varbi (and some other) listings carry titles only. Without a description
+    the skills/domain components score 0, which caps those jobs below the match
+    threshold no matter how relevant they are. Fetch the detail pages so they
+    compete on equal footing."""
+    import requests
+    from concurrent.futures import ThreadPoolExecutor
+    H = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"}
+
+    todo = [j for j in jobs
+            if not (j.get("description") or "").strip()
+            and j.get("source_platform") == "Varbi"
+            and title_relevant(j.get("title"), j)]
+    if not todo:
+        return jobs
+    print(f"Enriching {len(todo)} description-less listings...")
+
+    def fetch(j):
+        try:
+            r = requests.get(j["url"], headers=H, timeout=20)
+            if r.status_code != 200:
+                return
+            t = re.sub(r"<script.*?</script>", " ", r.text, flags=re.S | re.I)
+            t = re.sub(r"<style.*?</style>", " ", t, flags=re.S | re.I)
+            j["description"] = re.sub(r"\s+", " ", re.sub("<[^>]+>", " ", t)).strip()[:8000]
+        except Exception:
+            pass
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        list(ex.map(fetch, todo))
+    got = sum(1 for j in todo if j.get("description"))
+    print(f"  enriched {got}/{len(todo)}")
+    return jobs
+
+
+# Region Stockholm also runs public transport, property and infrastructure.
+# Those departments are not health work no matter how health-y the employer is.
+NON_HEALTH_UNIT = re.compile(
+    r"(tunnelban|sl trafik|trafikförvalt|trafikverk|kollektivtrafik|spårväg|"
+    r"färdtjänst|fastighet|byggprojekt|lokalförsörjning|entreprenad|"
+    r"väg- och|infrastrukturprojekt)", re.I)
+
+# Employer categories that are inherently health/care settings: for these, a job
+# does not need to repeat health words to qualify (Varbi listings carry no
+# description at all, so title-only matching would wrongly drop real roles).
+HEALTH_EMPLOYER_CATS = {"Healthcare provider", "Health IT vendor", "National eHealth",
+                        "Digital health", "Medtech", "Epic implementation / eHealth",
+                        "Public health authority", "Medical imaging IT",
+                        "Pharma / health data", "EU agency", "International org"}
+
+
 def title_relevant(t, job=None):
     t = t or ""
     if TITLE_EXCLUDE.search(t):
         return False
     if not TITLE_INCLUDE.search(t):
         return False
-    # Require a health/care/clinical anchor in the title or description.
     if job is not None:
-        blob = t + " " + (job.get("description") or "")
-        if not HEALTH_CONTEXT.search(blob):
+        if NON_HEALTH_UNIT.search(t):
             return False
+        # Health anchor: either in the text, or implied by a health employer.
+        blob = t + " " + (job.get("description") or "")
+        if HEALTH_CONTEXT.search(blob):
+            return True
+        return (job.get("employer_category") or "") in HEALTH_EMPLOYER_CATS
     return True
 
 
@@ -242,6 +304,13 @@ def main():
                 j["location"] = f"{e.get('city','')}, {e.get('country','')}".strip(", ")
         all_jobs += jobs
         print(f"  {e['name'][:38]:38} {e['ats']:16} +{len(jobs)}")
+    # Aggregator sources (added on request; tagged so they stay distinguishable)
+    print("Job boards (aggregators):")
+    for j in scrape_all_boards():
+        j.setdefault("employer_country", "")
+        all_jobs.append(j)
+
+    all_jobs = enrich_descriptions(all_jobs)
     RAW.write_text(json.dumps(all_jobs, indent=2))
 
     # score

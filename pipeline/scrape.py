@@ -434,6 +434,49 @@ def scrape_teamtailor(url, employer, queries=None, cap=500):
     return jobs
 
 
+# ---------------- Varbi (Swedish public sector / universities) ----------------
+# Varbi powers Region Stockholm (incl. Karolinska University Hospital), most
+# Swedish universities and several agencies. The English listing page at
+# https://<org>.varbi.com/en/ is server-rendered, so titles + job IDs parse
+# straight out of the HTML.
+VARBI_RE = re.compile(r"https?://([a-z0-9\-]+)\.varbi\.com", re.I)
+
+
+def scrape_varbi(url, employer, queries=None, cap=2000):
+    m = VARBI_RE.search(url)
+    org = m.group(1) if m else None
+    if not org:
+        return []
+    try:
+        r = requests.get(f"https://{org}.varbi.com/en/", headers=HEADERS, timeout=TIMEOUT)
+        if r.status_code != 200:
+            return []
+        html = r.text
+    except Exception:
+        return []
+    rows = re.findall(
+        r'href="[^"]*what:job/jobID:(\d+)[^"]*"[^>]*>\s*(?:<[^>]*>\s*)*([^<]{4,140})',
+        html)
+    seen, jobs = set(), []
+    for jid, title in rows:
+        if jid in seen:
+            continue
+        t = re.sub(r"\s+", " ", title).strip()
+        if len(t) < 5:
+            continue
+        seen.add(jid)
+        jobs.append({
+            "employer": employer, "title": t, "location": "",
+            "url": f"https://{org}.varbi.com/en/what:job/jobID:{jid}/",
+            "description": "", "salary_text": "", "remote_type": "",
+            "employment_type": "", "date_posted": "",
+            "source_platform": "Varbi",
+        })
+        if len(jobs) >= cap:
+            break
+    return jobs
+
+
 # ---------------- iCIMS (best-effort) ----------------
 # NOTE: many iCIMS tenants force-redirect the job iframe to a custom JS SPA domain
 # and render listings client-side, which a requests-based scraper cannot follow.
@@ -535,6 +578,8 @@ def pick_adapter(url):
         return scrape_oracle
     if "/jobboard/" in low and ("ultipro.com" in low or "ukg.com" in low):
         return scrape_ultipro
+    if ".varbi.com" in low:
+        return scrape_varbi
     if ".teamtailor.com" in low:
         return scrape_teamtailor
     if ".icims.com" in low:
