@@ -386,6 +386,54 @@ def scrape_phenom(url, employer, queries=None, cap=3000):
     return jobs
 
 
+# ---------------- Teamtailor (Nordic/EU) ----------------
+# Teamtailor powers most Swedish/Nordic tech + health hiring. Every career site
+# exposes a public RSS feed at /jobs.rss with title, description, link, pubDate
+# and remoteStatus -- stable and far more reliable than scraping the JS site.
+TT_RE = re.compile(r"https?://([a-z0-9\-]+)\.teamtailor\.com", re.I)
+
+
+def _rss_tag(block, name):
+    m = re.search(rf"<{name}>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</{name}>", block, re.S)
+    if not m:
+        return ""
+    return re.sub(r"\s+", " ", re.sub("<[^>]+>", " ", m.group(1))).strip()
+
+
+def scrape_teamtailor(url, employer, queries=None, cap=500):
+    m = TT_RE.search(url)
+    slug = m.group(1) if m else None
+    if not slug:
+        return []
+    try:
+        r = requests.get(f"https://{slug}.teamtailor.com/jobs.rss",
+                         headers=HEADERS, timeout=TIMEOUT)
+        if r.status_code != 200:
+            return []
+        text = r.text
+    except Exception:
+        return []
+    jobs = []
+    for block in re.findall(r"<item>(.*?)</item>", text, re.S)[:cap]:
+        link = _rss_tag(block, "link")
+        if not link:
+            continue
+        remote = _rss_tag(block, "remoteStatus")
+        jobs.append({
+            "employer": employer,
+            "title": _rss_tag(block, "title"),
+            "location": "",           # filled from employer country downstream
+            "url": link,
+            "description": _rss_tag(block, "description")[:8000],
+            "salary_text": "",
+            "remote_type": "Remote" if "fully" in remote.lower() else "",
+            "employment_type": "",
+            "date_posted": _rss_tag(block, "pubDate")[:16],
+            "source_platform": "Teamtailor",
+        })
+    return jobs
+
+
 # ---------------- iCIMS (best-effort) ----------------
 # NOTE: many iCIMS tenants force-redirect the job iframe to a custom JS SPA domain
 # and render listings client-side, which a requests-based scraper cannot follow.
@@ -487,6 +535,8 @@ def pick_adapter(url):
         return scrape_oracle
     if "/jobboard/" in low and ("ultipro.com" in low or "ukg.com" in low):
         return scrape_ultipro
+    if ".teamtailor.com" in low:
+        return scrape_teamtailor
     if ".icims.com" in low:
         return scrape_icims
     return scrape_generic

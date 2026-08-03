@@ -1,0 +1,31 @@
+{
+  "_note": "European health informatics / digital health / eHealth employers. Scope is NOT limited to Epic customers: it covers health-IT vendors, medtech, national eHealth bodies, EU agencies and hospitals. 'ats' drives adapter selection; null = discovered URL recorded but not yet scrapable (custom/JS site).",
+  "employers": [
+    {"name": "Cambio Healthcare Systems", "country": "Sweden", "city": "Linköping/Stockholm", "url": "https://cambio.teamtailor.com", "ats": "Teamtailor", "category": "Health IT vendor"},
+    {"name": "Inera (national eHealth, SKR)", "country": "Sweden", "city": "Stockholm", "url": "https://inera.teamtailor.com", "ats": "Teamtailor", "category": "National eHealth"},
+    {"name": "Platform24", "country": "Sweden", "city": "Stockholm", "url": "https://platform24.teamtailor.com", "ats": "Teamtailor", "category": "Digital health"},
+    {"name": "Trifork", "country": "Denmark", "city": "Copenhagen", "url": "https://trifork.teamtailor.com", "ats": "Teamtailor", "category": "Health IT vendor"},
+    {"name": "Tietoevry Care", "country": "Finland/Sweden", "city": "Stockholm/Helsinki", "url": "https://careers.smartrecruiters.com/Tietoevry", "ats": "SmartRecruiters", "category": "Health IT vendor"},
+    {"name": "Elekta", "country": "Sweden", "city": "Stockholm", "url": "https://elekta.wd3.myworkdayjobs.com/Elekta_Careers", "ats": "Workday", "category": "Medtech"},
+    {"name": "AstraZeneca", "country": "Sweden/UK", "city": "Gothenburg/Cambridge", "url": "https://astrazeneca.wd3.myworkdayjobs.com/Careers", "ats": "Workday", "category": "Pharma / health data"},
+    {"name": "Roche", "country": "Switzerland", "city": "Basel", "url": "https://roche.wd3.myworkdayjobs.com/roche-ext", "ats": "Workday", "category": "Pharma / health data"},
+
+    {"name": "Sectra", "country": "Sweden", "city": "Linköping", "url": "https://career.sectra.com", "ats": null, "category": "Medical imaging IT"},
+    {"name": "Karolinska Institutet", "country": "Sweden", "city": "Stockholm", "url": "https://ki.varbi.com", "ats": "Varbi", "category": "Academic"},
+    {"name": "Region Stockholm / Karolinska University Hospital", "country": "Sweden", "city": "Stockholm", "url": "https://jobb.regionstockholm.se", "ats": null, "category": "Healthcare provider"},
+    {"name": "E-hälsomyndigheten (eHealth Agency)", "country": "Sweden", "city": "Stockholm", "url": "https://www.ehalsomyndigheten.se/jobba-hos-oss/", "ats": null, "category": "National eHealth"},
+    {"name": "Socialstyrelsen", "country": "Sweden", "city": "Stockholm", "url": "https://www.socialstyrelsen.se/om-socialstyrelsen/jobba-hos-oss/", "ats": null, "category": "Public health authority"},
+    {"name": "ECDC", "country": "Sweden", "city": "Stockholm", "url": "https://www.ecdc.europa.eu/en/about-us/work-us/vacancies", "ats": null, "category": "EU agency"},
+    {"name": "EMA (European Medicines Agency)", "country": "Netherlands", "city": "Amsterdam", "url": "https://www.ema.europa.eu/en/about-us/careers", "ats": null, "category": "EU agency"},
+    {"name": "WHO Regional Office for Europe", "country": "Denmark", "city": "Copenhagen", "url": "https://www.who.int/careers", "ats": null, "category": "International org"},
+    {"name": "Philips", "country": "Netherlands", "city": "Amsterdam/Eindhoven", "url": "https://www.careers.philips.com", "ats": null, "category": "Medtech / health informatics"},
+    {"name": "Siemens Healthineers", "country": "Germany", "city": "Erlangen", "url": "https://jobs.siemens-healthineers.com", "ats": null, "category": "Medtech"},
+    {"name": "Dedalus", "country": "Italy/EU", "city": "Florence", "url": "https://www.dedalus.com/careers/", "ats": null, "category": "Health IT vendor"},
+    {"name": "InterSystems", "country": "UK/EU", "city": "Windsor", "url": "https://www.intersystems.com/careers/", "ats": null, "category": "Health IT vendor"},
+    {"name": "Doctolib", "country": "France/Germany", "city": "Paris/Berlin", "url": "https://careers.doctolib.com", "ats": null, "category": "Digital health"},
+    {"name": "Systematic", "country": "Denmark", "city": "Aarhus", "url": "https://systematic.com/careers/", "ats": null, "category": "Health IT vendor"},
+    {"name": "Sundhedsdatastyrelsen (Danish Health Data Authority)", "country": "Denmark", "city": "Copenhagen", "url": "https://sundhedsdatastyrelsen.dk/da/om-os/job", "ats": null, "category": "National eHealth"},
+    {"name": "Apotti", "country": "Finland", "city": "Helsinki", "url": "https://www.apotti.fi/en/careers/", "ats": null, "category": "Epic implementation / eHealth"},
+    {"name": "Helseplattformen", "country": "Norway", "city": "Trondheim", "url": "https://helseplattformen.no/jobb", "ats": null, "category": "Epic implementation / eHealth"}
+  ]
+}
